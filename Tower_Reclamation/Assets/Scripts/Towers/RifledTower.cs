@@ -197,7 +197,7 @@ public class RifledTower : Tower {
         // add in here about having a priority target or something
         if (projectileParticle == null)
         {
-            return; // not initiallized yet
+            return;
         }
 
         if (attackTimer < attackSpeed)
@@ -205,13 +205,11 @@ public class RifledTower : Tower {
             attackTimer += Time.deltaTime;
         }
 
-
         if (preferedEnemyBody != null && preferedEnemyBody != targetEnemyBody)
         {
             float distanceToPreferedEnemy = Vector3.Distance(preferedEnemyBody.gameObject.transform.position, gameObject.transform.position);
-            if ((distanceToPreferedEnemy <= currentAttackRange && preferedEnemyBody.isTargetable) && (distanceToPreferedEnemy >= minRange)) //targetEnemyBody.isTargetable
+            if ((distanceToPreferedEnemy <= currentAttackRange && preferedEnemyBody.isTargetable) && (distanceToPreferedEnemy >= minRange))
             {
-                //print(preferedEnemyBody.gameObject.name);
                 targetEnemyBody = preferedEnemyBody;
                 targetEnemy = preferedEnemyBody.gameObject.transform;
             }
@@ -221,7 +219,6 @@ public class RifledTower : Tower {
         {
             objectToPan.LookAt(targetEnemy);
             FireAtEnemy();
-
         }
         else
         {
