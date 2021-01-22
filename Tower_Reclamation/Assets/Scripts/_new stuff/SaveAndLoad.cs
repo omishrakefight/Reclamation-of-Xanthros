@@ -279,6 +279,7 @@ public class SaveAndLoad : MonoBehaviour {
                 _singleton.LoadTowerPreset(1, savedFile.towerOne.GetTowerName(), savedFile.towerOne.GetTowerHeadType(), savedFile.towerOne.GetTowerBaseType());
                 _singleton.LoadTowerPreset(2, savedFile.towerTwo.GetTowerName(), savedFile.towerTwo.GetTowerHeadType(), savedFile.towerTwo.GetTowerBaseType());
                 _singleton.LoadTowerPreset(3, savedFile.towerThree.GetTowerName(), savedFile.towerThree.GetTowerHeadType(), savedFile.towerThree.GetTowerBaseType());
+                _singleton.MassDelayedStart();
             }
             catch (Exception e)
             {

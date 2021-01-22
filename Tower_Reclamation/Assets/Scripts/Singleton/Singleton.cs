@@ -368,6 +368,20 @@ public sealed class Singleton : MonoBehaviour {
             enemyList.Add(enemy);
         }
     }
+
+
+
+    public void MassDelayedStart()
+    {
+        if(towerSelector == null){
+            towerSelector = FindObjectOfType<TowerSelecter>();
+        }
+        
+        IEnumerator start;
+        start = towerSelector.DelayedStart();
+
+        StartCoroutine(start);
+    }
     //private static Singleton instance = null;
     //private static readonly object padlock = new object();
 

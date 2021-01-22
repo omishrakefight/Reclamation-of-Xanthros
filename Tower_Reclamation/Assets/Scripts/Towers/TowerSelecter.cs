@@ -75,6 +75,7 @@ public class TowerSelecter : MonoBehaviour
     Dictionary<string, int> knownTowerParts;
 
     public int towerSlotSelected = 1;
+    bool skipImageReset = false;
     #region TowerParts
     //#TowerParts
     float turnSpeed = 6f;
@@ -333,6 +334,11 @@ public class TowerSelecter : MonoBehaviour
 
     public void ResetTowerPicture()
     {
+        if(skipImageReset)
+        {
+            return;
+        }
+
         Tower towerBase = null;
         GameObject towerHead = null;
         int baseInt = 0, AugmentInt = 0;
@@ -491,6 +497,8 @@ public class TowerSelecter : MonoBehaviour
             singleton = FindObjectOfType<Singleton>();
         }
 
+        skipImageReset = true;
+
         TurnPanelVisible(TowerOnePanel);
         TurnPanelInvisible(Tower2Panel);
         TurnPanelInvisible(Tower3Panel);
@@ -501,6 +509,7 @@ public class TowerSelecter : MonoBehaviour
 
         if (singleton.towerOneName.Equals(""))
         {
+            skipImageReset = false;
             ResetTowerPicture();
             return;
         }
@@ -512,6 +521,8 @@ public class TowerSelecter : MonoBehaviour
 
         towerBarrel.value = singleton.towerOneHeadType;
         towerBase.value = singleton.towerOneBaseType;
+
+        skipImageReset = false;
         ResetTowerPicture();
     }
     public void LoadTowerTwo()
@@ -520,6 +531,8 @@ public class TowerSelecter : MonoBehaviour
         {
             singleton = FindObjectOfType<Singleton>();
         }
+
+        skipImageReset = true;
 
         TurnPanelInvisible(TowerOnePanel);
         TurnPanelVisible(Tower2Panel);
@@ -531,6 +544,7 @@ public class TowerSelecter : MonoBehaviour
 
         if (singleton.towerTwoName.Equals(""))
         {
+            skipImageReset = false;
             ResetTowerPicture();
             return;
         }
@@ -542,6 +556,8 @@ public class TowerSelecter : MonoBehaviour
 
         towerBarrel.value = singleton.towerTwoHeadType;
         towerBase.value = singleton.towerTwoBaseType;
+
+        skipImageReset = false;
         ResetTowerPicture();
     }
     public void LoadTowerThree()
@@ -550,6 +566,9 @@ public class TowerSelecter : MonoBehaviour
         {
             singleton = FindObjectOfType<Singleton>();
         }
+
+        skipImageReset = true;
+
         TurnPanelInvisible(TowerOnePanel);
         TurnPanelInvisible(Tower2Panel);
         TurnPanelVisible(Tower3Panel);
@@ -560,6 +579,7 @@ public class TowerSelecter : MonoBehaviour
 
         if (singleton.towerThreeName.Equals(""))
         {
+            skipImageReset = false;
             ResetTowerPicture();
             return;
         }
@@ -571,6 +591,8 @@ public class TowerSelecter : MonoBehaviour
 
         towerBarrel.value = singleton.towerThreeHeadType;
         towerBase.value = singleton.towerThreeBaseType;
+
+        skipImageReset = false;
         ResetTowerPicture();
     }
 
