@@ -1,0 +1,447 @@
+Using pre-set license
+Built from '2020.2/release' branch; Version is '2020.2.1f1 (270dd8c3da1c) revision 2559448'; Using compiler version '192528614'; Build Type 'Release'
+OS: 'Windows 10  (10.0.0) 64bit' Language: 'en' Physical Memory: 16281 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+
+ COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2020.2.1f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+C:/Users/Nekier/Documents/GitHub/Reclamation-of-Xanthros/Tower_Reclamation
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+56472
+Successfully changed project path to: C:/Users/Nekier/Documents/GitHub/Reclamation-of-Xanthros/Tower_Reclamation
+C:/Users/Nekier/Documents/GitHub/Reclamation-of-Xanthros/Tower_Reclamation
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 43.67 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2020.2.1f1 (270dd8c3da1c)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/Nekier/Documents/GitHub/Reclamation-of-Xanthros/Tower_Reclamation/Assets
+GfxDevice: creating device client; threaded=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce RTX 2070 with Max-Q Design (ID=0x1f10)
+    Vendor:   
+    VRAM:     8031 MB
+    Driver:   25.21.14.1971
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56732
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.001363 seconds.
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 38.99 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.816 seconds
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.002062 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 37.56 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.810 seconds
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
+Refreshing native plugins compatible for Editor in 0.44 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1757 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 100.1 MB.
+System memory in use after: 100.2 MB.
+
+Unloading 33 unused Assets to reduce memory usage. Loaded Objects now: 2202.
+Total: 1.820600 ms (FindLiveObjects: 0.162500 ms CreateObjectMapping: 0.054300 ms MarkObjects: 1.489200 ms  DeleteObjects: 0.113900 ms)
+
+========================================================================
+Received Import Request.
+  path: Assets/Prefabs/Towers/_NEW/Rifled test
+  artifactKey: Guid(f6f2e8eb233e1c249940050d2629c799) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Towers/_NEW/Rifled test using Guid(f6f2e8eb233e1c249940050d2629c799) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0ce024a00b20b7015fe2c65661867eed') in 0.006539 seconds
+  Import took 0.009877 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.762803 seconds.
+  path: Assets/Prefabs/Towers/_NEW/Rifled test/Tower Base Rifled.obj
+  artifactKey: Guid(17ddcb7efb11aa44690d6c45c05fb1d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Towers/_NEW/Rifled test/Tower Base Rifled.obj using Guid(17ddcb7efb11aa44690d6c45c05fb1d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8b3aa0606934205b747a818ff1e42428') in 0.182297 seconds
+  Import took 0.185167 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000285 seconds.
+  path: Assets/Prefabs/Towers/_NEW/Rifled test/Tower Base Rifled.png
+  artifactKey: Guid(b740c000fa8bb5548a0e67d5556c4032) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Towers/_NEW/Rifled test/Tower Base Rifled.png using Guid(b740c000fa8bb5548a0e67d5556c4032) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '480135f1028e8d2904d89d60960ebcc6') in 0.021949 seconds
+  Import took 0.024208 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.979947 seconds.
+  path: Assets/Prefabs/Towers/_NEW/Rifled test/Tower Base Rifled.mtl
+  artifactKey: Guid(23edce8785f4d104d87f9e1a10c3269c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Towers/_NEW/Rifled test/Tower Base Rifled.mtl using Guid(23edce8785f4d104d87f9e1a10c3269c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2a58ee1a7e1360a1ddea2b76777c8189') in 0.004547 seconds
+  Import took 0.007120 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 14.897940 seconds.
+  path: Assets/Prefabs/Towers/_NEW/Rifled test/Tower Base Rifled.vox
+  artifactKey: Guid(4712bf653e83b624e9735c36c0f7a20e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Towers/_NEW/Rifled test/Tower Base Rifled.vox using Guid(4712bf653e83b624e9735c36c0f7a20e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b70e2519c4aea97a60a5b728fedc1880') in 0.004532 seconds
+  Import took 0.007065 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 15.424598 seconds.
+  path: Assets/_Scenes/Sandbox testing.unity
+  artifactKey: Guid(2da82f08fb8826a4b8c1d61f5c1564db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Scenes/Sandbox testing.unity using Guid(2da82f08fb8826a4b8c1d61f5c1564db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '69674975b9d775e31ee45350c4cfe6ea') in 0.004227 seconds
+  Import took 0.007280 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000635 seconds.
+  path: Assets/_Scenes/Sandbox testing.unity
+  artifactKey: Guid(2da82f08fb8826a4b8c1d61f5c1564db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Scenes/Sandbox testing.unity using Guid(2da82f08fb8826a4b8c1d61f5c1564db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '69674975b9d775e31ee45350c4cfe6ea') in 0.002170 seconds
+  Import took 0.004714 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 648.719251 seconds.
+  path: Assets/Prefabs/Towers/_NEW/Rifled test/Tower Base Rifled.obj
+  artifactKey: Guid(17ddcb7efb11aa44690d6c45c05fb1d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Towers/_NEW/Rifled test/Tower Base Rifled.obj using Guid(17ddcb7efb11aa44690d6c45c05fb1d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'daa930910bbac184709a91d192acff06') in 0.023317 seconds
+  Import took 0.026555 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 19.152444 seconds.
+  path: Assets/Prefabs/Towers/Flame Towers/Flame Basic Tower.prefab
+  artifactKey: Guid(9b88788f1af26d945a3ec20203b67002) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Towers/Flame Towers/Flame Basic Tower.prefab using Guid(9b88788f1af26d945a3ec20203b67002) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fda061e59c249f7743fdf492cecfff42') in 0.027914 seconds
+  Import took 0.030948 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000285 seconds.
+  path: Assets/Prefabs/Towers/Flame Towers/Flame Tower Alien.prefab
+  artifactKey: Guid(bfc12d4c65dda314da028c5f8d9075b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Towers/Flame Towers/Flame Tower Alien.prefab using Guid(bfc12d4c65dda314da028c5f8d9075b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ab12bcbf901abea80adf22789b7859b0') in 0.014290 seconds
+  Import took 0.016761 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.224814 seconds.
+  path: Assets/Prefabs/Towers/Flame Towers/Individuals for Kyle
+  artifactKey: Guid(f54c2208dabc1c24b9b0f793aa19c4cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Towers/Flame Towers/Individuals for Kyle using Guid(f54c2208dabc1c24b9b0f793aa19c4cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '081dbe5deeab680ec4edabb89c8c496a') in 0.002137 seconds
+  Import took 0.004959 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001418 seconds.
+  path: Assets/Prefabs/Towers/Flame Towers/Individuals for Kyle
+  artifactKey: Guid(f54c2208dabc1c24b9b0f793aa19c4cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Towers/Flame Towers/Individuals for Kyle using Guid(f54c2208dabc1c24b9b0f793aa19c4cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '081dbe5deeab680ec4edabb89c8c496a') in 0.002134 seconds
+  Import took 0.005154 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.134684 seconds.
+  path: Assets/Prefabs/Towers/Flame Towers/Individuals for Kyle/Fire_Alien_Base.prefab
+  artifactKey: Guid(04cc2f3f5497fd94791b2818eb39f7b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Towers/Flame Towers/Individuals for Kyle/Fire_Alien_Base.prefab using Guid(04cc2f3f5497fd94791b2818eb39f7b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1e927046292743b00b7baa1a4b353a29') in 0.018038 seconds
+  Import took 0.023300 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000370 seconds.
+  path: Assets/Prefabs/Towers/Flame Towers/Individuals for Kyle/FireBomb AOE.prefab
+  artifactKey: Guid(5d772de71966a9e4c96a91a0f6f45dae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Towers/Flame Towers/Individuals for Kyle/FireBomb AOE.prefab using Guid(5d772de71966a9e4c96a91a0f6f45dae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '732c9b7a99725ccd991201cbf47712df') in 0.011171 seconds
+  Import took 0.014165 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000297 seconds.
+  path: Assets/Prefabs/Towers/Flame Towers/Individuals for Kyle/Fire_FlameThrower_Turret.prefab
+  artifactKey: Guid(dbaf219dc21d05740a4c59121887c539) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Towers/Flame Towers/Individuals for Kyle/Fire_FlameThrower_Turret.prefab using Guid(dbaf219dc21d05740a4c59121887c539) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7bf1343b6b496b9216d911efa4a4eed4') in 0.011156 seconds
+  Import took 0.013930 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000232 seconds.
+  path: Assets/Prefabs/Towers/Flame Towers/Individuals for Kyle/Mortar shell.mat
+  artifactKey: Guid(a761e522ec29f1c48a3101c04adbbcc8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Towers/Flame Towers/Individuals for Kyle/Mortar shell.mat using Guid(a761e522ec29f1c48a3101c04adbbcc8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '50af936b341f62518cb6b777a6bb24f5') in 0.022450 seconds
+  Import took 0.024970 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000305 seconds.
+  path: Assets/Prefabs/Towers/Flame Towers/Individuals for Kyle/Fire_Mortar.prefab
+  artifactKey: Guid(970f2ce3de7b89948b89da03ec59e2f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Towers/Flame Towers/Individuals for Kyle/Fire_Mortar.prefab using Guid(970f2ce3de7b89948b89da03ec59e2f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1d0dfb0d992558d5dff11bd26e15832c') in 0.011605 seconds
+  Import took 0.014439 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000432 seconds.
+  path: Assets/Prefabs/Towers/Flame Towers/Individuals for Kyle/Flamethrower pivot.prefab
+  artifactKey: Guid(23093c7098d420842b34e4eabf95ae84) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Towers/Flame Towers/Individuals for Kyle/Flamethrower pivot.prefab using Guid(23093c7098d420842b34e4eabf95ae84) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cd9f9b59073aba8a616539ffb5f134b5') in 0.015138 seconds
+  Import took 0.018596 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000342 seconds.
+  path: Assets/Prefabs/Towers/Flame Towers/Individuals for Kyle/Fire_Standard_Base.prefab
+  artifactKey: Guid(fa1bd93eafb114548a926cc53ef41c12) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Towers/Flame Towers/Individuals for Kyle/Fire_Standard_Base.prefab using Guid(fa1bd93eafb114548a926cc53ef41c12) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7e59c8667416f9759dcb04eb592f7585') in 0.010193 seconds
+  Import took 0.013215 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000303 seconds.
+  path: Assets/Prefabs/Towers/Flame Towers/Individuals for Kyle/Fire_Standard_Turret.prefab
+  artifactKey: Guid(4fd1a8985ef61cc40be1903aa87715be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Towers/Flame Towers/Individuals for Kyle/Fire_Standard_Turret.prefab using Guid(4fd1a8985ef61cc40be1903aa87715be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '549b3b0f8f437ff7e949ea1abdbe9950') in 0.012931 seconds
+  Import took 0.015825 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000249 seconds.
+  path: Assets/Prefabs/Towers/Flame Towers/Individuals for Kyle/Fire_Tall_Base.prefab
+  artifactKey: Guid(4627388ebdfd18847bc48417ac56d7a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Towers/Flame Towers/Individuals for Kyle/Fire_Tall_Base.prefab using Guid(4627388ebdfd18847bc48417ac56d7a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e24b7c12a1b7ddef1ddb3e7073165d65') in 0.008893 seconds
+  Import took 0.011590 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000220 seconds.
+  path: Assets/Prefabs/Towers/Flame Towers/Individuals for Kyle/Mortar shell.prefab
+  artifactKey: Guid(64bb929fb0adb6742a72d55cfeaa0866) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Towers/Flame Towers/Individuals for Kyle/Mortar shell.prefab using Guid(64bb929fb0adb6742a72d55cfeaa0866) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '316525c3398968480ac51495938ee0f7') in 0.008014 seconds
+  Import took 0.010660 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000313 seconds.
+  path: Assets/Prefabs/Towers/Flame Towers/Individuals for Kyle/Fire_Tall_Base.prefab
+  artifactKey: Guid(4627388ebdfd18847bc48417ac56d7a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Towers/Flame Towers/Individuals for Kyle/Fire_Tall_Base.prefab using Guid(4627388ebdfd18847bc48417ac56d7a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e24b7c12a1b7ddef1ddb3e7073165d65') in 0.007218 seconds
+  Import took 0.009989 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.003397 seconds.
+  path: Assets/Prefabs/Towers/Flame Towers/Individuals for Kyle/Mortar shell.prefab
+  artifactKey: Guid(64bb929fb0adb6742a72d55cfeaa0866) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Towers/Flame Towers/Individuals for Kyle/Mortar shell.prefab using Guid(64bb929fb0adb6742a72d55cfeaa0866) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '316525c3398968480ac51495938ee0f7') in 0.007982 seconds
+  Import took 0.010946 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 244.126620 seconds.
+  path: Assets/Prefabs/Towers/_NEW/Tower Base Rifled Alien.obj
+  artifactKey: Guid(2ef86a5bda5dff24897d5d369fe4bd84) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Towers/_NEW/Tower Base Rifled Alien.obj using Guid(2ef86a5bda5dff24897d5d369fe4bd84) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2adfdc3a0e781953abfb509e40d39009') in 0.020653 seconds
+  Import took 0.023642 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 371.598204 seconds.
+  path: Assets/Prefabs/Towers/Plasma Towers
+  artifactKey: Guid(aec6f120bcf1ebe40a6208b1d272477b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Towers/Plasma Towers using Guid(aec6f120bcf1ebe40a6208b1d272477b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4c243dda06a195429e7745df3fde18ea') in 0.003700 seconds
+  Import took 0.007178 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.590088 seconds.
+  path: Assets/Prefabs/Towers/Rifled Towers/Tower Base Rifled Alien.prefab
+  artifactKey: Guid(77379413027baf341b219586412e8aa5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Towers/Rifled Towers/Tower Base Rifled Alien.prefab using Guid(77379413027baf341b219586412e8aa5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2a2a1bb5b8840226d0735e6ea35638d3') in 0.016158 seconds
+  Import took 0.020948 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001948 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.50 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.761 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.45 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1706 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 101.1 MB.
+System memory in use after: 101.2 MB.
+
+Unloading 24 unused Assets to reduce memory usage. Loaded Objects now: 2252.
+Total: 1.493800 ms (FindLiveObjects: 0.135800 ms CreateObjectMapping: 0.044300 ms MarkObjects: 1.298400 ms  DeleteObjects: 0.014400 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 21.085597 seconds.
+  path: Assets/Prefabs/Towers/_NEW/Tower Base Rifled Alien.obj
+  artifactKey: Guid(2ef86a5bda5dff24897d5d369fe4bd84) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Towers/_NEW/Tower Base Rifled Alien.obj using Guid(2ef86a5bda5dff24897d5d369fe4bd84) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '79318972272a66754121de28194be4cc') in 0.084167 seconds
+  Import took 0.087122 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 43.844445 seconds.
+  path: Assets/Prefabs/Towers/Voxel Towers Wife
+  artifactKey: Guid(916fe96be89d29d429da804438ba2294) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Towers/Voxel Towers Wife using Guid(916fe96be89d29d429da804438ba2294) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e164f2a4fa0986f6bb7da3d653b93170') in 0.001702 seconds
+  Import took 0.004138 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.009201 seconds.
+  path: Assets/Prefabs/Towers/Voxel Towers Wife
+  artifactKey: Guid(916fe96be89d29d429da804438ba2294) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Towers/Voxel Towers Wife using Guid(916fe96be89d29d429da804438ba2294) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e164f2a4fa0986f6bb7da3d653b93170') in 0.001468 seconds
+  Import took 0.003856 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.704367 seconds.
+  path: Assets/Prefabs/Towers/Rifled Towers/Tower Base Rifled Alien.prefab
+  artifactKey: Guid(77379413027baf341b219586412e8aa5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Towers/Rifled Towers/Tower Base Rifled Alien.prefab using Guid(77379413027baf341b219586412e8aa5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cfb9db1872648dc809d2e56bda8ff4ef') in 0.012746 seconds
+  Import took 0.016011 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002532 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.44 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.718 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.45 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1706 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 101.2 MB.
+System memory in use after: 101.3 MB.
+
+Unloading 24 unused Assets to reduce memory usage. Loaded Objects now: 2255.
+Total: 1.584800 ms (FindLiveObjects: 0.165300 ms CreateObjectMapping: 0.047800 ms MarkObjects: 1.335300 ms  DeleteObjects: 0.035600 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 17.115334 seconds.
+  path: Assets/Prefabs/Towers/Rifled Towers/Tower Base Rifled Alien.prefab
+  artifactKey: Guid(77379413027baf341b219586412e8aa5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Towers/Rifled Towers/Tower Base Rifled Alien.prefab using Guid(77379413027baf341b219586412e8aa5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3603c638ba7d3143a6182790b67ff7dd') in 0.055241 seconds
+  Import took 0.058121 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.614820 seconds.
+  path: Assets/Prefabs/Towers/Rifled Towers/Tower Base Rifled Alien.prefab
+  artifactKey: Guid(77379413027baf341b219586412e8aa5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Towers/Rifled Towers/Tower Base Rifled Alien.prefab using Guid(77379413027baf341b219586412e8aa5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1f4db0775b17936fa3f5cbb051be1f28') in 0.008693 seconds
+  Import took 0.011916 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 9.883861 seconds.
+  path: Assets/Prefabs/Towers/Rifled Towers/Tower Base Rifled Alien.prefab
+  artifactKey: Guid(77379413027baf341b219586412e8aa5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Towers/Rifled Towers/Tower Base Rifled Alien.prefab using Guid(77379413027baf341b219586412e8aa5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c18c09cd172206524cbc19a22aa4c8fc') in 0.009401 seconds
+  Import took 0.012814 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001811 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.48 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.755 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.45 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1706 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 101.2 MB.
+System memory in use after: 101.3 MB.
+
+Unloading 24 unused Assets to reduce memory usage. Loaded Objects now: 2258.
+Total: 1.870400 ms (FindLiveObjects: 0.174900 ms CreateObjectMapping: 0.049100 ms MarkObjects: 1.629700 ms  DeleteObjects: 0.015700 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 95.138518 seconds.
+  path: Assets/Prefabs/Towers/Rifled Towers/Tower Base Rifled Alien.prefab
+  artifactKey: Guid(77379413027baf341b219586412e8aa5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Towers/Rifled Towers/Tower Base Rifled Alien.prefab using Guid(77379413027baf341b219586412e8aa5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '47109e0e34a355ae7574994c140deeca') in 0.051345 seconds
+  Import took 0.054075 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001623 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.45 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.705 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.46 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1706 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 101.2 MB.
+System memory in use after: 101.3 MB.
+
+Unloading 24 unused Assets to reduce memory usage. Loaded Objects now: 2261.
+Total: 1.540400 ms (FindLiveObjects: 0.171600 ms CreateObjectMapping: 0.044200 ms MarkObjects: 1.308700 ms  DeleteObjects: 0.013800 ms)
+
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file

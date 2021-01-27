@@ -15,11 +15,11 @@ C:/Users/Nekier/Documents/GitHub/Reclamation-of-Xanthros/Tower_Reclamation
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-49775
+53230
 Successfully changed project path to: C:/Users/Nekier/Documents/GitHub/Reclamation-of-Xanthros/Tower_Reclamation
 C:/Users/Nekier/Documents/GitHub/Reclamation-of-Xanthros/Tower_Reclamation
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 42.50 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 48.61 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.2.1f1 (270dd8c3da1c)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/Resources/UnitySubsystems
@@ -35,49 +35,240 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56400
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56932
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.001293 seconds.
+Registered in 0.001399 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 38.07 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 43.02 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.347 seconds
+- Completed reload, in  2.449 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.001737 seconds.
+Registered in 0.001847 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 38.48 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 38.79 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.763 seconds
+- Completed reload, in  0.827 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
-Refreshing native plugins compatible for Editor in 0.44 ms, found 0 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.05 seconds
+Refreshing native plugins compatible for Editor in 0.43 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1757 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 100.1 MB.
 System memory in use after: 100.2 MB.
 
 Unloading 33 unused Assets to reduce memory usage. Loaded Objects now: 2202.
-Total: 2.162400 ms (FindLiveObjects: 0.206300 ms CreateObjectMapping: 0.101000 ms MarkObjects: 1.749000 ms  DeleteObjects: 0.105100 ms)
+Total: 1.638600 ms (FindLiveObjects: 0.151800 ms CreateObjectMapping: 0.059200 ms MarkObjects: 1.350100 ms  DeleteObjects: 0.076400 ms)
 
 ========================================================================
 Received Import Request.
-  path: Assets/Scripts/Singleton/Singleton.cs
-  artifactKey: Guid(ea8924db822837547918bfb77fa2d9cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/Singleton/Singleton.cs using Guid(ea8924db822837547918bfb77fa2d9cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cb3da2e7726e5941ae6953d76ccf053c') in 0.092795 seconds
-  Import took 0.095654 seconds .
+  path: Assets/_Scenes/Sandbox testing.unity
+  artifactKey: Guid(2da82f08fb8826a4b8c1d61f5c1564db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Scenes/Sandbox testing.unity using Guid(2da82f08fb8826a4b8c1d61f5c1564db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '75adfa2b2925ac0f7cd1af98df2d93ec') in 0.010920 seconds
+  Import took 0.013277 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.670895 seconds.
+  path: Assets/Prefabs/Towers/Rifled Towers
+  artifactKey: Guid(2dacfdbe505c02642a37488832eacf6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Towers/Rifled Towers using Guid(2dacfdbe505c02642a37488832eacf6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '780784eba568d31055064f40cd6facb0') in 0.015941 seconds
+  Import took 0.025993 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 48.084360 seconds.
+  path: Assets/Asset Store/PicaVoxel/PicaVoxel/MeshStore/60b43690-7187-45ea-9e3d-0da9b3f3f065/Chunk (2,1,1)_Framee3e16e1f-c76c-40ef-9d2e-844b1c06b3e6.asset
+  artifactKey: Guid(faff1c11001e149448112b2b4cbdce94) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Asset Store/PicaVoxel/PicaVoxel/MeshStore/60b43690-7187-45ea-9e3d-0da9b3f3f065/Chunk (2,1,1)_Framee3e16e1f-c76c-40ef-9d2e-844b1c06b3e6.asset using Guid(faff1c11001e149448112b2b4cbdce94) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4dca07d395deed11d936a201d0f88d54') in 0.117885 seconds
+  Import took 0.121042 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000254 seconds.
+  path: Assets/Asset Store/PicaVoxel/PicaVoxel/MeshStore/57cde972-32bd-4941-be45-b41b71da1013/Chunk (2,1,2)_Frame8467d5d2-e124-4cc1-91da-61c8011938d3.asset
+  artifactKey: Guid(b17518ed445dd6344be8a7b6b8ccb355) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Asset Store/PicaVoxel/PicaVoxel/MeshStore/57cde972-32bd-4941-be45-b41b71da1013/Chunk (2,1,2)_Frame8467d5d2-e124-4cc1-91da-61c8011938d3.asset using Guid(b17518ed445dd6344be8a7b6b8ccb355) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '41b22a39d7ea25bc13b96c3edbf5b3a0') in 0.009027 seconds
+  Import took 0.011995 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000284 seconds.
+  path: Assets/Prefabs/Towers/Voxel Towers Wife/Fire Light Tower/Fire_Standard_Turret 1.obj
+  artifactKey: Guid(27f67edbe80d45e4e932747be7e70064) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Towers/Voxel Towers Wife/Fire Light Tower/Fire_Standard_Turret 1.obj using Guid(27f67edbe80d45e4e932747be7e70064) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'af7f37744aa724e64391f254f4bc026b') in 0.486200 seconds
+  Import took 0.489317 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000179 seconds.
+  path: Assets/Asset Store/PicaVoxel/PicaVoxel/MeshStore/57cde972-32bd-4941-be45-b41b71da1013/Chunk (2,1,2)_Frame8467d5d2-e124-4cc1-91da-61c8011938d3.asset
+  artifactKey: Guid(b17518ed445dd6344be8a7b6b8ccb355) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Asset Store/PicaVoxel/PicaVoxel/MeshStore/57cde972-32bd-4941-be45-b41b71da1013/Chunk (2,1,2)_Frame8467d5d2-e124-4cc1-91da-61c8011938d3.asset using Guid(b17518ed445dd6344be8a7b6b8ccb355) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '41b22a39d7ea25bc13b96c3edbf5b3a0') in 0.008565 seconds
+  Import took 0.011768 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000164 seconds.
+  path: Assets/Asset Store/PicaVoxel/PicaVoxel/MeshStore/60b43690-7187-45ea-9e3d-0da9b3f3f065/Chunk (2,1,1)_Framee3e16e1f-c76c-40ef-9d2e-844b1c06b3e6.asset
+  artifactKey: Guid(faff1c11001e149448112b2b4cbdce94) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Asset Store/PicaVoxel/PicaVoxel/MeshStore/60b43690-7187-45ea-9e3d-0da9b3f3f065/Chunk (2,1,1)_Framee3e16e1f-c76c-40ef-9d2e-844b1c06b3e6.asset using Guid(faff1c11001e149448112b2b4cbdce94) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4dca07d395deed11d936a201d0f88d54') in 0.009657 seconds
+  Import took 0.012634 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000205 seconds.
+  path: Assets/Prefabs/Towers/Voxel Towers Wife/Fire Light Tower/Fire_Light_Base.obj
+  artifactKey: Guid(e4ff35dd72d92924781ead847d3b84e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Towers/Voxel Towers Wife/Fire Light Tower/Fire_Light_Base.obj using Guid(e4ff35dd72d92924781ead847d3b84e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3f43f9bc75343944d337f1519fdd3a4d') in 0.042220 seconds
+  Import took 0.045488 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000209 seconds.
+  path: Assets/Prefabs/Towers/Flame Towers/parts/Fire_Mortar.obj
+  artifactKey: Guid(19ee0b68a7104b74e91ff3d5ad3fb17b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Towers/Flame Towers/parts/Fire_Mortar.obj using Guid(19ee0b68a7104b74e91ff3d5ad3fb17b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2608ba5a75b852465fd42c0830c7d8ff') in 0.025595 seconds
+  Import took 0.028386 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000261 seconds.
+  path: Assets/Asset Store/PicaVoxel/PicaVoxel/MeshStore/71277a03-2ec2-48ee-9088-131b120fea1b/Chunk (2,1,2)_Framed988bbbc-dc14-42ea-a077-88513385c4ae.asset
+  artifactKey: Guid(10750acf0c3336643bbea1cb98c5159c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Asset Store/PicaVoxel/PicaVoxel/MeshStore/71277a03-2ec2-48ee-9088-131b120fea1b/Chunk (2,1,2)_Framed988bbbc-dc14-42ea-a077-88513385c4ae.asset using Guid(10750acf0c3336643bbea1cb98c5159c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '075f0afa4cd0b68b08e8f5bb6ba953d5') in 0.009462 seconds
+  Import took 0.012588 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000202 seconds.
+  path: Assets/Asset Store/PicaVoxel/PicaVoxel/MeshStore/71277a03-2ec2-48ee-9088-131b120fea1b/Chunk (2,2,1)_Framed988bbbc-dc14-42ea-a077-88513385c4ae.asset
+  artifactKey: Guid(22fcee0092aa43340a915be23c25c8d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Asset Store/PicaVoxel/PicaVoxel/MeshStore/71277a03-2ec2-48ee-9088-131b120fea1b/Chunk (2,2,1)_Framed988bbbc-dc14-42ea-a077-88513385c4ae.asset using Guid(22fcee0092aa43340a915be23c25c8d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '20c8339951db0eececa07bc04142659b') in 0.009504 seconds
+  Import took 0.012251 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000203 seconds.
+  path: Assets/Prefabs/Towers/Voxel Towers Wife/Fire Norm Tower Set/Fire_Standard_Base.obj
+  artifactKey: Guid(c8dd5fe50e04a7b44bd9d4b5cb211f42) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Towers/Voxel Towers Wife/Fire Norm Tower Set/Fire_Standard_Base.obj using Guid(c8dd5fe50e04a7b44bd9d4b5cb211f42) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '421dca03282145b04269aee006eebbc6') in 0.020688 seconds
+  Import took 0.023953 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000262 seconds.
+  path: Assets/Prefabs/Towers/Voxel Towers Wife/Fire Tall Tower/Fire_Standard_Turret 1.obj
+  artifactKey: Guid(092832e2e5be4ac4ea5a73da9792bf25) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Towers/Voxel Towers Wife/Fire Tall Tower/Fire_Standard_Turret 1.obj using Guid(092832e2e5be4ac4ea5a73da9792bf25) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cc506957983cb6dc0c84fe0dcd8730b1') in 0.018758 seconds
+  Import took 0.021374 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000222 seconds.
+  path: Assets/Prefabs/Towers/Voxel Towers Wife/Fire Norm Tower Set/Fire_Standard_Turret.obj
+  artifactKey: Guid(c564ccc3c16c10a47bd2846fb376c3c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Towers/Voxel Towers Wife/Fire Norm Tower Set/Fire_Standard_Turret.obj using Guid(c564ccc3c16c10a47bd2846fb376c3c4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'addbb8fca318f801f5b0536c352420de') in 0.016805 seconds
+  Import took 0.019751 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000226 seconds.
+  path: Assets/Asset Store/PicaVoxel/PicaVoxel/MeshStore/71277a03-2ec2-48ee-9088-131b120fea1b/Chunk (2,2,0)_Framed988bbbc-dc14-42ea-a077-88513385c4ae.asset
+  artifactKey: Guid(bf676423b4f43aa4997ec1fdd51d0ebf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Asset Store/PicaVoxel/PicaVoxel/MeshStore/71277a03-2ec2-48ee-9088-131b120fea1b/Chunk (2,2,0)_Framed988bbbc-dc14-42ea-a077-88513385c4ae.asset using Guid(bf676423b4f43aa4997ec1fdd51d0ebf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '88aea502d7e27362b1e6beec2ae0f88e') in 0.008505 seconds
+  Import took 0.011549 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000195 seconds.
+  path: Assets/Prefabs/Towers/Voxel Towers Wife/Fire Alien Tower/Fire_Alien_Base.obj
+  artifactKey: Guid(aea4f821b569f0240ac9a467ff626bbd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Towers/Voxel Towers Wife/Fire Alien Tower/Fire_Alien_Base.obj using Guid(aea4f821b569f0240ac9a467ff626bbd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '19d34f82a2e1a35e0014ce6b4d033ff3') in 0.024342 seconds
+  Import took 0.027108 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000253 seconds.
+  path: Assets/Prefabs/Towers/Voxel Towers Wife/Fire Alien Tower/Fire_Standard_Turret 1.obj
+  artifactKey: Guid(58cacb8379044eb42802150d443d43bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Towers/Voxel Towers Wife/Fire Alien Tower/Fire_Standard_Turret 1.obj using Guid(58cacb8379044eb42802150d443d43bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b439739403eda4bc5075b670421958a8') in 0.016848 seconds
+  Import took 0.019925 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000265 seconds.
+  path: Assets/Prefabs/Towers/Voxel Towers Wife/Fire Heavy Tower/Fire_Heavy_Base.obj
+  artifactKey: Guid(0b797914689aa314980a63de1565fb58) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Towers/Voxel Towers Wife/Fire Heavy Tower/Fire_Heavy_Base.obj using Guid(0b797914689aa314980a63de1565fb58) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '54a16bdabffc1ddfeeac31e360420a26') in 0.022630 seconds
+  Import took 0.025540 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000315 seconds.
+  path: Assets/Asset Store/PicaVoxel/PicaVoxel/MeshStore/57cde972-32bd-4941-be45-b41b71da1013/Chunk (2,2,1)_Frame8467d5d2-e124-4cc1-91da-61c8011938d3.asset
+  artifactKey: Guid(858f5a5cbde2372419379cfdf1f7af37) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Asset Store/PicaVoxel/PicaVoxel/MeshStore/57cde972-32bd-4941-be45-b41b71da1013/Chunk (2,2,1)_Frame8467d5d2-e124-4cc1-91da-61c8011938d3.asset using Guid(858f5a5cbde2372419379cfdf1f7af37) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '339417d7c779de7468ea3117a54a04d8') in 0.008415 seconds
+  Import took 0.011064 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000299 seconds.
+  path: Assets/Prefabs/Towers/Voxel Towers Wife/Fire Heavy Tower/Fire_Standard_Turret 1.obj
+  artifactKey: Guid(aefcf0de3426dda48b7a85df76f37d9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Towers/Voxel Towers Wife/Fire Heavy Tower/Fire_Standard_Turret 1.obj using Guid(aefcf0de3426dda48b7a85df76f37d9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9128623d68c40ed67c0295ae58f5e210') in 0.018186 seconds
+  Import took 0.020836 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000282 seconds.
+  path: Assets/Prefabs/Towers/Voxel Towers Wife/Fire Tall Tower/Fire_Tall_Base.obj
+  artifactKey: Guid(8932efc7e189f6c478318c383e9bf9ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Towers/Voxel Towers Wife/Fire Tall Tower/Fire_Tall_Base.obj using Guid(8932efc7e189f6c478318c383e9bf9ed) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4f1b9f3a0007aba249c7b2a3193d0c81') in 0.024869 seconds
+  Import took 0.027526 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 120.828009 seconds.
+  path: Assets/Assets.index
+  artifactKey: Guid(59a28e7741dc3384ab33ec303678a574) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets.index using Guid(59a28e7741dc3384ab33ec303678a574) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '984a2e804b6858f3d72a1b319e33ba4a') in 0.042417 seconds
+  Import took 0.046165 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002225 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.14 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.406 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.73 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1706 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 101.0 MB.
+System memory in use after: 101.1 MB.
+
+Unloading 24 unused Assets to reduce memory usage. Loaded Objects now: 2247.
+Total: 3.440100 ms (FindLiveObjects: 1.109300 ms CreateObjectMapping: 0.156600 ms MarkObjects: 2.142300 ms  DeleteObjects: 0.028000 ms)
 
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file
