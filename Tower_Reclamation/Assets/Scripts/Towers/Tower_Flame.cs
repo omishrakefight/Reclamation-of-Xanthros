@@ -216,7 +216,7 @@ public class Tower_Flame : Tower {
         if (preferedEnemyBody != null && preferedEnemyBody != targetEnemyBody)
         {
             float distanceToPreferedEnemy = Vector3.Distance(preferedEnemyBody.gameObject.transform.position, gameObject.transform.position);
-            if (distanceToPreferedEnemy <= attackRange && targetEnemyBody.isTargetable)
+            if (distanceToPreferedEnemy <= attackRange && preferedEnemyBody.isTargetable)
             {
                 print(preferedEnemyBody.gameObject.name);
                 targetEnemyBody = preferedEnemyBody;
@@ -224,7 +224,7 @@ public class Tower_Flame : Tower {
             }
         }
 
-        if (targetEnemy)
+        if (targetEnemy && targetEnemyBody.isTargetable)
         {
             objectToPan.LookAt(targetEnemy.position);
             FireAtEnemy();

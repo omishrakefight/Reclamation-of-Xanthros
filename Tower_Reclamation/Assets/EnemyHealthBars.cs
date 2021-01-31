@@ -31,4 +31,8 @@ public class EnemyHealthBars : MonoBehaviour {
     {
         burnTimeBar.fillAmount = burnTimePercent;
     }
+    public float GetBurnTimePercent()
+    {
+        return burnTimeBar.fillAmount;
+    }
 }

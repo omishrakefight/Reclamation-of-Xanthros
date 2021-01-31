@@ -6,6 +6,8 @@ using UnityEngine.UI;
 public class PreferedEnemyPanel : MonoBehaviour {
 
     [SerializeField] Image health;
+    [SerializeField] Image burnTimer
+        ;
     [SerializeField] Text enemyName;
     //[SerializeField] Image enemyPicature;
     public float maxEnemyHP = 0;
@@ -22,6 +24,7 @@ public class PreferedEnemyPanel : MonoBehaviour {
         if ((targetEnemy != null))
         {
             health.fillAmount = targetEnemy.getHPPercent();
+            burnTimer.fillAmount = targetEnemy.getBurnPercent();
 
         } else
         {

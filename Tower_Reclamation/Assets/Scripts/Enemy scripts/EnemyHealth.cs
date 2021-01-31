@@ -83,6 +83,11 @@ public abstract class EnemyHealth : MonoBehaviour {
         //print("Amount of enemies before me = " + amountPreAdd + "  |||  Enemies after = " + EnemySpawner.EnemyAliveList.Count.ToString());
     }
 
+    public float getBurnPercent()
+    {
+        return healthBars.GetBurnTimePercent();
+    }
+
     public void IsBoss()
     {
         isBoss = true;
