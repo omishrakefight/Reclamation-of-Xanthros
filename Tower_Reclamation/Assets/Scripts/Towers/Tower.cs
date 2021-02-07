@@ -51,7 +51,7 @@ public abstract class Tower : MonoBehaviour {
     public bool canHeavyShelling = false;
     public bool canTowerEngineer = false;
 
-    protected bool testingTowerUpgrades = true;
+    protected bool testingTowerUpgrades = false;
 
     // Use this for initialization
     // Buff info
