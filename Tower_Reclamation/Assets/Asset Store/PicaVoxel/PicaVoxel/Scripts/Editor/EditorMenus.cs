@@ -53,6 +53,11 @@ namespace PicaVoxel
             {
                 newObject.name = "PicaVoxel Volume";
                 newObject.GetComponent<Volume>().Material = EditorUtility.PicaVoxelDiffuseMaterial;
+
+                newObject.GetComponent<Volume>().XSize = 32;
+                newObject.GetComponent<Volume>().YSize = 32;
+                newObject.GetComponent<Volume>().ZSize = 32;
+
                 newObject.GetComponent<Volume>().GenerateBasic(FillMode.AllVoxels);
                 Selection.activeObject = newObject;
                 Undo.RegisterCreatedObjectUndo(newObject, "Create PicaVoxel Volume");
@@ -177,25 +182,25 @@ namespace PicaVoxel
 
 
 
-        //[MenuItem(MENU_GAMEOBJECT_ROOT + "Import VXS (TEMPORARY)", false, 14)]
-        //private static void DoImportVXS()
-        //{
-        //    var newObject =
-        //        Editor.Instantiate(EditorUtility.VoxelVolumePrefab, Vector3.zero, Quaternion.identity) as GameObject;
-        //    if (newObject != null)
-        //    {
-        //        newObject.name = "Imported VXS";
-        //        newObject.GetComponent<Volume>().Material = EditorUtility.PicaVoxelDiffuseMaterial;
-        //        newObject.GetComponent<Volume>().GenerateBasic(FillMode.AllVoxels);
-        //        Volume voxelVolume = newObject.GetComponent<Volume>();
-
-        //        VXSImporter.LoadSprite(UnityEditor.EditorUtility.OpenFilePanel("Import VXS", "", "vxs"), voxelVolume);
-
-
-
-        //    }
-        //    else Debug.LogError("PicaVoxel: Could not instantiate PicaVoxel Volume!");
-        //}
+//        [MenuItem(MENU_GAMEOBJECT_ROOT + "Import VXS (TEMPORARY)", false, 14)]
+//        private static void DoImportVXS()
+//        {
+//            var newObject =
+//                Editor.Instantiate(EditorUtility.VoxelVolumePrefab, Vector3.zero, Quaternion.identity) as GameObject;
+//            if (newObject != null)
+//            {
+//                newObject.name = "Imported VXS";
+//                newObject.GetComponent<Volume>().Material = EditorUtility.PicaVoxelDiffuseMaterial;
+//                newObject.GetComponent<Volume>().GenerateBasic(FillMode.AllVoxels);
+//                Volume voxelVolume = newObject.GetComponent<Volume>();
+//
+//                VXSImporter.LoadSprite(UnityEditor.EditorUtility.OpenFilePanel("Import VXS", "", "vxs"), voxelVolume);
+//
+//
+//
+//            }
+//            else Debug.LogError("PicaVoxel: Could not instantiate PicaVoxel Volume!");
+//        }
 
         //[MenuItem(MENU_GAMEOBJECT_ROOT + "Convert 5-byte to 6-byte voxels (TEMPORARY)", false, 14)]
         //private static void ConvertBytes()

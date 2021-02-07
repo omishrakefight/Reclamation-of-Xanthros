@@ -195,7 +195,7 @@ namespace Ionic.Zlib
         /// <summary>
         /// Create a ZlibCodec that either compresses or decompresses.
         /// </summary>
-        /// <param buttonName="mode">
+        /// <param name="mode">
         /// Indicates whether the codec should compress (deflate) or decompress (inflate).
         /// </param>
         public ZlibCodec(CompressionMode mode)
@@ -240,7 +240,7 @@ namespace Ionic.Zlib
         /// want to specify false.
         /// </remarks>
         ///
-        /// <param buttonName="expectRfc1950Header">whether to expect an RFC1950 header byte
+        /// <param name="expectRfc1950Header">whether to expect an RFC1950 header byte
         /// pair when reading the stream of data to be inflated.</param>
         ///
         /// <returns>Z_OK if everything goes well.</returns>
@@ -252,7 +252,7 @@ namespace Ionic.Zlib
         /// <summary>
         /// Initialize the ZlibCodec for inflation, with the specified number of window bits. 
         /// </summary>
-        /// <param buttonName="windowBits">The number of window bits to use. If you need to ask what that is, 
+        /// <param name="windowBits">The number of window bits to use. If you need to ask what that is, 
         /// then you shouldn't be calling this initializer.</param>
         /// <returns>Z_OK if all goes well.</returns>
         public int InitializeInflate(int windowBits)
@@ -275,9 +275,9 @@ namespace Ionic.Zlib
         /// false.
         /// </remarks>
         ///
-        /// <param buttonName="expectRfc1950Header">whether to expect an RFC1950 header byte pair when reading 
+        /// <param name="expectRfc1950Header">whether to expect an RFC1950 header byte pair when reading 
         /// the stream of data to be inflated.</param>
-        /// <param buttonName="windowBits">The number of window bits to use. If you need to ask what that is, 
+        /// <param name="windowBits">The number of window bits to use. If you need to ask what that is, 
         /// then you shouldn't be calling this initializer.</param>
         /// <returns>Z_OK if everything goes well.</returns>
         public int InitializeInflate(int windowBits, bool expectRfc1950Header)
@@ -349,7 +349,7 @@ namespace Ionic.Zlib
         ///
         /// </code>
         /// </example>
-        /// <param buttonName="flush">The flush to use when inflating.</param>
+        /// <param name="flush">The flush to use when inflating.</param>
         /// <returns>Z_OK if everything goes well.</returns>
         public int Inflate(FlushType flush)
         {
@@ -440,7 +440,7 @@ namespace Ionic.Zlib
         /// The codec will use the maximum window bits (15) and the specified
         /// CompressionLevel.  It will emit a ZLIB stream as it compresses.
         /// </remarks>
-        /// <param buttonName="level">The compression level for the codec.</param>
+        /// <param name="level">The compression level for the codec.</param>
         /// <returns>Z_OK if all goes well.</returns>
         public int InitializeDeflate(CompressionLevel level)
         {
@@ -460,8 +460,8 @@ namespace Ionic.Zlib
         /// header, as defined in <see href="http://www.ietf.org/rfc/rfc1950.txt">RFC
         /// 1950</see>, in the compressed stream.  
         /// </remarks>
-        /// <param buttonName="level">The compression level for the codec.</param>
-        /// <param buttonName="wantRfc1950Header">whether to emit an initial RFC1950 byte pair in the compressed stream.</param>
+        /// <param name="level">The compression level for the codec.</param>
+        /// <param name="wantRfc1950Header">whether to emit an initial RFC1950 byte pair in the compressed stream.</param>
         /// <returns>Z_OK if all goes well.</returns>
         public int InitializeDeflate(CompressionLevel level, bool wantRfc1950Header)
         {
@@ -477,8 +477,8 @@ namespace Ionic.Zlib
         /// <remarks>
         /// The codec will use the specified number of window bits and the specified CompressionLevel.
         /// </remarks>
-        /// <param buttonName="level">The compression level for the codec.</param>
-        /// <param buttonName="bits">the number of window bits to use.  If you don't know what this means, don't use this method.</param>
+        /// <param name="level">The compression level for the codec.</param>
+        /// <param name="bits">the number of window bits to use.  If you don't know what this means, don't use this method.</param>
         /// <returns>Z_OK if all goes well.</returns>
         public int InitializeDeflate(CompressionLevel level, int bits)
         {
@@ -493,9 +493,9 @@ namespace Ionic.Zlib
         /// governing whether to emit an RFC1950 header byte pair.
         /// </summary>
         ///
-        /// <param buttonName="level">The compression level for the codec.</param>
-        /// <param buttonName="wantRfc1950Header">whether to emit an initial RFC1950 byte pair in the compressed stream.</param>
-        /// <param buttonName="bits">the number of window bits to use.  If you don't know what this means, don't use this method.</param>
+        /// <param name="level">The compression level for the codec.</param>
+        /// <param name="wantRfc1950Header">whether to emit an initial RFC1950 byte pair in the compressed stream.</param>
+        /// <param name="bits">the number of window bits to use.  If you don't know what this means, don't use this method.</param>
         /// <returns>Z_OK if all goes well.</returns>
         public int InitializeDeflate(CompressionLevel level, int bits, bool wantRfc1950Header)
         {
@@ -576,7 +576,7 @@ namespace Ionic.Zlib
         /// }
         /// </code>
         /// </example>
-        /// <param buttonName="flush">whether to flush all data as you deflate. Generally you will want to 
+        /// <param name="flush">whether to flush all data as you deflate. Generally you will want to 
         /// use Z_NO_FLUSH here, in a series of calls to Deflate(), and then call EndDeflate() to 
         /// flush everything. 
         /// </param>
@@ -625,8 +625,8 @@ namespace Ionic.Zlib
         /// <summary>
         /// Set the CompressionStrategy and CompressionLevel for a deflation session.
         /// </summary>
-        /// <param buttonName="level">the level of compression to use.</param>
-        /// <param buttonName="strategy">the strategy to use for compression.</param>
+        /// <param name="level">the level of compression to use.</param>
+        /// <param name="strategy">the strategy to use for compression.</param>
         /// <returns>Z_OK if all goes well.</returns>
         public int SetDeflateParams(CompressionLevel level, CompressionStrategy strategy)
         {
@@ -639,7 +639,7 @@ namespace Ionic.Zlib
         /// <summary>
         /// Set the dictionary to be used for either Inflation or Deflation.
         /// </summary>
-        /// <param buttonName="dictionary">The dictionary bytes to use.</param>
+        /// <param name="dictionary">The dictionary bytes to use.</param>
         /// <returns>Z_OK if all goes well.</returns>
         public int SetDictionary(byte[] dictionary)
         {

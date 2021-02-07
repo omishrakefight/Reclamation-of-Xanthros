@@ -124,8 +124,8 @@ namespace Ionic.Zlib
         /// </code>
         /// </example>
         ///
-        /// <param buttonName="stream">The stream which will be read or written.</param>
-        /// <param buttonName="mode">Indicates whether the ZlibStream will compress or decompress.</param>
+        /// <param name="stream">The stream which will be read or written.</param>
+        /// <param name="mode">Indicates whether the ZlibStream will compress or decompress.</param>
         public ZlibStream(System.IO.Stream stream, CompressionMode mode)
             : this(stream, mode, CompressionLevel.Default, false)
         {
@@ -187,9 +187,9 @@ namespace Ionic.Zlib
         /// </code>
         /// </example>
         ///
-        /// <param buttonName="stream">The stream to be read or written while deflating or inflating.</param>
-        /// <param buttonName="mode">Indicates whether the ZlibStream will compress or decompress.</param>
-        /// <param buttonName="level">A tuning knob to trade speed for effectiveness.</param>
+        /// <param name="stream">The stream to be read or written while deflating or inflating.</param>
+        /// <param name="mode">Indicates whether the ZlibStream will compress or decompress.</param>
+        /// <param name="level">A tuning knob to trade speed for effectiveness.</param>
         public ZlibStream(System.IO.Stream stream, CompressionMode mode, CompressionLevel level)
             : this(stream, mode, level, false)
         {
@@ -214,7 +214,7 @@ namespace Ionic.Zlib
         ///   <c>Close()</c> is called on the stream, the captive stream is also
         ///   closed. In some cases this is not desired, for example if the stream is a
         ///   <see cref="System.IO.MemoryStream"/> that will be re-read after
-        ///   compression.  Specify true for the <paramref buttonName="leaveOpen"/> parameter to leave the stream
+        ///   compression.  Specify true for the <paramref name="leaveOpen"/> parameter to leave the stream
         ///   open.
         /// </para>
         ///
@@ -224,10 +224,10 @@ namespace Ionic.Zlib
         ///
         /// </remarks>
         ///
-        /// <param buttonName="stream">The stream which will be read or written. This is called the
+        /// <param name="stream">The stream which will be read or written. This is called the
         /// "captive" stream in other places in this documentation.</param>
-        /// <param buttonName="mode">Indicates whether the ZlibStream will compress or decompress.</param>
-        /// <param buttonName="leaveOpen">true if the application would like the stream to remain
+        /// <param name="mode">Indicates whether the ZlibStream will compress or decompress.</param>
+        /// <param name="leaveOpen">true if the application would like the stream to remain
         /// open after inflation/deflation.</param>
         public ZlibStream(System.IO.Stream stream, CompressionMode mode, bool leaveOpen)
             : this(stream, mode, CompressionLevel.Default, leaveOpen)
@@ -249,7 +249,7 @@ namespace Ionic.Zlib
         ///   stream is also closed. In some cases this is not desired, for example
         ///   if the stream is a <see cref="System.IO.MemoryStream"/> that will be
         ///   re-read after compression.  Specify true for the <paramref
-        ///   buttonName="leaveOpen"/> parameter to leave the stream open.
+        ///   name="leaveOpen"/> parameter to leave the stream open.
         /// </para>
         ///
         /// <para>
@@ -302,16 +302,16 @@ namespace Ionic.Zlib
         /// </code>
         /// </example>
         ///
-        /// <param buttonName="stream">The stream which will be read or written.</param>
+        /// <param name="stream">The stream which will be read or written.</param>
         ///
-        /// <param buttonName="mode">Indicates whether the ZlibStream will compress or decompress.</param>
+        /// <param name="mode">Indicates whether the ZlibStream will compress or decompress.</param>
         ///
-        /// <param buttonName="leaveOpen">
+        /// <param name="leaveOpen">
         /// true if the application would like the stream to remain open after
         /// inflation/deflation.
         /// </param>
         ///
-        /// <param buttonName="level">
+        /// <param name="level">
         /// A tuning knob to trade speed for effectiveness. This parameter is
         /// effective only when mode is <c>CompressionMode.Compress</c>.
         /// </param>
@@ -406,7 +406,7 @@ namespace Ionic.Zlib
         ///     be referenced or disposed.
         ///   </para>
         /// </remarks>
-        /// <param buttonName="disposing">
+        /// <param name="disposing">
         ///   indicates whether the Dispose method was invoked by user code.
         /// </param>
         protected override void Dispose(bool disposing)
@@ -534,13 +534,13 @@ namespace Ionic.Zlib
         ///
         /// </remarks>
         ///
-        /// <param buttonName="buffer">
+        /// <param name="buffer">
         /// The buffer into which the read data should be placed.</param>
         ///
-        /// <param buttonName="offset">
+        /// <param name="offset">
         /// the offset within that data array to put the first byte read.</param>
         ///
-        /// <param buttonName="count">the number of bytes to read.</param>
+        /// <param name="count">the number of bytes to read.</param>
         ///
         /// <returns>the number of bytes read</returns>
         public override int Read(byte[] buffer, int offset, int count)
@@ -552,11 +552,11 @@ namespace Ionic.Zlib
         /// <summary>
         /// Calling this method always throws a <see cref="NotSupportedException"/>.
         /// </summary>
-        /// <param buttonName="offset">
+        /// <param name="offset">
         ///   The offset to seek to....
         ///   IF THIS METHOD ACTUALLY DID ANYTHING.
         /// </param>
-        /// <param buttonName="origin">
+        /// <param name="origin">
         ///   The reference specifying how to apply the offset....  IF
         ///   THIS METHOD ACTUALLY DID ANYTHING.
         /// </param>
@@ -570,7 +570,7 @@ namespace Ionic.Zlib
         /// <summary>
         /// Calling this method always throws a <see cref="NotSupportedException"/>.
         /// </summary>
-        /// <param buttonName="value">
+        /// <param name="value">
         ///   The new value for the stream length....  IF
         ///   THIS METHOD ACTUALLY DID ANYTHING.
         /// </param>
@@ -602,9 +602,9 @@ namespace Ionic.Zlib
         ///   A <c>ZlibStream</c> can be used for <c>Read()</c> or <c>Write()</c>, but not both.
         /// </para>
         /// </remarks>
-        /// <param buttonName="buffer">The buffer holding data to write to the stream.</param>
-        /// <param buttonName="offset">the offset within that data array to find the first byte to write.</param>
-        /// <param buttonName="count">the number of bytes to write.</param>
+        /// <param name="buffer">The buffer holding data to write to the stream.</param>
+        /// <param name="offset">the offset within that data array to find the first byte to write.</param>
+        /// <param name="count">the number of bytes to write.</param>
         public override void Write(byte[] buffer, int offset, int count)
         {
                 if (_disposed) throw new ObjectDisposedException("ZlibStream");
@@ -625,7 +625,7 @@ namespace Ionic.Zlib
         /// <seealso cref="ZlibStream.CompressBuffer(byte[])"/>
         /// <seealso cref="GZipStream.CompressString(string)"/>
         ///
-        /// <param buttonName="s">
+        /// <param name="s">
         ///   A string to compress.  The string will first be encoded
         ///   using UTF8, then compressed.
         /// </param>
@@ -654,7 +654,7 @@ namespace Ionic.Zlib
         /// <seealso cref="ZlibStream.CompressString(string)"/>
         /// <seealso cref="ZlibStream.UncompressBuffer(byte[])"/>
         ///
-        /// <param buttonName="b">
+        /// <param name="b">
         /// A buffer to compress.
         /// </param>
         ///
@@ -679,7 +679,7 @@ namespace Ionic.Zlib
         /// <seealso cref="ZlibStream.CompressString(String)"/>
         /// <seealso cref="ZlibStream.UncompressBuffer(byte[])"/>
         ///
-        /// <param buttonName="compressed">
+        /// <param name="compressed">
         ///   A buffer containing ZLIB-compressed data.
         /// </param>
         ///
@@ -703,7 +703,7 @@ namespace Ionic.Zlib
         /// <seealso cref="ZlibStream.CompressBuffer(byte[])"/>
         /// <seealso cref="ZlibStream.UncompressString(byte[])"/>
         ///
-        /// <param buttonName="compressed">
+        /// <param name="compressed">
         ///   A buffer containing ZLIB-compressed data.
         /// </param>
         ///

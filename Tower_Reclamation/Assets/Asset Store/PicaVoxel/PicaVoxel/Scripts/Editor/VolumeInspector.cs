@@ -6,6 +6,9 @@ using PicaVoxel;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.Rendering;
+using UnityEngine.SceneManagement;
+using UnityEditor.Experimental.SceneManagement;
+using UnityEditor.SceneManagement;
 
 namespace PicaVoxel
 {
@@ -16,8 +19,16 @@ namespace PicaVoxel
 
         public override void OnInspectorGUI()
         {
+            var isInStage = (prefabStage != null && prefabStage.IsPartOfPrefabContents(voxelObject.gameObject)); 
+
             serializedObject.Update();
 
+            if (PrefabUtility.IsPartOfAnyPrefab(voxelObject) && !isInStage)
+            {
+                EditorGUILayout.HelpBox("Open the prefab scene to edit this PicaVoxel volume.", MessageType.Info);
+                return;
+            }
+            
             GUIStyle foldoutStyle = EditorStyles.foldout;
             foldoutStyle.fontStyle = FontStyle.Bold;
 
@@ -38,12 +49,16 @@ namespace PicaVoxel
 
                         voxelObject.UpdateChunks(true);
 
-
+                        if (isInStage)
+                        {
+                            EditorSceneManager.MarkSceneDirty(prefabStage.scene); 
+                        }    
 
                         SceneView.RepaintAll();
                     }
                     if (voxelObject.IsEnabledForEditing)
                     {
+                        var oldbgcol = GUI.backgroundColor;
                         GUI.backgroundColor = (EditorGUIUtility.isProSkin ? Color.white : Color.grey);
                         GUILayout.BeginHorizontal(new GUIStyle() { stretchWidth = true, alignment = TextAnchor.MiddleCenter });
                         GUILayout.FlexibleSpace();
@@ -58,6 +73,7 @@ namespace PicaVoxel
                         {
                             buttonJustClicked = true;
                             voxelObject.AddFrame(voxelObject.CurrentFrame);
+                            if (isInStage) { EditorSceneManager.MarkSceneDirty(prefabStage.scene); }    
                         }
                         if (GUILayout.Button(new GUIContent(EditorUtility.Buttons["pvButton_DeleteFrame"], "Delete frame"),
                             new GUIStyle(GUI.skin.button)
@@ -68,6 +84,7 @@ namespace PicaVoxel
                         {
                             buttonJustClicked = true;
                             voxelObject.DeleteFrame();
+                            if (isInStage) { EditorSceneManager.MarkSceneDirty(prefabStage.scene); }    
                         }
                         if (GUILayout.Button(new GUIContent(EditorUtility.Buttons["pvButton_MoveLeft"], "Move frame left"),
                             new GUIStyle(GUI.skin.button)
@@ -78,6 +95,7 @@ namespace PicaVoxel
                         {
                             buttonJustClicked = true;
                             voxelObject.MoveFrameLeft();
+                            if (isInStage) { EditorSceneManager.MarkSceneDirty(prefabStage.scene); }    
                         }
                         if (GUILayout.Button(new GUIContent(EditorUtility.Buttons["pvButton_PrevFrame"], "Previous frame"),
                             new GUIStyle(GUI.skin.button)
@@ -88,6 +106,7 @@ namespace PicaVoxel
                         {
                             buttonJustClicked = true;
                             voxelObject.PrevFrame();
+                            if (isInStage) { EditorSceneManager.MarkSceneDirty(prefabStage.scene); }    
                         }
                         GUILayout.Label(voxelObject.CurrentFrame + 1 + "/" + voxelObject.NumFrames,
                             new GUIStyle(GUI.skin.label)
@@ -107,6 +126,7 @@ namespace PicaVoxel
                         {
                             buttonJustClicked = true;
                             voxelObject.NextFrame();
+                            if (isInStage) { EditorSceneManager.MarkSceneDirty(prefabStage.scene); }    
                         }
                         if (GUILayout.Button(new GUIContent(EditorUtility.Buttons["pvButton_MoveRight"], "Move frame right"),
                             new GUIStyle(GUI.skin.button)
@@ -117,6 +137,7 @@ namespace PicaVoxel
                         {
                             buttonJustClicked = true;
                             voxelObject.MoveFrameRight();
+                            if (isInStage) { EditorSceneManager.MarkSceneDirty(prefabStage.scene); }    
                         }
                         if (GUILayout.Button(new GUIContent(EditorUtility.Buttons["pvButton_AddFrameNext"], "Add frame after"),
                             new GUIStyle(GUI.skin.button)
@@ -127,6 +148,7 @@ namespace PicaVoxel
                         {
                             buttonJustClicked = true;
                             voxelObject.AddFrame(voxelObject.CurrentFrame + 1);
+                            if (isInStage) { EditorSceneManager.MarkSceneDirty(prefabStage.scene); }    
                         }
                         if (GUILayout.Button(new GUIContent(EditorUtility.Buttons["pvButton_CopyFrame"], "Copy frame to clipboard"),
                             new GUIStyle(GUI.skin.button)
@@ -140,6 +162,7 @@ namespace PicaVoxel
                             Array.Copy(voxelObject.Frames[voxelObject.CurrentFrame].Voxels, EditorPersistence.AnimFrameClipboard,
                                 voxelObject.Frames[voxelObject.CurrentFrame].Voxels.Length);
                             EditorPersistence.AnimFrameClipboardSize = new PicaVoxelPoint(voxelObject.XSize, voxelObject.YSize, voxelObject.ZSize);
+                            if (isInStage) { EditorSceneManager.MarkSceneDirty(prefabStage.scene); }    
                         }
 
                         if (
@@ -166,8 +189,10 @@ namespace PicaVoxel
                                     }
                             voxelObject.SaveForSerialize();
                             voxelObject.UpdateAllChunks();
+                            if (isInStage) { EditorSceneManager.MarkSceneDirty(prefabStage.scene); }    
                         }
 
+                        GUI.backgroundColor = oldbgcol;
                         GUILayout.EndHorizontal();
                         GUILayout.FlexibleSpace();
 
@@ -197,15 +222,16 @@ namespace PicaVoxel
 
             runtimeOnlyMesh.boolValue = EditorGUILayout.ToggleLeft(new GUIContent(" Runtime-Only Mesh"),
                 runtimeOnlyMesh.boolValue);
-            if (runtimeOnlyMesh.boolValue != voxelObject.RuntimOnlyMesh)
+            if (runtimeOnlyMesh.boolValue != voxelObject.RuntimeOnlyMesh)
             {
                 foreach (var o in serializedObject.targetObjects)
                 {
                     ((Volume) o).IsEnabledForEditing = false;
-                    ((Volume) o).RuntimOnlyMesh = runtimeOnlyMesh.boolValue;
+                    ((Volume) o).RuntimeOnlyMesh = runtimeOnlyMesh.boolValue;
                     ((Volume) o).CreateChunks();
                     ((Volume) o).UpdateAllChunks();
                 }
+                if (isInStage) { EditorSceneManager.MarkSceneDirty(prefabStage.scene); }   
             }
 
             EditorGUILayout.Space();
@@ -224,6 +250,7 @@ namespace PicaVoxel
                     ((Volume) o).VoxelSize = voxelSize;
                     ((Volume) o).CreateChunks();
                 }
+                if (isInStage) { EditorSceneManager.MarkSceneDirty(prefabStage.scene); }    
             }
 
             float overlap = EditorGUILayout.FloatField("Face Overlap:", overlapAmountProperty.floatValue);
@@ -236,6 +263,7 @@ namespace PicaVoxel
                     ((Volume) o).OverlapAmount = overlapAmount;
                     ((Volume) o).CreateChunks();
                 }
+                if (isInStage) { EditorSceneManager.MarkSceneDirty(prefabStage.scene); }    
             }
 
             if (serializedObject.targetObjects.Length < 2 && !voxelObject.IsEnabledForEditing)
@@ -253,14 +281,17 @@ namespace PicaVoxel
                 if (GUILayout.Button("Rotate X"))
                 {
                     voxelObject.RotateX();
+                    if (isInStage) { EditorSceneManager.MarkSceneDirty(prefabStage.scene); }    
                 }
                 if (GUILayout.Button("Rotate Y"))
                 {
                     voxelObject.RotateY();
+                    if (isInStage) { EditorSceneManager.MarkSceneDirty(prefabStage.scene); }    
                 }
                 if (GUILayout.Button("Rotate Z"))
                 {
                     voxelObject.RotateZ();
+                    if (isInStage) { EditorSceneManager.MarkSceneDirty(prefabStage.scene); }    
                 }
                 GUILayout.EndHorizontal();
             }
@@ -276,6 +307,7 @@ namespace PicaVoxel
                     ((Volume) o).Pivot = pivot;
                     ((Volume) o).UpdatePivot();
                 }
+                if (isInStage) { EditorSceneManager.MarkSceneDirty(prefabStage.scene); }    
             }
             if (GUILayout.Button("Set to Center"))
             {
@@ -286,6 +318,7 @@ namespace PicaVoxel
                     ((Volume) o).Pivot = pivot;
                     ((Volume) o).UpdatePivot();
                 }
+                if (isInStage) { EditorSceneManager.MarkSceneDirty(prefabStage.scene); }    
             }
 
             EditorGUILayout.Space();
@@ -363,6 +396,7 @@ namespace PicaVoxel
                         ((Volume) o).ChunkLayer = chunkLayer.intValue;
                         ((Volume) o).CreateChunks();
                     }
+                    if (isInStage) { EditorSceneManager.MarkSceneDirty(prefabStage.scene); }    
                 }
 
                 EditorUtility.SkinnedLabel("Mesh Collider");
@@ -374,6 +408,7 @@ namespace PicaVoxel
                     {
                         ((Volume) o).ChangeCollisionMode((CollisionMode) collisionMode.enumValueIndex);
                     }
+                    if (isInStage) { EditorSceneManager.MarkSceneDirty(prefabStage.scene); }    
                 }
                 if (collisionMode.enumValueIndex > 0)
                 {
@@ -386,6 +421,7 @@ namespace PicaVoxel
                             ((Volume) o).CollisionTrigger = collisionTrigger.boolValue;
                             ((Volume) o).CreateChunks();
                         }
+                        if (isInStage) { EditorSceneManager.MarkSceneDirty(prefabStage.scene); }    
                     }
 
                     physicMaterial.objectReferenceValue = EditorGUILayout.ObjectField("Physic Material: ",
@@ -399,6 +435,7 @@ namespace PicaVoxel
                             ((Volume) o).PhysicMaterial = (PhysicMaterial) physicMaterial.objectReferenceValue;
                             ((Volume) o).CreateChunks();
                         }
+                        if (isInStage) { EditorSceneManager.MarkSceneDirty(prefabStage.scene); }    
                     }
 
                     separateColliderMesh.boolValue =
@@ -412,6 +449,7 @@ namespace PicaVoxel
                             ((Volume) o).GenerateMeshColliderSeparately = separateColliderMesh.boolValue;
                             ((Volume) o).CreateChunks();
                         }
+                        if (isInStage) { EditorSceneManager.MarkSceneDirty(prefabStage.scene); }    
                     }
 
                     if (separateColliderMesh.boolValue)
@@ -426,6 +464,7 @@ namespace PicaVoxel
                                 ((Volume) o).MeshColliderMeshingMode = (MeshingMode) colliderMeshingMode.enumValueIndex;
                                 ((Volume) o).CreateChunks();
                             }
+                            if (isInStage) { EditorSceneManager.MarkSceneDirty(prefabStage.scene); }    
                         }
                     }
                 }
@@ -442,6 +481,7 @@ namespace PicaVoxel
                         ((Volume) o).MeshingMode = (MeshingMode) meshingMode.enumValueIndex;
                         ((Volume) o).CreateChunks();
                     }
+                    if (isInStage) { EditorSceneManager.MarkSceneDirty(prefabStage.scene); }    
                 }
 
                 EditorUtility.SkinnedLabel("Mesh Compression");
@@ -455,6 +495,7 @@ namespace PicaVoxel
                         ((Volume) o).MeshCompression = (ModelImporterMeshCompression) meshCompression.enumValueIndex;
                         ((Volume) o).CreateChunks();
                     }
+                    if (isInStage) { EditorSceneManager.MarkSceneDirty(prefabStage.scene); }    
                 }
 
                 selfShadeInt.floatValue = EditorGUILayout.Slider("Self-Shading Intensity", selfShadeInt.floatValue, 0, 1);
@@ -465,6 +506,7 @@ namespace PicaVoxel
                         ((Volume) o).SelfShadingIntensity = selfShadeInt.floatValue;
                         ((Volume) o).UpdateAllChunks();
                     }
+                    if (isInStage) { EditorSceneManager.MarkSceneDirty(prefabStage.scene); }    
                 }
 
                 material.objectReferenceValue = EditorGUILayout.ObjectField("Material: ", material.objectReferenceValue,
@@ -477,6 +519,7 @@ namespace PicaVoxel
                         ((Volume) o).Material = (Material) material.objectReferenceValue;
                         ((Volume) o).CreateChunks();
                     }
+                    if (isInStage) { EditorSceneManager.MarkSceneDirty(prefabStage.scene); }    
                 }
 
                 castShadows.enumValueIndex =
@@ -489,6 +532,7 @@ namespace PicaVoxel
                         ((Volume) o).CastShadows = (ShadowCastingMode) castShadows.enumValueIndex;
                         ((Volume) o).CreateChunks();
                     }
+                    if (isInStage) { EditorSceneManager.MarkSceneDirty(prefabStage.scene); }    
                 }
 
                 receiveShadows.boolValue = EditorGUILayout.ToggleLeft(new GUIContent(" Receive Shadows"),
@@ -500,6 +544,7 @@ namespace PicaVoxel
                         ((Volume) o).ReceiveShadows = receiveShadows.boolValue;
                         ((Volume) o).CreateChunks();
                     }
+                    if (isInStage) { EditorSceneManager.MarkSceneDirty(prefabStage.scene); }    
                 }
             }
 
@@ -538,6 +583,7 @@ namespace PicaVoxel
                     }
 
                 }
+                if (isInStage) { EditorSceneManager.MarkSceneDirty(prefabStage.scene); }    
             }
 
             EditorGUILayout.Space();
@@ -548,6 +594,7 @@ namespace PicaVoxel
                     ((Volume) o).CreateChunks();
                     ((Volume)o).SaveForSerialize();
                 }
+                if (isInStage) { EditorSceneManager.MarkSceneDirty(prefabStage.scene); }    
             }
 
             if (voxelObject.ImportedFrom != Importer.None && !string.IsNullOrEmpty(voxelObject.ImportedFile) &&
@@ -581,7 +628,39 @@ namespace PicaVoxel
                             }
                         }
                     }
+                    if (isInStage) { EditorSceneManager.MarkSceneDirty(prefabStage.scene); }  
                 }
+                  
+            }
+
+            if (serializedObject.targetObjects.Length < 2 && !voxelObject.IsEnabledForEditing)
+            {
+                EditorGUILayout.Space();
+                GUILayout.BeginHorizontal();
+                if (GUILayout.Button("Export QB"))
+                {
+                    QubicleExporter.QubicleExport(voxelObject);
+                }
+                //if (GUILayout.Button("Export VOX"))
+                //{
+
+                //}
+                GUILayout.EndHorizontal();
+            }
+
+            if (serializedObject.targetObjects.Length < 2 && !voxelObject.IsEnabledForEditing)
+            {
+                EditorGUILayout.Space();
+                GUILayout.BeginHorizontal();
+                if (GUILayout.Button("Export VOX"))
+                {
+                    MagicaExporter.MagicaExport(voxelObject);
+                }
+                //if (GUILayout.Button("Export VOX"))
+                //{
+
+                //}
+                GUILayout.EndHorizontal();
             }
 
             EditorGUILayout.Space();

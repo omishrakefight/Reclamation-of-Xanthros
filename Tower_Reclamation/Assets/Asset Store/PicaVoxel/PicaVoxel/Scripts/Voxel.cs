@@ -41,7 +41,7 @@ namespace PicaVoxel
         /// <summary>
         /// Deserialise this voxel from a byte array
         /// </summary>
-        /// <param buttonName="bytes">A byte array representing a single voxel</param>
+        /// <param name="bytes">A byte array representing a single voxel</param>
         public Voxel(byte[] bytes)
         {
             if (bytes.Length != BYTE_SIZE)

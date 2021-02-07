@@ -10,6 +10,8 @@
 
 using System.Collections.Generic;
 using System.IO;
+using UnityEditor.Experimental.SceneManagement;
+using UnityEditor.SceneManagement;
 using Object = UnityEngine.Object;
 #if UNITY_EDITOR
 using System;
@@ -59,6 +61,7 @@ namespace PicaVoxel
         private SerializedProperty receiveShadows;
         private SerializedProperty chunkLayer;
         private SerializedProperty collisionTrigger;
+        private SerializedProperty isEnabledForEditing;
 
         private float voxelSize;
         private float overlapAmount;
@@ -81,12 +84,17 @@ namespace PicaVoxel
 
         private bool buttonJustClicked = false;
 
+        private PrefabStage prefabStage;
+        
         private void OnEnable()
-        {
-
+        {   
             voxelObject = (Volume)target;
             if (voxelObject == null) return;
 
+            prefabStage = PrefabStageUtility.GetPrefabStage(voxelObject.gameObject);
+            var isInStage = (prefabStage != null && prefabStage.IsPartOfPrefabContents(voxelObject.gameObject)); 
+            
+            
             Undo.undoRedoPerformed += () => voxelObject.OnUndoRedo();
 
             voxelSizeProperty = serializedObject.FindProperty("VoxelSize");
@@ -105,7 +113,7 @@ namespace PicaVoxel
             selfShadeInt = serializedObject.FindProperty("SelfShadingIntensity");
 
             drawGrid = voxelObject.DrawGrid;
-            runtimeOnlyMesh = serializedObject.FindProperty("RuntimOnlyMesh");
+            runtimeOnlyMesh = serializedObject.FindProperty("RuntimeOnlyMesh");
 
             material = serializedObject.FindProperty("Material");
             physicMaterial = serializedObject.FindProperty("PhysicMaterial");
@@ -114,14 +122,16 @@ namespace PicaVoxel
             chunkLayer = serializedObject.FindProperty("ChunkLayer");
             collisionTrigger = serializedObject.FindProperty("CollisionTrigger");
 
-            if (voxelObject != null && !Application.isPlaying && PrefabUtility.GetPrefabType(voxelObject) != PrefabType.Prefab && PrefabUtility.GetPrefabType(voxelObject) != PrefabType.PrefabInstance)
+            isEnabledForEditing = serializedObject.FindProperty("IsEnabledForEditing");
+
+            if (voxelObject != null && !Application.isPlaying && !isInStage)
             {
                 string path = Path.Combine(Helper.GetMeshStorePath(), voxelObject.AssetGuid);
                 if (!Directory.Exists(path))
                     voxelObject.CreateChunks();
             }
 
-            if (!Application.isPlaying && voxelObject.gameObject.activeSelf && PrefabUtility.GetPrefabType(voxelObject) != PrefabType.Prefab && !voxelObject.RuntimOnlyMesh)
+            if (!Application.isPlaying && voxelObject.gameObject.activeSelf && !isInStage && !voxelObject.RuntimeOnlyMesh)
                 foreach (var frame in voxelObject.Frames)
                 {
                     if (frame.HasDeserialized) frame.UpdateChunks(true);
@@ -142,6 +152,11 @@ namespace PicaVoxel
 
         private void OnSceneGUI()
         {
+            if (PrefabUtility.IsPartOfAnyPrefab(voxelObject) && voxelObject.IsEnabledForEditing && prefabStage == null)
+            {
+                voxelObject.IsEnabledForEditing = false;
+            }
+
             voxelObject.GetCurrentFrame().UpdateTransformMatrix();
 
             if (Selection.Contains(voxelObject.gameObject))
@@ -702,6 +717,14 @@ namespace PicaVoxel
             //if (buttonJustClicked && e.type == EventType.MouseUp && e.button == 0)
             //    buttonJustClicked = false;
 
+            if (PrefabUtility.IsPartOfAnyPrefab(voxelObject) && voxelObject.IsEnabledForEditing && prefabStage == null)
+            {
+                voxelObject.IsEnabledForEditing = false;
+                return;
+            }
+
+            var isInStage = (prefabStage != null && prefabStage.IsPartOfPrefabContents(voxelObject.gameObject)); 
+            
             if (GUIUtility.hotControl == 0 && EditorGUIUtility.hotControl == 0 && GUI.GetNameOfFocusedControl() == "" && buttonJustClicked == false)
             {
 
@@ -714,7 +737,7 @@ namespace PicaVoxel
                 }
                 foreach (var frame in voxelObject.Frames)
                 {
-                    if (frame.HasDeserialized) frame.CreateChunks();
+                    if (frame.HasDeserialized && !isInStage) frame.CreateChunks();
                     frame.HasDeserialized = false;
                 }
 

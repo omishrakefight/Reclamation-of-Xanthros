@@ -12,7 +12,12 @@ using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
 using System.Collections;
-using ICSharpCode.SharpZipLib.GZip;
+using Unity.IO.Compression;
+#if UNITY_EDITOR
+using UnityEditor;
+using UnityEditor.Experimental.SceneManagement;
+using UnityEditor.SceneManagement;
+#endif
 
 namespace PicaVoxel
 {
@@ -59,7 +64,7 @@ namespace PicaVoxel
             if (!Application.isPlaying)
             {
                 GetChunkReferences();
-                if (chunks == null && (ParentVolume != null && !ParentVolume.RuntimOnlyMesh))
+                if (chunks == null && (ParentVolume != null && !ParentVolume.RuntimeOnlyMesh))
                     CreateChunks();
             }
         }
@@ -70,7 +75,7 @@ namespace PicaVoxel
             if (transform.parent != null) ParentVolume = transform.parent.GetComponent<Volume>();
             if (ParentVolume != null)
             {
-                if (ParentVolume.RuntimOnlyMesh)// || !Application.isPlaying)
+                if (ParentVolume.RuntimeOnlyMesh)// || !Application.isPlaying)
                     UpdateAllChunks();
             }
             transformMatrix = transform.worldToLocalMatrix;
@@ -102,7 +107,7 @@ namespace PicaVoxel
         /// <summary>
         /// Returns a voxel contained in this frame, at a given world position
         /// </summary>
-        /// <param buttonName="pos">The world position in the scene</param>
+        /// <param name="pos">The world position in the scene</param>
         /// <returns>A voxel if position is within this volume, otherwise null</returns>
         public Voxel? GetVoxelAtWorldPosition(Vector3 pos)
         {
@@ -122,9 +127,9 @@ namespace PicaVoxel
         /// <summary>
         /// Returns a voxel contained in this frame, at a given array position
         /// </summary>
-        /// <param buttonName="x">X array position</param>
-        /// <param buttonName="y">Y array position</param>
-        /// <param buttonName="z">Z array position</param>
+        /// <param name="x">X array position</param>
+        /// <param name="y">Y array position</param>
+        /// <param name="z">Z array position</param>
         /// <returns>A voxel if position is within the array, otherwise null</returns>
         public Voxel? GetVoxelAtArrayPosition(int x, int y, int z)
         {
@@ -136,8 +141,8 @@ namespace PicaVoxel
         /// <summary>
         /// Attempts to set a voxel within this frame, at a given world position, to the supplied voxel value
         /// </summary>
-        /// <param buttonName="pos">The world position in the scene</param>
-        /// <param buttonName="vox">The new voxel to set to</param>
+        /// <param name="pos">The world position in the scene</param>
+        /// <param name="vox">The new voxel to set to</param>
         public Vector3 SetVoxelAtWorldPosition(Vector3 pos, Voxel vox)
         {
             Vector3 localPos = transform.InverseTransformPoint(pos);
@@ -153,8 +158,8 @@ namespace PicaVoxel
         /// <summary>
         /// Attempts to set a voxel's state within this frame, at a given world position, to the supplied value
         /// </summary>
-        /// <param buttonName="pos">The world position in the scene</param>
-        /// <param buttonName="state">The new voxel state to set to</param>
+        /// <param name="pos">The world position in the scene</param>
+        /// <param name="state">The new voxel state to set to</param>
         public Vector3 SetVoxelStateAtWorldPosition(Vector3 pos, VoxelState state)
         {
             Vector3 localPos = transform.InverseTransformPoint(pos);
@@ -170,8 +175,8 @@ namespace PicaVoxel
         /// <summary>
         /// Attempts to set a voxel within this frame, at a specified array position
         /// </summary>
-        /// <param buttonName="pos">A PicaVoxelPoint location within the 3D array of voxels</param>
-        /// <param buttonName="vox">The new voxel to set to</param>
+        /// <param name="pos">A PicaVoxelPoint location within the 3D array of voxels</param>
+        /// <param name="vox">The new voxel to set to</param>
         public void SetVoxelAtArrayPosition(PicaVoxelPoint pos, Voxel vox)
         {
             SetVoxelAtArrayPosition(pos.X, pos.Y, pos.Z, vox);
@@ -180,10 +185,10 @@ namespace PicaVoxel
         /// <summary>
         /// Attempts to set a voxel within this frame, at a specified x,y,z array position
         /// </summary>
-        /// <param buttonName="x">X array position</param>
-        /// <param buttonName="y">Y array position</param>
-        /// <param buttonName="z">Z array position</param>
-        /// <param buttonName="vox">The new voxel to set to</param>
+        /// <param name="x">X array position</param>
+        /// <param name="y">Y array position</param>
+        /// <param name="z">Z array position</param>
+        /// <param name="vox">The new voxel to set to</param>
         public void SetVoxelAtArrayPosition(int x, int y, int z, Voxel vox)
         {
             if (x < 0 || y < 0 || z < 0 || x >= XSize || y >= YSize || z >= ZSize) return;
@@ -226,8 +231,8 @@ namespace PicaVoxel
         /// <summary>
         /// Attempts to set a voxel's state within this frame, at a specified array position
         /// </summary>
-        /// <param buttonName="pos">A PicaVoxelPoint location within the 3D array of voxels</param>
-        /// <param buttonName="state">The new state to set to</param>
+        /// <param name="pos">A PicaVoxelPoint location within the 3D array of voxels</param>
+        /// <param name="state">The new state to set to</param>
         public void SetVoxelStateAtArrayPosition(PicaVoxelPoint pos, VoxelState state)
         {
             SetVoxelStateAtArrayPosition(pos.X, pos.Y, pos.Z, state);
@@ -236,10 +241,10 @@ namespace PicaVoxel
         /// <summary>
         /// Attempts to set a voxel's state within this frame, at a specified x,y,z array position
         /// </summary>
-        /// <param buttonName="x">X array position</param>
-        /// <param buttonName="y">Y array position</param>
-        /// <param buttonName="z">Z array position</param>
-        /// <param buttonName="state">The new voxel state to set to</param>
+        /// <param name="x">X array position</param>
+        /// <param name="y">Y array position</param>
+        /// <param name="z">Z array position</param>
+        /// <param name="state">The new voxel state to set to</param>
         public void SetVoxelStateAtArrayPosition(int x, int y, int z, VoxelState state)
         {
             if (x < 0 || y < 0 || z < 0 || x >= XSize || y >= YSize || z >= ZSize) return;
@@ -269,7 +274,7 @@ namespace PicaVoxel
         /// <summary>
         /// Returns the local position of a voxel within this frame, at a specified world position
         /// </summary>
-        /// <param buttonName="pos">The world position in the scene</param>
+        /// <param name="pos">The world position in the scene</param>
         /// <returns>The local voxel position</returns>
         public Vector3 GetVoxelPosition(Vector3 scenePos)
         {
@@ -282,7 +287,7 @@ namespace PicaVoxel
         /// <summary>
         /// Returns the array position of a voxel within this frame, at a specified world position
         /// </summary>
-        /// <param buttonName="pos">The world position in the scene</param>
+        /// <param name="pos">The world position in the scene</param>
         /// <returns>The array position of the voxel</returns>
         public PicaVoxelPoint GetVoxelArrayPosition(Vector3 scenePos)
         {
@@ -295,9 +300,9 @@ namespace PicaVoxel
         /// <summary>
         /// Returns the world position of a voxel given its array positions
         /// </summary>
-        /// <param buttonName="x">The X position of the voxel in the array</param>
-        /// <param buttonName="y">The Y position of the voxel in the array</param>
-        /// <param buttonName="z">The Z position of the voxel in the array</param>
+        /// <param name="x">The X position of the voxel in the array</param>
+        /// <param name="y">The Y position of the voxel in the array</param>
+        /// <param name="z">The Z position of the voxel in the array</param>
         /// <returns>The world position of the center of the voxel</returns>
         public Vector3 GetVoxelWorldPosition(int x, int y, int z)
         {
@@ -353,7 +358,7 @@ namespace PicaVoxel
         /// <summary>
         /// Initialise this frame and copy the voxels from a source frame
         /// </summary>
-        /// <param buttonName="sourceFrame"></param>
+        /// <param name="sourceFrame"></param>
         public void GenerateNewFrame(Frame sourceFrame)
         {
             ParentVolume = transform.parent.GetComponent<Volume>();
@@ -414,13 +419,13 @@ namespace PicaVoxel
         /// <summary>
         /// Update only the chunks which have changed voxels
         /// </summary>
-        /// <param buttonName="immediate">If true, don't use threading to perform this update</param>
+        /// <param name="immediate">If true, don't use threading to perform this update</param>
         public void UpdateChunks(bool immediate)
         {
             if (chunksToUpdate.Count == 0) return;
 
             if (ParentVolume == null) return;
-            if (ParentVolume.RuntimOnlyMesh && !Application.isPlaying) return;
+            if (ParentVolume.RuntimeOnlyMesh && !Application.isPlaying) return;
 
             if (Voxels == null) return;
 
@@ -471,9 +476,9 @@ namespace PicaVoxel
         /// </summary>
         public void UpdateAllChunks()
         {
-            // Debug.Log("UpdateAllChunks " + ParentVolume.transform.buttonName);
+            // Debug.Log("UpdateAllChunks " + ParentVolume.transform.name);
             if (ParentVolume == null) return;
-            if (ParentVolume.RuntimOnlyMesh && !Application.isPlaying)
+            if (ParentVolume.RuntimeOnlyMesh && !Application.isPlaying)
             {
                 DestroyMeshColliders();
 
@@ -500,6 +505,8 @@ namespace PicaVoxel
                 {
                     for (int z = 0; z < (int)Mathf.Ceil((float)ZSize / ParentVolume.ZChunkSize); z++)
                     {
+                        
+                        
 #if UNITY_EDITOR
                         chunks[x, y, z].GenerateMesh(
                             EditingVoxels == null ? Voxels : EditingVoxels.Length > 0 ? EditingVoxels : Voxels,
@@ -518,6 +525,7 @@ namespace PicaVoxel
                             ParentVolume.MeshColliderMeshingMode, true,
                             ParentVolume.PaintMode);
 #else
+                         ParentVolume.GenerateMeshColliderSeparately = EditingVoxels != null;
                          chunks[x, y, z].GenerateMesh(EditingVoxels==null?Voxels:EditingVoxels.Length>0?EditingVoxels:Voxels,
                                 ParentVolume.VoxelSize, ParentVolume.OverlapAmount,
                                  x* ParentVolume.XChunkSize, y* ParentVolume.YChunkSize, z* ParentVolume.ZChunkSize,
@@ -546,6 +554,9 @@ namespace PicaVoxel
 #if UNITY_EDITOR
             if (!Application.isPlaying)
                 UnityEditor.EditorUtility.ClearProgressBar();
+            
+            var prefabStage = PrefabStageUtility.GetCurrentPrefabStage();
+            if (prefabStage != null) { EditorSceneManager.MarkSceneDirty(prefabStage.scene); }
 #endif
             transformMatrix = transform.worldToLocalMatrix;
         }
@@ -568,8 +579,8 @@ namespace PicaVoxel
         /// </summary>
         public void CreateChunks()
         {
-            //Debug.Log("CreateChunks " + ParentVolume.transform.buttonName);
-            if (ParentVolume.RuntimOnlyMesh && !Application.isPlaying) return;
+            //Debug.Log("CreateChunks " + ParentVolume.transform.name);
+            if (ParentVolume.RuntimeOnlyMesh && !Application.isPlaying) return;
             if (Voxels == null) return;
 
             DestroyMeshColliders();
@@ -610,6 +621,13 @@ namespace PicaVoxel
 			newChunk.isStatic = ParentVolume.gameObject.isStatic;
                         chunks[chunkX, chunkY, chunkZ] = newChunk.GetComponent<Chunk>();
 
+                        #if UNITY_EDITOR
+                        if (PrefabUtility.IsPartOfAnyPrefab(ParentVolume))
+                        {
+                            PrefabUtility.ApplyAddedGameObject(newChunk, PrefabUtility.GetPrefabAssetPathOfNearestInstanceRoot(ParentVolume), InteractionMode.AutomatedAction);
+                        }
+                        #endif
+                        
                         z += ParentVolume.ZChunkSize;
                         chunkZ++;
                     }
@@ -698,7 +716,7 @@ namespace PicaVoxel
 
         private void GetChunkReferences()
         {
-            if (ParentVolume.RuntimOnlyMesh && !Application.isPlaying) return;
+            if (ParentVolume.RuntimeOnlyMesh && !Application.isPlaying) return;
             //Debug.Log("Frame GetChunkReferences");
             chunks =
                 new Chunk[(int)Mathf.Ceil((float)XSize / ParentVolume.XChunkSize),
@@ -735,7 +753,7 @@ namespace PicaVoxel
         /// <summary>
         /// Scroll voxels along X axis
         /// </summary>
-        /// <param buttonName="amount">The amount of voxels to scroll by</param>
+        /// <param name="amount">The amount of voxels to scroll by</param>
         /// This shouldn't really be used at runtime
         public void ScrollX(int amount)
         {
@@ -762,7 +780,7 @@ namespace PicaVoxel
         /// <summary>
         /// Scroll voxels along Y axis
         /// </summary>
-        /// <param buttonName="amount">The amount of voxels to scroll by</param>
+        /// <param name="amount">The amount of voxels to scroll by</param>
         /// This shouldn't really be used at runtime
         public void ScrollY(int amount)
         {
@@ -789,7 +807,7 @@ namespace PicaVoxel
         /// <summary>
         /// Scroll voxels along Z axis
         /// </summary>
-        /// <param buttonName="amount">The amount of voxels to scroll by</param>
+        /// <param name="amount">The amount of voxels to scroll by</param>
         /// This shouldn't really be used at runtime
         public void ScrollZ(int amount)
         {
@@ -880,9 +898,9 @@ namespace PicaVoxel
             using (var ms = new MemoryStream())
             {
 
-                using (var gzs = new GZipOutputStream(ms))
+                using (var gzs = new GZipStream(ms, CompressionMode.Compress)) // GZipOutputStream(ms))
                 {
-                    gzs.SetLevel(1);
+                    //gzs.SetLevel(1);
                     gzs.Write(streambuff, 0, streambuff.Length);
                 }
 
@@ -890,6 +908,8 @@ namespace PicaVoxel
             }
 
             return returnArray;
+
+            //return streambuff;
         }
 
 
@@ -927,18 +947,19 @@ namespace PicaVoxel
 
         public void FromCompressedByteArray(byte[] compressed)
         {
+            //var streambuff = compressed;
             byte[] streambuff = new byte[XSize * YSize * ZSize * Voxel.BYTE_SIZE];
 
             using (var ms = new MemoryStream(compressed))
             {
 
-                using (var gzs = new GZipInputStream(ms))
+                using (var gzs = new GZipStream(ms, CompressionMode.Decompress))
                 {
                     gzs.Read(streambuff, 0, streambuff.Length);
                 }
             }
 
-          
+
             Voxels = new Voxel[XSize * YSize * ZSize];
 
             int o = 0;

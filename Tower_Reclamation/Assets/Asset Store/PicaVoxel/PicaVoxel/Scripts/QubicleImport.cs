@@ -15,6 +15,7 @@ using System.Collections.Generic;
 
 namespace PicaVoxel
 {
+    [SelectionBase]
     public class QubicleImport : MonoBehaviour
     {
         public string ImportedFile;

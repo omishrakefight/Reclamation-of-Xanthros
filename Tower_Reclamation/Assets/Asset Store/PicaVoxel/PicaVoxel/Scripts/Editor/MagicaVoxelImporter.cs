@@ -81,8 +81,7 @@ namespace PicaVoxel
             
 
             string magic = new string(stream.ReadChars(4));
-            //int version = 
-            stream.ReadInt32();
+            int version = stream.ReadInt32();
             
 
             // a MagicaVoxel .vox file starts with a 'magic' 4 character 'VOX ' identifier
@@ -96,13 +95,12 @@ namespace PicaVoxel
                     // each chunk has an ID, size and child chunks
                     char[] chunkId = stream.ReadChars(4);
                     int chunkSize = stream.ReadInt32();
-                    //int childChunks = 
-                    stream.ReadInt32();
+                    int childChunks = stream.ReadInt32();
                     string chunkName = new string(chunkId);
 
                     if (chunkName == "PACK")
                     {
-                        stream.ReadInt32();
+                        var p = stream.ReadInt32();
                         //stream.ReadBytes(chunkSize - 4 * 3);
                     }
                     else if (chunkName == "SIZE")
@@ -113,7 +111,7 @@ namespace PicaVoxel
 
                         //if (sizex > 32 || sizey > 32) subsample = true;
 
-                        stream.ReadBytes(chunkSize - 4 * 3);
+                        var what = stream.ReadBytes(chunkSize - 4 * 3);
                     }
                     else if (chunkName == "XYZI")
                     {
