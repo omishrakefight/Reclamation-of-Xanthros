@@ -144,3 +144,10 @@ public enum Enemies
     slimter = 20,
     healer = 21
 }
+
+public enum Biomes
+{
+    Ice = 0,
+    Volcanic = 1,
+    Forest = 2
+}

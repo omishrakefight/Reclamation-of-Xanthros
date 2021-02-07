@@ -73,7 +73,33 @@ public abstract class EnemyHealth : MonoBehaviour {
             healPerTick = healPerTick / 10f;
         }
         hasGold = true;
+        StartCoroutine(CheckBiomeModifier());
+        //CheckBiomeModifier();
         RegisterToEnemyList();
+    }
+
+    // make this a coroutine delayed start?
+    private IEnumerator CheckBiomeModifier()
+    {
+        yield return null;
+        switch (Singleton.biome)
+        {
+            case (int)Biomes.Ice:
+                //ice, currently start and no modifier.
+                break;
+                  
+            case (int)Biomes.Volcanic:
+                EnemyMovement movement = this.gameObject.GetComponentInChildren< EnemyMovement > ();
+                movement.enemySpeed += movement.enemySpeed * .1f;
+                movement.enemyBaseSpeed += movement.enemyBaseSpeed * .1f;
+                break;
+
+            case (int)Biomes.Forest:
+                hitPoints += (hitPoints * .1f);
+                hitPointsMax += (hitPointsMax * .1f);
+                break;
+        }
+        yield return null;
     }
 
     public void RegisterToEnemyList()

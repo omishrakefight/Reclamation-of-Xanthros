@@ -35,12 +35,12 @@ public sealed class Singleton : MonoBehaviour {
     public int towerThreeHeadType = -1;
     public string towerThreeName = "";
 
+    public static int biome = 0;
     static public Dictionary<string, float> towerDamages = new Dictionary<string, float>();
 
     protected Dropdown dropdown;
 
     public EnemyHealth preferedTargetEnemy = null;
-
 
     TowerSelecter towerSelector;
 
