@@ -13,7 +13,7 @@ using System.Collections;
 
 namespace PicaVoxel
 {
-    [AddComponentMenu("")]
+   // [AddComponentMenu("")]
     public class VoxelParticleSystem : MonoBehaviour
     {
         public static VoxelParticleSystem Instance;
@@ -48,6 +48,13 @@ namespace PicaVoxel
 
             System = GetComponent<ParticleSystem>();
             parts = new ParticleSystem.Particle[System.main.maxParticles];
+
+            for (int i = 0; i < System.main.maxParticles; i++)
+            {
+                System.Emit(1);
+            }
+            System.Clear();
+
         }
 
         // Update is called once per frame

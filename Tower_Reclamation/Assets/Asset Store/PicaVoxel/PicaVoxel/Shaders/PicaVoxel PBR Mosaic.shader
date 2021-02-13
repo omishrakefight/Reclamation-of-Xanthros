@@ -1,455 +1,101 @@
-// Shader created with Shader Forge v1.37 
-// Shader Forge (c) Neat Corporation / Joachim Holmer - http://www.acegikmo.com/shaderforge/
-// Note: Manually altering this data may prevent you from opening it in Shader Forge
-/*SF_DATA;ver:1.37;sub:START;pass:START;ps:flbk:,iptp:0,cusa:False,bamd:0,cgin:,lico:1,lgpr:1,limd:3,spmd:1,trmd:0,grmd:0,uamb:True,mssp:True,bkdf:True,hqlp:False,rprd:True,enco:False,rmgx:True,imps:True,rpth:0,vtps:0,hqsc:True,nrmq:1,nrsp:0,vomd:0,spxs:False,tesm:0,olmd:1,culm:0,bsrc:0,bdst:1,dpts:2,wrdp:True,dith:0,atcv:False,rfrpo:True,rfrpn:Refraction,coma:15,ufog:True,aust:True,igpj:False,qofs:0,qpre:1,rntp:1,fgom:False,fgoc:False,fgod:False,fgor:False,fgmd:0,fgcr:0.5,fgcg:0.5,fgcb:0.5,fgca:1,fgde:0.01,fgrn:0,fgrf:300,stcl:False,stva:128,stmr:255,stmw:255,stcp:6,stps:0,stfa:0,stfz:0,ofsf:0,ofsu:0,f2p0:False,fnsp:False,fnfb:False,fsmp:False;n:type:ShaderForge.SFN_Final,id:2865,x:32719,y:32712,varname:node_2865,prsc:2|diff-7997-OUT,spec-358-OUT,gloss-1813-OUT;n:type:ShaderForge.SFN_Slider,id:358,x:32615,y:33230,ptovrint:False,ptlb:Metallic,ptin:_Metallic,varname:node_358,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,min:0,cur:0,max:1;n:type:ShaderForge.SFN_Slider,id:1813,x:32570,y:33144,ptovrint:False,ptlb:Gloss,ptin:_Gloss,varname:_Metallic_copy,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,min:0,cur:0,max:1;n:type:ShaderForge.SFN_VertexColor,id:2630,x:31910,y:32492,varname:node_2630,prsc:2;n:type:ShaderForge.SFN_TexCoord,id:9085,x:31920,y:32764,varname:node_9085,prsc:2,uv:0,uaff:False;n:type:ShaderForge.SFN_Multiply,id:7997,x:32407,y:32530,varname:node_7997,prsc:2|A-2630-RGB,B-4617-OUT,C-3066-RGB;n:type:ShaderForge.SFN_If,id:8865,x:32194,y:32666,varname:node_8865,prsc:2|A-9085-U,B-5593-OUT,GT-9000-OUT,EQ-9000-OUT,LT-6298-OUT;n:type:ShaderForge.SFN_ValueProperty,id:9000,x:31923,y:33074,ptovrint:False,ptlb:Normal Brightness,ptin:_NormalBrightness,varname:node_9000,prsc:2,glob:False,taghide:True,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,v1:1;n:type:ShaderForge.SFN_If,id:7254,x:32279,y:32801,varname:node_7254,prsc:2|A-9085-V,B-5593-OUT,GT-9000-OUT,EQ-9000-OUT,LT-6298-OUT;n:type:ShaderForge.SFN_Multiply,id:7333,x:32418,y:32687,varname:node_7333,prsc:2|A-8865-OUT,B-7254-OUT;n:type:ShaderForge.SFN_If,id:8047,x:32320,y:33163,varname:node_8047,prsc:2|A-9085-V,B-6151-OUT,GT-6010-OUT,EQ-9000-OUT,LT-9000-OUT;n:type:ShaderForge.SFN_If,id:4165,x:32334,y:32982,varname:node_4165,prsc:2|A-9085-U,B-6151-OUT,GT-6010-OUT,EQ-9000-OUT,LT-9000-OUT;n:type:ShaderForge.SFN_Multiply,id:8957,x:32529,y:33117,varname:node_8957,prsc:2|A-4165-OUT,B-8047-OUT;n:type:ShaderForge.SFN_Multiply,id:4617,x:32570,y:32829,varname:node_4617,prsc:2|A-7333-OUT,B-8957-OUT;n:type:ShaderForge.SFN_OneMinus,id:6151,x:32117,y:33002,varname:node_6151,prsc:2|IN-5593-OUT;n:type:ShaderForge.SFN_OneMinus,id:6298,x:31940,y:33184,varname:node_6298,prsc:2|IN-6017-OUT;n:type:ShaderForge.SFN_Slider,id:6017,x:31872,y:33348,ptovrint:False,ptlb:Outline Intensity,ptin:_OutlineIntensity,varname:node_6017,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,min:0,cur:0.3540895,max:1;n:type:ShaderForge.SFN_Slider,id:5593,x:31831,y:32945,ptovrint:False,ptlb:Outline Size,ptin:_OutlineSize,varname:node_5593,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,min:0,cur:0.07264958,max:0.5;n:type:ShaderForge.SFN_Multiply,id:1842,x:32348,y:33314,varname:node_1842,prsc:2|A-6298-OUT,B-7737-OUT;n:type:ShaderForge.SFN_ValueProperty,id:7737,x:32189,y:33444,ptovrint:False,ptlb:3D Lightness,ptin:_3DLightness,varname:node_7737,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,v1:10;n:type:ShaderForge.SFN_Multiply,id:6656,x:32588,y:33336,varname:node_6656,prsc:2|A-1842-OUT,B-6017-OUT;n:type:ShaderForge.SFN_ConstantClamp,id:9081,x:32802,y:33366,varname:node_9081,prsc:2,min:1,max:50|IN-6656-OUT;n:type:ShaderForge.SFN_SwitchProperty,id:6010,x:32445,y:33444,ptovrint:False,ptlb:3D Look,ptin:_3DLook,varname:node_6010,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,on:True|A-6298-OUT,B-9081-OUT;n:type:ShaderForge.SFN_Color,id:3066,x:31920,y:32641,ptovrint:False,ptlb:Tint,ptin:_Tint,varname:node_3066,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,c1:1,c2:1,c3:1,c4:1;proporder:358-1813-9000-6017-5593-6010-7737-3066;pass:END;sub:END;*/
+// Made with Amplify Shader Editor
+// Available at the Unity Asset Store - http://u3d.as/y3X 
+Shader "PicaVoxel/PicaVoxel PBR Mosaic"
+{
+	Properties
+	{
+		_Tint("Tint", Color) = (0,0,0,0)
+		[HDR]_Metallic("Metallic", Range( 0 , 1)) = 0
+		_Smoothness("Smoothness", Range( 0 , 1)) = 0
+		_Emission("Emission", Float) = 0
+		_Normal("Normal", 2D) = "white" {}
+		[Toggle]_LinearColorspace("Linear Colorspace", Float) = 0
+		_TextureSample0("Texture Sample 0", 2D) = "white" {}
+		[HideInInspector] _texcoord( "", 2D ) = "white" {}
+		[HideInInspector] __dirty( "", Int ) = 1
+	}
 
-Shader "PicaVoxel/PicaVoxel PBR Mosaic" {
-    Properties {
-        _Metallic ("Metallic", Range(0, 1)) = 0
-        _Gloss ("Gloss", Range(0, 1)) = 0
-        [HideInInspector]_NormalBrightness ("Normal Brightness", Float ) = 1
-        _OutlineIntensity ("Outline Intensity", Range(0, 1)) = 0.3540895
-        _OutlineSize ("Outline Size", Range(0, 0.5)) = 0.07264958
-        [MaterialToggle] _3DLook ("3D Look", Float ) = 1
-        _3DLightness ("3D Lightness", Float ) = 10
-        _Tint ("Tint", Color) = (1,1,1,1)
-    }
-    SubShader {
-        Tags {
-            "RenderType"="Opaque"
-        }
-        Pass {
-            Name "FORWARD"
-            Tags {
-                "LightMode"="ForwardBase"
-            }
-            
-            
-            CGPROGRAM
-            #pragma vertex vert
-            #pragma fragment frag
-            #define UNITY_PASS_FORWARDBASE
-            #define SHOULD_SAMPLE_SH ( defined (LIGHTMAP_OFF) && defined(DYNAMICLIGHTMAP_OFF) )
-            #define _GLOSSYENV 1
-            #include "UnityCG.cginc"
-            #include "AutoLight.cginc"
-            #include "Lighting.cginc"
-            #include "UnityPBSLighting.cginc"
-            #include "UnityStandardBRDF.cginc"
-            #pragma multi_compile_fwdbase_fullshadows
-            #pragma multi_compile LIGHTMAP_OFF LIGHTMAP_ON
-            #pragma multi_compile DIRLIGHTMAP_OFF DIRLIGHTMAP_COMBINED DIRLIGHTMAP_SEPARATE
-            #pragma multi_compile DYNAMICLIGHTMAP_OFF DYNAMICLIGHTMAP_ON
-            #pragma multi_compile_fog
-            #pragma only_renderers d3d9 d3d11 glcore gles gles3 metal d3d11_9x xboxone ps4 psp2 n3ds wiiu 
-            #pragma target 3.0
-            uniform float _Metallic;
-            uniform float _Gloss;
-            uniform float _NormalBrightness;
-            uniform float _OutlineIntensity;
-            uniform float _OutlineSize;
-            uniform float _3DLightness;
-            uniform fixed _3DLook;
-            uniform float4 _Tint;
-            struct VertexInput {
-                float4 vertex : POSITION;
-                float3 normal : NORMAL;
-                float4 tangent : TANGENT;
-                float2 texcoord0 : TEXCOORD0;
-                float2 texcoord1 : TEXCOORD1;
-                float2 texcoord2 : TEXCOORD2;
-                float4 vertexColor : COLOR;
-            };
-            struct VertexOutput {
-                float4 pos : SV_POSITION;
-                float2 uv0 : TEXCOORD0;
-                float2 uv1 : TEXCOORD1;
-                float2 uv2 : TEXCOORD2;
-                float4 posWorld : TEXCOORD3;
-                float3 normalDir : TEXCOORD4;
-                float3 tangentDir : TEXCOORD5;
-                float3 bitangentDir : TEXCOORD6;
-                float4 vertexColor : COLOR;
-                LIGHTING_COORDS(7,8)
-                UNITY_FOG_COORDS(9)
-                #if defined(LIGHTMAP_ON) || defined(UNITY_SHOULD_SAMPLE_SH)
-                    float4 ambientOrLightmapUV : TEXCOORD10;
-                #endif
-            };
-            VertexOutput vert (VertexInput v) {
-                VertexOutput o = (VertexOutput)0;
-                o.uv0 = v.texcoord0;
-                o.uv1 = v.texcoord1;
-                o.uv2 = v.texcoord2;
-                o.vertexColor = v.vertexColor;
-                #ifdef LIGHTMAP_ON
-                    o.ambientOrLightmapUV.xy = v.texcoord1.xy * unity_LightmapST.xy + unity_LightmapST.zw;
-                    o.ambientOrLightmapUV.zw = 0;
-                #elif UNITY_SHOULD_SAMPLE_SH
-                #endif
-                #ifdef DYNAMICLIGHTMAP_ON
-                    o.ambientOrLightmapUV.zw = v.texcoord2.xy * unity_DynamicLightmapST.xy + unity_DynamicLightmapST.zw;
-                #endif
-                o.normalDir = UnityObjectToWorldNormal(v.normal);
-                o.tangentDir = normalize( mul( unity_ObjectToWorld, float4( v.tangent.xyz, 0.0 ) ).xyz );
-                o.bitangentDir = normalize(cross(o.normalDir, o.tangentDir) * v.tangent.w);
-                o.posWorld = mul(unity_ObjectToWorld, v.vertex);
-                float3 lightColor = _LightColor0.rgb;
-                o.pos = UnityObjectToClipPos( v.vertex );
-                UNITY_TRANSFER_FOG(o,o.pos);
-                TRANSFER_VERTEX_TO_FRAGMENT(o)
-                return o;
-            }
-            float4 frag(VertexOutput i) : COLOR {
-                i.normalDir = normalize(i.normalDir);
-                float3x3 tangentTransform = float3x3( i.tangentDir, i.bitangentDir, i.normalDir);
-                float3 viewDirection = normalize(_WorldSpaceCameraPos.xyz - i.posWorld.xyz);
-                float3 normalDirection = i.normalDir;
-                float3 viewReflectDirection = reflect( -viewDirection, normalDirection );
-                float3 lightDirection = normalize(_WorldSpaceLightPos0.xyz);
-                float3 lightColor = _LightColor0.rgb;
-                float3 halfDirection = normalize(viewDirection+lightDirection);
-////// Lighting:
-                float attenuation = LIGHT_ATTENUATION(i);
-                float3 attenColor = attenuation * _LightColor0.xyz;
-                float Pi = 3.141592654;
-                float InvPi = 0.31830988618;
-///////// Gloss:
-                float gloss = _Gloss;
-                float perceptualRoughness = 1.0 - _Gloss;
-                float roughness = perceptualRoughness * perceptualRoughness;
-                float specPow = exp2( gloss * 10.0 + 1.0 );
-/////// GI Data:
-                UnityLight light;
-                #ifdef LIGHTMAP_OFF
-                    light.color = lightColor;
-                    light.dir = lightDirection;
-                    light.ndotl = LambertTerm (normalDirection, light.dir);
-                #else
-                    light.color = half3(0.f, 0.f, 0.f);
-                    light.ndotl = 0.0f;
-                    light.dir = half3(0.f, 0.f, 0.f);
-                #endif
-                UnityGIInput d;
-                d.light = light;
-                d.worldPos = i.posWorld.xyz;
-                d.worldViewDir = viewDirection;
-                d.atten = attenuation;
-                #if defined(LIGHTMAP_ON) || defined(DYNAMICLIGHTMAP_ON)
-                    d.ambient = 0;
-                    d.lightmapUV = i.ambientOrLightmapUV;
-                #else
-                    d.ambient = i.ambientOrLightmapUV;
-                #endif
-                #if UNITY_SPECCUBE_BLENDING || UNITY_SPECCUBE_BOX_PROJECTION
-                    d.boxMin[0] = unity_SpecCube0_BoxMin;
-                    d.boxMin[1] = unity_SpecCube1_BoxMin;
-                #endif
-                #if UNITY_SPECCUBE_BOX_PROJECTION
-                    d.boxMax[0] = unity_SpecCube0_BoxMax;
-                    d.boxMax[1] = unity_SpecCube1_BoxMax;
-                    d.probePosition[0] = unity_SpecCube0_ProbePosition;
-                    d.probePosition[1] = unity_SpecCube1_ProbePosition;
-                #endif
-                d.probeHDR[0] = unity_SpecCube0_HDR;
-                d.probeHDR[1] = unity_SpecCube1_HDR;
-                Unity_GlossyEnvironmentData ugls_en_data;
-                ugls_en_data.roughness = 1.0 - gloss;
-                ugls_en_data.reflUVW = viewReflectDirection;
-                UnityGI gi = UnityGlobalIllumination(d, 1, normalDirection, ugls_en_data );
-                lightDirection = gi.light.dir;
-                lightColor = gi.light.color;
-////// Specular:
-                float NdotL = saturate(dot( normalDirection, lightDirection ));
-                float LdotH = saturate(dot(lightDirection, halfDirection));
-                float3 specularColor = _Metallic;
-                float specularMonochrome;
-                float node_8865_if_leA = step(i.uv0.r,_OutlineSize);
-                float node_8865_if_leB = step(_OutlineSize,i.uv0.r);
-                float node_6298 = (1.0 - _OutlineIntensity);
-                float node_7254_if_leA = step(i.uv0.g,_OutlineSize);
-                float node_7254_if_leB = step(_OutlineSize,i.uv0.g);
-                float node_6151 = (1.0 - _OutlineSize);
-                float node_4165_if_leA = step(i.uv0.r,node_6151);
-                float node_4165_if_leB = step(node_6151,i.uv0.r);
-                float _3DLook_var = lerp( node_6298, clamp(((node_6298*_3DLightness)*_OutlineIntensity),1,50), _3DLook );
-                float node_8047_if_leA = step(i.uv0.g,node_6151);
-                float node_8047_if_leB = step(node_6151,i.uv0.g);
-                float3 diffuseColor = (i.vertexColor.rgb*((lerp((node_8865_if_leA*node_6298)+(node_8865_if_leB*_NormalBrightness),_NormalBrightness,node_8865_if_leA*node_8865_if_leB)*lerp((node_7254_if_leA*node_6298)+(node_7254_if_leB*_NormalBrightness),_NormalBrightness,node_7254_if_leA*node_7254_if_leB))*(lerp((node_4165_if_leA*_NormalBrightness)+(node_4165_if_leB*_3DLook_var),_NormalBrightness,node_4165_if_leA*node_4165_if_leB)*lerp((node_8047_if_leA*_NormalBrightness)+(node_8047_if_leB*_3DLook_var),_NormalBrightness,node_8047_if_leA*node_8047_if_leB)))*_Tint.rgb); // Need this for specular when using metallic
-                diffuseColor = DiffuseAndSpecularFromMetallic( diffuseColor, specularColor, specularColor, specularMonochrome );
-                specularMonochrome = 1.0-specularMonochrome;
-                float NdotV = abs(dot( normalDirection, viewDirection ));
-                float NdotH = saturate(dot( normalDirection, halfDirection ));
-                float VdotH = saturate(dot( viewDirection, halfDirection ));
-                float visTerm = SmithJointGGXVisibilityTerm( NdotL, NdotV, roughness );
-                float normTerm = GGXTerm(NdotH, roughness);
-                float specularPBL = (visTerm*normTerm) * UNITY_PI;
-                #ifdef UNITY_COLORSPACE_GAMMA
-                    specularPBL = sqrt(max(1e-4h, specularPBL));
-                #endif
-                specularPBL = max(0, specularPBL * NdotL);
-                #if defined(_SPECULARHIGHLIGHTS_OFF)
-                    specularPBL = 0.0;
-                #endif
-                half surfaceReduction;
-                #ifdef UNITY_COLORSPACE_GAMMA
-                    surfaceReduction = 1.0-0.28*roughness*perceptualRoughness;
-                #else
-                    surfaceReduction = 1.0/(roughness*roughness + 1.0);
-                #endif
-                specularPBL *= any(specularColor) ? 1.0 : 0.0;
-                float3 directSpecular = attenColor*specularPBL*FresnelTerm(specularColor, LdotH);
-                half grazingTerm = saturate( gloss + specularMonochrome );
-                float3 indirectSpecular = (gi.indirect.specular);
-                indirectSpecular *= FresnelLerp (specularColor, grazingTerm, NdotV);
-                indirectSpecular *= surfaceReduction;
-                float3 specular = (directSpecular + indirectSpecular);
-/////// Diffuse:
-                NdotL = max(0.0,dot( normalDirection, lightDirection ));
-                half fd90 = 0.5 + 2 * LdotH * LdotH * (1-gloss);
-                float nlPow5 = Pow5(1-NdotL);
-                float nvPow5 = Pow5(1-NdotV);
-                float3 directDiffuse = ((1 +(fd90 - 1)*nlPow5) * (1 + (fd90 - 1)*nvPow5) * NdotL) * attenColor;
-                float3 indirectDiffuse = float3(0,0,0);
-                indirectDiffuse += gi.indirect.diffuse;
-                float3 diffuse = (directDiffuse + indirectDiffuse) * diffuseColor;
-/// Final Color:
-                float3 finalColor = diffuse + specular;
-                fixed4 finalRGBA = fixed4(finalColor,1);
-                UNITY_APPLY_FOG(i.fogCoord, finalRGBA);
-                return finalRGBA;
-            }
-            ENDCG
-        }
-        Pass {
-            Name "FORWARD_DELTA"
-            Tags {
-                "LightMode"="ForwardAdd"
-            }
-            Blend One One
-            
-            
-            CGPROGRAM
-            #pragma vertex vert
-            #pragma fragment frag
-            #define UNITY_PASS_FORWARDADD
-            #define SHOULD_SAMPLE_SH ( defined (LIGHTMAP_OFF) && defined(DYNAMICLIGHTMAP_OFF) )
-            #define _GLOSSYENV 1
-            #include "UnityCG.cginc"
-            #include "AutoLight.cginc"
-            #include "Lighting.cginc"
-            #include "UnityPBSLighting.cginc"
-            #include "UnityStandardBRDF.cginc"
-            #pragma multi_compile_fwdadd_fullshadows
-            #pragma multi_compile LIGHTMAP_OFF LIGHTMAP_ON
-            #pragma multi_compile DIRLIGHTMAP_OFF DIRLIGHTMAP_COMBINED DIRLIGHTMAP_SEPARATE
-            #pragma multi_compile DYNAMICLIGHTMAP_OFF DYNAMICLIGHTMAP_ON
-            #pragma multi_compile_fog
-            #pragma only_renderers d3d9 d3d11 glcore gles gles3 metal d3d11_9x xboxone ps4 psp2 n3ds wiiu 
-            #pragma target 3.0
-            uniform float _Metallic;
-            uniform float _Gloss;
-            uniform float _NormalBrightness;
-            uniform float _OutlineIntensity;
-            uniform float _OutlineSize;
-            uniform float _3DLightness;
-            uniform fixed _3DLook;
-            uniform float4 _Tint;
-            struct VertexInput {
-                float4 vertex : POSITION;
-                float3 normal : NORMAL;
-                float4 tangent : TANGENT;
-                float2 texcoord0 : TEXCOORD0;
-                float2 texcoord1 : TEXCOORD1;
-                float2 texcoord2 : TEXCOORD2;
-                float4 vertexColor : COLOR;
-            };
-            struct VertexOutput {
-                float4 pos : SV_POSITION;
-                float2 uv0 : TEXCOORD0;
-                float2 uv1 : TEXCOORD1;
-                float2 uv2 : TEXCOORD2;
-                float4 posWorld : TEXCOORD3;
-                float3 normalDir : TEXCOORD4;
-                float3 tangentDir : TEXCOORD5;
-                float3 bitangentDir : TEXCOORD6;
-                float4 vertexColor : COLOR;
-                LIGHTING_COORDS(7,8)
-                UNITY_FOG_COORDS(9)
-            };
-            VertexOutput vert (VertexInput v) {
-                VertexOutput o = (VertexOutput)0;
-                o.uv0 = v.texcoord0;
-                o.uv1 = v.texcoord1;
-                o.uv2 = v.texcoord2;
-                o.vertexColor = v.vertexColor;
-                o.normalDir = UnityObjectToWorldNormal(v.normal);
-                o.tangentDir = normalize( mul( unity_ObjectToWorld, float4( v.tangent.xyz, 0.0 ) ).xyz );
-                o.bitangentDir = normalize(cross(o.normalDir, o.tangentDir) * v.tangent.w);
-                o.posWorld = mul(unity_ObjectToWorld, v.vertex);
-                float3 lightColor = _LightColor0.rgb;
-                o.pos = UnityObjectToClipPos( v.vertex );
-                UNITY_TRANSFER_FOG(o,o.pos);
-                TRANSFER_VERTEX_TO_FRAGMENT(o)
-                return o;
-            }
-            float4 frag(VertexOutput i) : COLOR {
-                i.normalDir = normalize(i.normalDir);
-                float3x3 tangentTransform = float3x3( i.tangentDir, i.bitangentDir, i.normalDir);
-                float3 viewDirection = normalize(_WorldSpaceCameraPos.xyz - i.posWorld.xyz);
-                float3 normalDirection = i.normalDir;
-                float3 lightDirection = normalize(lerp(_WorldSpaceLightPos0.xyz, _WorldSpaceLightPos0.xyz - i.posWorld.xyz,_WorldSpaceLightPos0.w));
-                float3 lightColor = _LightColor0.rgb;
-                float3 halfDirection = normalize(viewDirection+lightDirection);
-////// Lighting:
-                float attenuation = LIGHT_ATTENUATION(i);
-                float3 attenColor = attenuation * _LightColor0.xyz;
-                float Pi = 3.141592654;
-                float InvPi = 0.31830988618;
-///////// Gloss:
-                float gloss = _Gloss;
-                float perceptualRoughness = 1.0 - _Gloss;
-                float roughness = perceptualRoughness * perceptualRoughness;
-                float specPow = exp2( gloss * 10.0 + 1.0 );
-////// Specular:
-                float NdotL = saturate(dot( normalDirection, lightDirection ));
-                float LdotH = saturate(dot(lightDirection, halfDirection));
-                float3 specularColor = _Metallic;
-                float specularMonochrome;
-                float node_8865_if_leA = step(i.uv0.r,_OutlineSize);
-                float node_8865_if_leB = step(_OutlineSize,i.uv0.r);
-                float node_6298 = (1.0 - _OutlineIntensity);
-                float node_7254_if_leA = step(i.uv0.g,_OutlineSize);
-                float node_7254_if_leB = step(_OutlineSize,i.uv0.g);
-                float node_6151 = (1.0 - _OutlineSize);
-                float node_4165_if_leA = step(i.uv0.r,node_6151);
-                float node_4165_if_leB = step(node_6151,i.uv0.r);
-                float _3DLook_var = lerp( node_6298, clamp(((node_6298*_3DLightness)*_OutlineIntensity),1,50), _3DLook );
-                float node_8047_if_leA = step(i.uv0.g,node_6151);
-                float node_8047_if_leB = step(node_6151,i.uv0.g);
-                float3 diffuseColor = (i.vertexColor.rgb*((lerp((node_8865_if_leA*node_6298)+(node_8865_if_leB*_NormalBrightness),_NormalBrightness,node_8865_if_leA*node_8865_if_leB)*lerp((node_7254_if_leA*node_6298)+(node_7254_if_leB*_NormalBrightness),_NormalBrightness,node_7254_if_leA*node_7254_if_leB))*(lerp((node_4165_if_leA*_NormalBrightness)+(node_4165_if_leB*_3DLook_var),_NormalBrightness,node_4165_if_leA*node_4165_if_leB)*lerp((node_8047_if_leA*_NormalBrightness)+(node_8047_if_leB*_3DLook_var),_NormalBrightness,node_8047_if_leA*node_8047_if_leB)))*_Tint.rgb); // Need this for specular when using metallic
-                diffuseColor = DiffuseAndSpecularFromMetallic( diffuseColor, specularColor, specularColor, specularMonochrome );
-                specularMonochrome = 1.0-specularMonochrome;
-                float NdotV = abs(dot( normalDirection, viewDirection ));
-                float NdotH = saturate(dot( normalDirection, halfDirection ));
-                float VdotH = saturate(dot( viewDirection, halfDirection ));
-                float visTerm = SmithJointGGXVisibilityTerm( NdotL, NdotV, roughness );
-                float normTerm = GGXTerm(NdotH, roughness);
-                float specularPBL = (visTerm*normTerm) * UNITY_PI;
-                #ifdef UNITY_COLORSPACE_GAMMA
-                    specularPBL = sqrt(max(1e-4h, specularPBL));
-                #endif
-                specularPBL = max(0, specularPBL * NdotL);
-                #if defined(_SPECULARHIGHLIGHTS_OFF)
-                    specularPBL = 0.0;
-                #endif
-                specularPBL *= any(specularColor) ? 1.0 : 0.0;
-                float3 directSpecular = attenColor*specularPBL*FresnelTerm(specularColor, LdotH);
-                float3 specular = directSpecular;
-/////// Diffuse:
-                NdotL = max(0.0,dot( normalDirection, lightDirection ));
-                half fd90 = 0.5 + 2 * LdotH * LdotH * (1-gloss);
-                float nlPow5 = Pow5(1-NdotL);
-                float nvPow5 = Pow5(1-NdotV);
-                float3 directDiffuse = ((1 +(fd90 - 1)*nlPow5) * (1 + (fd90 - 1)*nvPow5) * NdotL) * attenColor;
-                float3 diffuse = directDiffuse * diffuseColor;
-/// Final Color:
-                float3 finalColor = diffuse + specular;
-                fixed4 finalRGBA = fixed4(finalColor * 1,0);
-                UNITY_APPLY_FOG(i.fogCoord, finalRGBA);
-                return finalRGBA;
-            }
-            ENDCG
-        }
-        Pass {
-            Name "Meta"
-            Tags {
-                "LightMode"="Meta"
-            }
-            Cull Off
-            
-            CGPROGRAM
-            #pragma vertex vert
-            #pragma fragment frag
-            #define UNITY_PASS_META 1
-            #define SHOULD_SAMPLE_SH ( defined (LIGHTMAP_OFF) && defined(DYNAMICLIGHTMAP_OFF) )
-            #define _GLOSSYENV 1
-            #include "UnityCG.cginc"
-            #include "Lighting.cginc"
-            #include "UnityPBSLighting.cginc"
-            #include "UnityStandardBRDF.cginc"
-            #include "UnityMetaPass.cginc"
-            #pragma fragmentoption ARB_precision_hint_fastest
-            #pragma multi_compile_shadowcaster
-            #pragma multi_compile LIGHTMAP_OFF LIGHTMAP_ON
-            #pragma multi_compile DIRLIGHTMAP_OFF DIRLIGHTMAP_COMBINED DIRLIGHTMAP_SEPARATE
-            #pragma multi_compile DYNAMICLIGHTMAP_OFF DYNAMICLIGHTMAP_ON
-            #pragma multi_compile_fog
-            #pragma only_renderers d3d9 d3d11 glcore gles gles3 metal d3d11_9x xboxone ps4 psp2 n3ds wiiu 
-            #pragma target 3.0
-            uniform float _Metallic;
-            uniform float _Gloss;
-            uniform float _NormalBrightness;
-            uniform float _OutlineIntensity;
-            uniform float _OutlineSize;
-            uniform float _3DLightness;
-            uniform fixed _3DLook;
-            uniform float4 _Tint;
-            struct VertexInput {
-                float4 vertex : POSITION;
-                float2 texcoord0 : TEXCOORD0;
-                float2 texcoord1 : TEXCOORD1;
-                float2 texcoord2 : TEXCOORD2;
-                float4 vertexColor : COLOR;
-            };
-            struct VertexOutput {
-                float4 pos : SV_POSITION;
-                float2 uv0 : TEXCOORD0;
-                float2 uv1 : TEXCOORD1;
-                float2 uv2 : TEXCOORD2;
-                float4 posWorld : TEXCOORD3;
-                float4 vertexColor : COLOR;
-            };
-            VertexOutput vert (VertexInput v) {
-                VertexOutput o = (VertexOutput)0;
-                o.uv0 = v.texcoord0;
-                o.uv1 = v.texcoord1;
-                o.uv2 = v.texcoord2;
-                o.vertexColor = v.vertexColor;
-                o.posWorld = mul(unity_ObjectToWorld, v.vertex);
-                o.pos = UnityMetaVertexPosition(v.vertex, v.texcoord1.xy, v.texcoord2.xy, unity_LightmapST, unity_DynamicLightmapST );
-                return o;
-            }
-            float4 frag(VertexOutput i) : SV_Target {
-                float3 viewDirection = normalize(_WorldSpaceCameraPos.xyz - i.posWorld.xyz);
-                UnityMetaInput o;
-                UNITY_INITIALIZE_OUTPUT( UnityMetaInput, o );
-                
-                o.Emission = 0;
-                
-                float node_8865_if_leA = step(i.uv0.r,_OutlineSize);
-                float node_8865_if_leB = step(_OutlineSize,i.uv0.r);
-                float node_6298 = (1.0 - _OutlineIntensity);
-                float node_7254_if_leA = step(i.uv0.g,_OutlineSize);
-                float node_7254_if_leB = step(_OutlineSize,i.uv0.g);
-                float node_6151 = (1.0 - _OutlineSize);
-                float node_4165_if_leA = step(i.uv0.r,node_6151);
-                float node_4165_if_leB = step(node_6151,i.uv0.r);
-                float _3DLook_var = lerp( node_6298, clamp(((node_6298*_3DLightness)*_OutlineIntensity),1,50), _3DLook );
-                float node_8047_if_leA = step(i.uv0.g,node_6151);
-                float node_8047_if_leB = step(node_6151,i.uv0.g);
-                float3 diffColor = (i.vertexColor.rgb*((lerp((node_8865_if_leA*node_6298)+(node_8865_if_leB*_NormalBrightness),_NormalBrightness,node_8865_if_leA*node_8865_if_leB)*lerp((node_7254_if_leA*node_6298)+(node_7254_if_leB*_NormalBrightness),_NormalBrightness,node_7254_if_leA*node_7254_if_leB))*(lerp((node_4165_if_leA*_NormalBrightness)+(node_4165_if_leB*_3DLook_var),_NormalBrightness,node_4165_if_leA*node_4165_if_leB)*lerp((node_8047_if_leA*_NormalBrightness)+(node_8047_if_leB*_3DLook_var),_NormalBrightness,node_8047_if_leA*node_8047_if_leB)))*_Tint.rgb);
-                float specularMonochrome;
-                float3 specColor;
-                diffColor = DiffuseAndSpecularFromMetallic( diffColor, _Metallic, specColor, specularMonochrome );
-                float roughness = 1.0 - _Gloss;
-                o.Albedo = diffColor + specColor * roughness * roughness * 0.5;
-                
-                return UnityMetaFragment( o );
-            }
-            ENDCG
-        }
-    }
-    FallBack "Diffuse"
-    CustomEditor "ShaderForgeMaterialInspector"
+	SubShader
+	{
+		Tags{ "RenderType" = "Opaque"  "Queue" = "Geometry+0" "IsEmissive" = "true"  }
+		Cull Back
+		CGPROGRAM
+		#include "UnityCG.cginc"
+		#pragma target 3.0
+		#pragma surface surf Standard keepalpha addshadow fullforwardshadows 
+		struct Input
+		{
+			float2 uv_texcoord;
+			float4 vertexColor : COLOR;
+		};
+
+		uniform sampler2D _Normal;
+		uniform float4 _Normal_ST;
+		uniform sampler2D _TextureSample0;
+		uniform float4 _TextureSample0_ST;
+		uniform float4 _Tint;
+		uniform float _LinearColorspace;
+		uniform float _Emission;
+		uniform float _Metallic;
+		uniform float _Smoothness;
+
+		void surf( Input i , inout SurfaceOutputStandard o )
+		{
+			float2 uv_Normal = i.uv_texcoord * _Normal_ST.xy + _Normal_ST.zw;
+			o.Normal = tex2D( _Normal, uv_Normal ).rgb;
+			float2 uv_TextureSample0 = i.uv_texcoord * _TextureSample0_ST.xy + _TextureSample0_ST.zw;
+			float3 gammaToLinear23 = GammaToLinearSpace( i.vertexColor.rgb );
+			float4 temp_output_27_0 = ( ( i.vertexColor * ( 1.0 - _LinearColorspace ) ) + float4( ( _LinearColorspace * gammaToLinear23 ) , 0.0 ) );
+			o.Albedo = ( tex2D( _TextureSample0, uv_TextureSample0 ) * ( _Tint * temp_output_27_0 ) ).rgb;
+			o.Emission = ( temp_output_27_0 * _Emission ).rgb;
+			o.Metallic = _Metallic;
+			o.Smoothness = _Smoothness;
+			o.Alpha = 1;
+		}
+
+		ENDCG
+	}
+	Fallback "PicaVoxel/PicaVoxel Diffuse"
+	CustomEditor "ASEMaterialInspector"
 }
+/*ASEBEGIN
+Version=16700
+-2238;158;1782;1085;62.5;317.5;1;True;True
+Node;AmplifyShaderEditor.VertexColorNode;1;153,187;Float;False;0;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
+Node;AmplifyShaderEditor.RangedFloatNode;22;578.8333,526.6667;Float;False;Property;_LinearColorspace;Linear Colorspace;5;1;[Toggle];Create;True;0;0;False;0;0;0;0;0;0;1;FLOAT;0
+Node;AmplifyShaderEditor.OneMinusNode;24;610.8333,435.6667;Float;False;1;0;FLOAT;0;False;1;FLOAT;0
+Node;AmplifyShaderEditor.GammaToLinearNode;23;576.8333,616.6667;Float;False;0;1;0;FLOAT3;0,0,0;False;1;FLOAT3;0
+Node;AmplifyShaderEditor.SimpleMultiplyOpNode;25;810.8333,542.6667;Float;False;2;2;0;FLOAT;0;False;1;FLOAT3;0,0,0;False;1;FLOAT3;0
+Node;AmplifyShaderEditor.SimpleMultiplyOpNode;26;808.8333,433.6667;Float;False;2;2;0;COLOR;0,0,0,0;False;1;FLOAT;0;False;1;COLOR;0
+Node;AmplifyShaderEditor.SimpleAddOpNode;27;960.8333,489.6667;Float;False;2;2;0;COLOR;0,0,0,0;False;1;FLOAT3;0,0,0;False;1;COLOR;0
+Node;AmplifyShaderEditor.ColorNode;2;148,0;Float;False;Property;_Tint;Tint;0;0;Create;True;0;0;False;0;0,0,0,0;1,1,1,1;False;0;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
+Node;AmplifyShaderEditor.SamplerNode;20;627.5,-333.5;Float;True;Property;_TextureSample0;Texture Sample 0;6;0;Create;True;0;0;False;0;None;33e3adb20d9c0404486614a7b85c93dc;True;0;False;white;Auto;False;Object;-1;Auto;Texture2D;6;0;SAMPLER2D;;False;1;FLOAT2;0,0;False;2;FLOAT;0;False;3;FLOAT2;0,0;False;4;FLOAT2;0,0;False;5;FLOAT;1;False;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
+Node;AmplifyShaderEditor.RangedFloatNode;13;158,366;Float;False;Property;_Emission;Emission;3;0;Create;True;0;0;False;0;0;0;0;0;0;1;FLOAT;0
+Node;AmplifyShaderEditor.SimpleMultiplyOpNode;3;539,87;Float;False;2;2;0;COLOR;0,0,0,0;False;1;COLOR;0,0,0,0;False;1;COLOR;0
+Node;AmplifyShaderEditor.RangedFloatNode;9;589,-86;Float;False;Property;_Metallic;Metallic;1;1;[HDR];Create;True;0;0;False;0;0;0;0;1;0;1;FLOAT;0
+Node;AmplifyShaderEditor.RangedFloatNode;10;877,-84;Float;False;Property;_Smoothness;Smoothness;2;0;Create;True;0;0;False;0;0;0;0;1;0;1;FLOAT;0
+Node;AmplifyShaderEditor.SamplerNode;18;146.5,-248.5;Float;True;Property;_Normal;Normal;4;0;Create;True;0;0;False;0;None;2b455b73d20f56043a4ffdb414b7cf3e;True;0;False;white;Auto;False;Object;-1;Auto;Texture2D;6;0;SAMPLER2D;;False;1;FLOAT2;0,0;False;2;FLOAT;0;False;3;FLOAT2;0,0;False;4;FLOAT2;0,0;False;5;FLOAT;1;False;5;COLOR;0;FLOAT;1;FLOAT;2;FLOAT;3;FLOAT;4
+Node;AmplifyShaderEditor.SimpleMultiplyOpNode;12;536,222;Float;False;2;2;0;COLOR;0,0,0,0;False;1;FLOAT;0;False;1;COLOR;0
+Node;AmplifyShaderEditor.SimpleMultiplyOpNode;21;1165.5,-195.5;Float;False;2;2;0;COLOR;0,0,0,0;False;1;COLOR;0,0,0,0;False;1;COLOR;0
+Node;AmplifyShaderEditor.StandardSurfaceOutputNode;0;1209,-4;Float;False;True;2;Float;ASEMaterialInspector;0;0;Standard;PicaVoxel/PicaVoxel PBR Mosaic;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;False;Back;0;False;-1;0;False;-1;False;0;False;-1;0;False;-1;False;0;Opaque;0.5;True;True;0;False;Opaque;;Geometry;All;True;True;True;True;True;True;True;True;True;True;True;True;True;True;True;True;True;0;False;-1;False;0;False;-1;255;False;-1;255;False;-1;0;False;-1;0;False;-1;0;False;-1;0;False;-1;0;False;-1;0;False;-1;0;False;-1;0;False;-1;False;2;15;10;25;False;0.5;True;0;0;False;-1;0;False;-1;0;0;False;-1;0;False;-1;0;False;-1;0;False;-1;0;False;0;0,0,0,0;VertexOffset;True;False;Cylindrical;False;Relative;0;PicaVoxel/PicaVoxel Diffuse;-1;-1;-1;-1;0;False;0;0;False;-1;-1;0;False;-1;0;0;0;False;0.1;False;-1;0;False;-1;16;0;FLOAT3;0,0,0;False;1;FLOAT3;0,0,0;False;2;FLOAT3;0,0,0;False;3;FLOAT;0;False;4;FLOAT;0;False;5;FLOAT;0;False;6;FLOAT3;0,0,0;False;7;FLOAT3;0,0,0;False;8;FLOAT;0;False;9;FLOAT;0;False;10;FLOAT;0;False;13;FLOAT3;0,0,0;False;11;FLOAT3;0,0,0;False;12;FLOAT3;0,0,0;False;14;FLOAT4;0,0,0,0;False;15;FLOAT3;0,0,0;False;0
+WireConnection;24;0;22;0
+WireConnection;23;0;1;0
+WireConnection;25;0;22;0
+WireConnection;25;1;23;0
+WireConnection;26;0;1;0
+WireConnection;26;1;24;0
+WireConnection;27;0;26;0
+WireConnection;27;1;25;0
+WireConnection;3;0;2;0
+WireConnection;3;1;27;0
+WireConnection;12;0;27;0
+WireConnection;12;1;13;0
+WireConnection;21;0;20;0
+WireConnection;21;1;3;0
+WireConnection;0;0;21;0
+WireConnection;0;1;18;0
+WireConnection;0;2;12;0
+WireConnection;0;3;9;0
+WireConnection;0;4;10;0
+ASEEND*/
+//CHKSM=47C028BCD11A18EB6A0C5415A965F9CD147D4773

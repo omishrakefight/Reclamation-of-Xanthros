@@ -7,7 +7,7 @@
 // http://unity3d.com/legal/as_terms
 //
 /////////////////////////////////////////////////////////////////////////
-using ICSharpCode.SharpZipLib.GZip;
+//using ICSharpCode.SharpZipLib.GZip;
 using Ionic.Zlib;
 using System;
 using System.Collections.Generic;

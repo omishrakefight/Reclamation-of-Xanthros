@@ -98,7 +98,7 @@ namespace PicaVoxel
                 foreach (Volume v in mpvObject.Volumes)
                 {
                     v.IsEnabledForEditing = false;
-                    v.RuntimOnlyMesh = !allRuntimeOnlyMesh;
+                    v.RuntimeOnlyMesh = !allRuntimeOnlyMesh;
 
                     v.CreateChunks();
                     v.UpdateAllChunks();
@@ -307,7 +307,7 @@ namespace PicaVoxel
             bool rtom = true;
             if (mpvObject.Volumes == null) mpvObject.GetPartReferences();
             foreach (Volume v in mpvObject.Volumes)
-                if (v != null && !v.RuntimOnlyMesh) rtom = false;
+                if (v != null && !v.RuntimeOnlyMesh) rtom = false;
 
             return rtom;
         }

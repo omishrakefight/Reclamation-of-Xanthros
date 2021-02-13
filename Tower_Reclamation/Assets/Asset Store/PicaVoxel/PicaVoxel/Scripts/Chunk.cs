@@ -28,7 +28,29 @@ namespace PicaVoxel
     [AddComponentMenu("")]
     public class Chunk : MonoBehaviour
     {
-
+        private class RecalculateToken
+        {
+            public Voxel[] voxels;
+            public float voxelSize;
+            public float overlapAmount;
+            public int xOffset;
+            public int yOffset;
+            public int zOffset;
+            public int xSize;
+            public int ySize;
+            public int zSize;
+            public int ub0;
+            public int ub1;
+            public int ub2;
+            public float selfShadeIntensity;
+            public MeshingMode mode;
+            public MeshingMode colliderMode;
+            public bool immediate;
+#if UNITY_EDITOR
+            public EditorPaintMode paintMode;
+#endif
+        }
+        
         private enum ChunkStatus
         {
             NoChange,
@@ -54,13 +76,28 @@ namespace PicaVoxel
         private bool hasCreatedRuntimeColMesh = false;
         private bool updateColliderNextFrame = false;
 
-
+        private bool needsRecalculating;
+        private RecalculateToken recalcToken;
+        
         private void Update()
         {
             if (status == ChunkStatus.Ready)
             {
-                SetMesh();
                 status = ChunkStatus.NoChange;
+                if (!needsRecalculating || recalcToken==null)
+                {
+                    SetMesh();
+                }
+                else
+                {
+                    //Debug.Log("Recalculating");
+                    needsRecalculating = false;
+#if UNITY_EDITOR
+                    GenerateMesh(recalcToken.voxels, recalcToken.voxelSize, recalcToken.overlapAmount, recalcToken.xOffset, recalcToken.yOffset, recalcToken.zOffset,recalcToken.xSize,recalcToken.ySize,recalcToken.zSize,recalcToken.ub0,recalcToken.ub1,recalcToken.ub2,recalcToken.selfShadeIntensity,recalcToken.mode,recalcToken.colliderMode,false,recalcToken.paintMode);
+#else
+                    GenerateMesh(recalcToken.voxels, recalcToken.voxelSize, recalcToken.overlapAmount, recalcToken.xOffset, recalcToken.yOffset, recalcToken.zOffset,recalcToken.xSize,recalcToken.ySize,recalcToken.zSize,recalcToken.ub0,recalcToken.ub1,recalcToken.ub2,recalcToken.selfShadeIntensity,recalcToken.mode,recalcToken.colliderMode,false);
+#endif
+                }
             }
 
             if (updateColliderNextFrame)
@@ -107,7 +144,7 @@ namespace PicaVoxel
             }
             else
             {
-                if (status != ChunkStatus.NoChange) return;
+               
 #if UNITY_WINRT && !UNITY_EDITOR
                 System.Threading.Tasks.Task.Run(() =>
                 {
@@ -133,7 +170,35 @@ namespace PicaVoxel
 
 
 #else
+               
 #if UNITY_EDITOR
+                if (status != ChunkStatus.NoChange)
+                {
+                    needsRecalculating = true;
+                    //Debug.Log("Setting recalc");
+                    recalcToken = new RecalculateToken()
+                    {
+                        voxels = voxels,
+                        voxelSize = voxelSize,
+                        overlapAmount = overlapAmount,
+                        xOffset = xOffset,
+                        yOffset = yOffset,
+                        zOffset = zOffset,
+                        xSize = xSize,
+                        ySize = ySize,
+                        zSize = zSize,
+                        ub0 = ub0,
+                        ub1 = ub1,
+                        ub2 = ub2,
+                        selfShadeIntensity = selfShadeIntensity,
+                        mode = mode,
+                        colliderMode = colliderMode,
+                        immediate = immediate,
+                        paintMode = paintMode,    
+                    };
+                    return;
+                }
+
                 if(!ThreadPool.QueueUserWorkItem(delegate
                 {
                     GenerateThreaded(ref voxels, voxelSize, overlapAmount, xOffset, yOffset, zOffset, xSize, ySize, zSize, ub0, ub1, ub2,
@@ -141,6 +206,31 @@ namespace PicaVoxel
                 })) Generate(ref voxels, voxelSize, overlapAmount, xOffset, yOffset, zOffset, xSize, ySize, zSize, ub0, ub1, ub2,
                                 selfShadeIntensity, mode, paintMode);
 #else
+                if (status != ChunkStatus.NoChange)
+                                {
+                    needsRecalculating = true;
+                    recalcToken = new RecalculateToken()
+                    {
+                        voxels = voxels,
+                        voxelSize = voxelSize,
+                        overlapAmount = overlapAmount,
+                        xOffset = xOffset,
+                        yOffset = yOffset,
+                        zOffset = zOffset,
+                        xSize = xSize,
+                        ySize = ySize,
+                        zSize = zSize,
+                        ub0 = ub0,
+                        ub1 = ub1,
+                        ub2 = ub2,
+                        selfShadeIntensity = selfShadeIntensity,
+                        mode = mode,
+                        colliderMode = colliderMode,
+                        immediate = immediate, 
+                    };
+                    return;
+                }
+    
                 if(!ThreadPool.QueueUserWorkItem(delegate
                 {
                     GenerateThreaded(ref voxels, voxelSize, overlapAmount, xOffset, yOffset, zOffset, xSize, ySize, zSize,ub0, ub1, ub2,
@@ -160,15 +250,18 @@ namespace PicaVoxel
         private void GenerateThreaded(ref Voxel[] voxels, float voxelSize,float overlapAmount, int xOffset, int yOffset, int zOffset, int xSize, int ySize, int zSize, int ub0, int ub1, int ub2, float selfShadeIntensity, MeshingMode meshMode)
 #endif
         {
+            
             status = ChunkStatus.CalculatingMesh;
 #if UNITY_EDITOR
             Generate(ref voxels, voxelSize, overlapAmount, xOffset, yOffset, zOffset, xSize, ySize, zSize, ub0, ub1, ub2,
                         selfShadeIntensity, meshMode, paintMode);
+          
+           
 #else
             Generate(ref voxels, voxelSize, overlapAmount, xOffset, yOffset, zOffset, xSize, ySize, zSize, ub0, ub1, ub2,
                         selfShadeIntensity, meshMode);
 #endif
-
+         
             status = ChunkStatus.Ready;
         }
 
@@ -330,24 +423,62 @@ namespace PicaVoxel
             Frame frame = transform.parent.parent.GetComponent<Frame>();
             if (frame == null) return;
 
-            if (PrefabUtility.GetPrefabType(vol) == PrefabType.PrefabInstance) return;
-
-            //if (vol.AssetGuid == Guid.Empty) vol.g = Guid.NewGuid();
-            string path = Path.Combine(Helper.GetMeshStorePath(), vol.AssetGuid);
-
-            if (mf.sharedMesh != null)
+            if (!PrefabUtility.IsPartOfAnyPrefab(vol))
             {
-                Mesh tempMesh = (Mesh)Instantiate(mf.sharedMesh);
-                AssetDatabase.CreateAsset(tempMesh, Path.Combine(path, transform.name + "_Frame" + frame.AssetGuid + ".asset"));
-                mf.sharedMesh = tempMesh;
-            }
+                try
+                {
+                    //if (vol.AssetGuid == Guid.Empty) vol.g = Guid.NewGuid();
+                    string path = Path.Combine(Helper.GetMeshStorePath(), vol.AssetGuid);
 
-            if (mc!=null && mc.sharedMesh != null)
-            {
-                Mesh tempMesh = (Mesh)Instantiate(mc.sharedMesh);
-                AssetDatabase.CreateAsset(tempMesh, Path.Combine(path, transform.name + "_Frame" + frame.AssetGuid + "_mc" + ".asset"));
-                mc.sharedMesh = tempMesh;
+                    if (mf.sharedMesh != null)
+                    {
+                        Mesh tempMesh = (Mesh) Instantiate(mf.sharedMesh);
+                        AssetDatabase.CreateAsset(tempMesh, Path.Combine(path, transform.name + "_Frame" + frame.AssetGuid + ".asset"));
+
+                        mf.sharedMesh = tempMesh;
+                    }
+
+                    if (mc != null && mc.sharedMesh != null)
+                    {
+                        Mesh tempMesh = (Mesh) Instantiate(mc.sharedMesh);
+                        AssetDatabase.CreateAsset(tempMesh, Path.Combine(path, transform.name + "_Frame" + frame.AssetGuid + "_mc" + ".asset"));
+                        mc.sharedMesh = tempMesh;
+                    }
+                }
+                catch (Exception)
+                {
+                }
             }
+//            if (PrefabUtility.IsPartOfAnyPrefab(vol))
+//            {
+//                PrefabUtility.RecordPrefabInstancePropertyModifications(mf);
+//                PrefabUtility.RecordPrefabInstancePropertyModifications(mc);
+//            }
+//            if (PrefabUtility.IsPartOfAnyPrefab(vol))
+//            {
+//                if (mf.sharedMesh != null)
+//                {
+//                    Mesh tempMesh = (Mesh) Instantiate(mf.sharedMesh);
+//                    //AssetDatabase.CreateAsset(tempMesh, Path.Combine(path, transform.name + "_Frame" + frame.AssetGuid + ".asset"));
+//                    PrefabUtility.SavePrefabAsset()
+//                    //PrefabUtility.SaveAsPrefabAsset(mf, PrefabUtility.GetPrefabAssetPathOfNearestInstanceRoot(vol));
+//                   // mf.sharedMesh = tempMesh;
+//                   PrefabUtility.RecordPrefabInstancePropertyModifications(mf);
+//                }
+//
+//                if (mc != null && mc.sharedMesh != null)
+//                {
+//                   // Mesh tempMesh = (Mesh) Instantiate(mc.sharedMesh);
+//                    //AssetDatabase.CreateAsset(tempMesh, Path.Combine(path, transform.name + "_Frame" + frame.AssetGuid + "_mc" + ".asset"));
+//                   // mc.sharedMesh = tempMesh;
+//                   PrefabUtility.RecordPrefabInstancePropertyModifications(mc);
+//                }
+                
+                //AssetDatabase.SaveAssets();
+                //AssetDatabase.Refresh();
+            
+            
+            
         }
 #endif
     }
