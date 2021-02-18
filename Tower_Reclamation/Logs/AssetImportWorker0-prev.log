@@ -15,11 +15,11 @@ D:/Github/Reclamation-of-Xanthros/Tower_Reclamation
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-52629
+57261
 Successfully changed project path to: D:/Github/Reclamation-of-Xanthros/Tower_Reclamation
 D:/Github/Reclamation-of-Xanthros/Tower_Reclamation
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 36.64 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 38.59 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.2.1f1 (270dd8c3da1c)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2017.4.39f1/2020.2.1f1/Editor/Data/Resources/UnitySubsystems
@@ -35,49 +35,73 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2017.4.39f1/2020.2.1f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2017.4.39f1/2020.2.1f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2017.4.39f1/2020.2.1f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56176
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56984
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2017.4.39f1/2020.2.1f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.001293 seconds.
+Registered in 0.001251 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 34.23 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 36.03 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.842 seconds
+- Completed reload, in  0.867 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.001229 seconds.
+Registered in 0.001172 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 33.49 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 34.75 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.770 seconds
+- Completed reload, in  0.731 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.03 seconds
-Refreshing native plugins compatible for Editor in 0.46 ms, found 0 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.02 seconds
+Refreshing native plugins compatible for Editor in 0.48 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1757 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 100.1 MB.
-System memory in use after: 100.2 MB.
+Unloading 1816 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 101.8 MB.
+System memory in use after: 101.8 MB.
 
-Unloading 33 unused Assets to reduce memory usage. Loaded Objects now: 2205.
-Total: 2.201800 ms (FindLiveObjects: 0.202400 ms CreateObjectMapping: 0.085300 ms MarkObjects: 1.817300 ms  DeleteObjects: 0.096000 ms)
+Unloading 33 unused Assets to reduce memory usage. Loaded Objects now: 2264.
+Total: 1.636300 ms (FindLiveObjects: 0.183200 ms CreateObjectMapping: 0.087200 ms MarkObjects: 1.259200 ms  DeleteObjects: 0.084200 ms)
 
 ========================================================================
 Received Import Request.
-  path: Assets/Assets.index
-  artifactKey: Guid(59a28e7741dc3384ab33ec303678a574) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Assets.index using Guid(59a28e7741dc3384ab33ec303678a574) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4c40917b48258366553cb1b2905188d1') in 0.062604 seconds
-  Import took 0.066097 seconds .
+  path: Packages/com.unity.ide.visualstudio/package.json
+  artifactKey: Guid(656f74f6edaa396458412b9e3903d8cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.ide.visualstudio/package.json using Guid(656f74f6edaa396458412b9e3903d8cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '294b48740b294db23ab7d6ca936b3da8') in 0.030410 seconds
+  Import took 0.032867 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000412 seconds.
+  path: Packages/com.unity.2d.sprite/package.json
+  artifactKey: Guid(7dc5f1e5d04ac8549ac21802071e983b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.2d.sprite/package.json using Guid(7dc5f1e5d04ac8549ac21802071e983b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9eff246d4208fd550dc56cc3fdb63e6c') in 0.007113 seconds
+  Import took 0.009413 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 20.645731 seconds.
+  path: Assets/Asset Store/PicaVoxel/PicaVoxel/Scripts/SharpZip/ZLib/Deflate.cs
+  artifactKey: Guid(00b57d1621295d7428cb116e5e962b44) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Asset Store/PicaVoxel/PicaVoxel/Scripts/SharpZip/ZLib/Deflate.cs using Guid(00b57d1621295d7428cb116e5e962b44) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7eb050eedcba84f8e55c478301de6e34') in 0.007246 seconds
+  Import took 0.009798 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.002150 seconds.
+  path: Assets/Asset Store/PicaVoxel/PicaVoxel/Scripts/SharpZip/ZLib/Deflate.cs
+  artifactKey: Guid(00b57d1621295d7428cb116e5e962b44) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Asset Store/PicaVoxel/PicaVoxel/Scripts/SharpZip/ZLib/Deflate.cs using Guid(00b57d1621295d7428cb116e5e962b44) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7eb050eedcba84f8e55c478301de6e34') in 0.001683 seconds
+  Import took 0.004146 seconds .
 
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file
