@@ -62,8 +62,6 @@ public abstract class EnemyHealth : MonoBehaviour {
             healthModifier = (hitPoints * (1 + ( .05f * (float)wavecount)));
             hitPointsMax = hitPoints;
             healthBars.SetHealthBarPercent(1.0f);
-            //healthImage = enemyHealthBar.gameObject.GetComponentInChildren<Image>();
-            //healthImage.fillAmount = 1.0f;
         }
 
         //only need to calculate once.  And if enemy is boss, reduce healing so its fair.
@@ -89,14 +87,21 @@ public abstract class EnemyHealth : MonoBehaviour {
                 break;
                   
             case (int)Biomes.Volcanic:
+                // increase speed by 10% minus HP by 5%
                 EnemyMovement movement = this.gameObject.GetComponentInChildren< EnemyMovement > ();
                 movement.enemySpeed += movement.enemySpeed * .1f;
                 movement.enemyBaseSpeed += movement.enemyBaseSpeed * .1f;
+
+                hitPoints -= (hitPoints * .05f);
+                hitPointsMax -= (hitPointsMax * .05f);
                 break;
 
             case (int)Biomes.Forest:
                 hitPoints += (hitPoints * .1f);
                 hitPointsMax += (hitPointsMax * .1f);
+                break;
+            default:
+                print("Biome hitting default? Value : " + Singleton.biome);
                 break;
         }
         yield return null;

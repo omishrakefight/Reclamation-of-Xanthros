@@ -81,9 +81,8 @@ public class LoadNextArea : MonoBehaviour {
         // they either need to do everything in base, or click to proceed 4 times.  More for me (developer) to skip
         if (CheckDoneInBase() || timesClickedNextLevel > 3)
         {
-            //print("level is currently: " + FindObjectOfType<LevelTracker>().currentLevel);
-            //FindObjectOfType<LevelTracker>().IncreaseLevel();
-            //print("level is now : " + FindObjectOfType<LevelTracker>().currentLevel);
+            // MAYBE as I do singleton 'Biome / world' to give global bonuses, I can also use world to determine loadnext level.  
+            // LOAD 'world' + random 1-5 or something to load randomly created,
 
             currentLevel = singleton.level;
 

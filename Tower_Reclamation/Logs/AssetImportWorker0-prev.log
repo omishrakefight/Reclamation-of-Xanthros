@@ -1,0 +1,203 @@
+Using pre-set license
+Built from '2020.2/release' branch; Version is '2020.2.1f1 (270dd8c3da1c) revision 2559448'; Using compiler version '192528614'; Build Type 'Release'
+OS: 'Windows 10  (10.0.0) 64bit' Language: 'en' Physical Memory: 16281 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+
+ COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2020.2.1f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+C:/Users/Nekier/Documents/GitHub/Reclamation-of-Xanthros/Tower_Reclamation
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+54155
+Successfully changed project path to: C:/Users/Nekier/Documents/GitHub/Reclamation-of-Xanthros/Tower_Reclamation
+C:/Users/Nekier/Documents/GitHub/Reclamation-of-Xanthros/Tower_Reclamation
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 57.04 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2020.2.1f1 (270dd8c3da1c)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Users/Nekier/Documents/GitHub/Reclamation-of-Xanthros/Tower_Reclamation/Assets
+GfxDevice: creating device client; threaded=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce RTX 2070 with Max-Q Design (ID=0x1f10)
+    Vendor:   
+    VRAM:     8031 MB
+    Driver:   25.21.14.1971
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56648
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.002223 seconds.
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 48.42 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  2.054 seconds
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.002615 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 47.95 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.875 seconds
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.06 seconds
+Refreshing native plugins compatible for Editor in 0.45 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1791 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 101.6 MB.
+System memory in use after: 101.7 MB.
+
+Unloading 33 unused Assets to reduce memory usage. Loaded Objects now: 2240.
+Total: 2.167000 ms (FindLiveObjects: 0.346500 ms CreateObjectMapping: 0.138800 ms MarkObjects: 1.530000 ms  DeleteObjects: 0.150700 ms)
+
+========================================================================
+Received Import Request.
+  path: Assets/_Scenes/Volcano level 3.unity
+  artifactKey: Guid(0fdb2ed68c2c31b4596abd0e0ccdf453) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Scenes/Volcano level 3.unity using Guid(0fdb2ed68c2c31b4596abd0e0ccdf453) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8ddd53ab0d3d478ffdc38237e9a3fc19') in 0.013833 seconds
+  Import took 0.016391 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1094.807818 seconds.
+  path: Assets/_Scenes/Volcano level 3.unity
+  artifactKey: Guid(0fdb2ed68c2c31b4596abd0e0ccdf453) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Scenes/Volcano level 3.unity using Guid(0fdb2ed68c2c31b4596abd0e0ccdf453) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '26fe76db9554b8b90d2c0c3094a17e90') in 0.004733 seconds
+  Import took 0.008670 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001708 seconds.
+  path: Assets/_Scenes/Volcano level 3.unity
+  artifactKey: Guid(0fdb2ed68c2c31b4596abd0e0ccdf453) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Scenes/Volcano level 3.unity using Guid(0fdb2ed68c2c31b4596abd0e0ccdf453) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '26fe76db9554b8b90d2c0c3094a17e90') in 0.004075 seconds
+  Import took 0.008088 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 103.235570 seconds.
+  path: Assets/_Scenes/Volcano level 4.unity
+  artifactKey: Guid(2b2405e20ba5362499d4bb974e43c59a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Scenes/Volcano level 4.unity using Guid(2b2405e20ba5362499d4bb974e43c59a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5e094f447d3f94c55dc79630f28684b7') in 0.005162 seconds
+  Import took 0.008636 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001281 seconds.
+  path: Assets/_Scenes/Volcano level 4.unity
+  artifactKey: Guid(2b2405e20ba5362499d4bb974e43c59a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Scenes/Volcano level 4.unity using Guid(2b2405e20ba5362499d4bb974e43c59a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5e094f447d3f94c55dc79630f28684b7') in 0.003915 seconds
+  Import took 0.007025 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 358.295975 seconds.
+  path: Assets/_Scenes/Volcano level 5.unity
+  artifactKey: Guid(ff456560853e6d3459be09aab778ee14) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Scenes/Volcano level 5.unity using Guid(ff456560853e6d3459be09aab778ee14) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6144b46a6f57af7de340df63aef78d5c') in 0.005208 seconds
+  Import took 0.008670 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.002526 seconds.
+  path: Assets/_Scenes/Volcano level 5.unity
+  artifactKey: Guid(ff456560853e6d3459be09aab778ee14) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Scenes/Volcano level 5.unity using Guid(ff456560853e6d3459be09aab778ee14) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6144b46a6f57af7de340df63aef78d5c') in 0.004293 seconds
+  Import took 0.007204 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.573018 seconds.
+  path: Assets/_Scenes/Forest Level 1.unity
+  artifactKey: Guid(91ce2d6266d81794c8f1e512269921b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Scenes/Forest Level 1.unity using Guid(91ce2d6266d81794c8f1e512269921b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ce701f4d983f9e33a4fff1c2d5968cfa') in 0.004542 seconds
+  Import took 0.007592 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001550 seconds.
+  path: Assets/_Scenes/Forest Level 1.unity
+  artifactKey: Guid(91ce2d6266d81794c8f1e512269921b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Scenes/Forest Level 1.unity using Guid(91ce2d6266d81794c8f1e512269921b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ce701f4d983f9e33a4fff1c2d5968cfa') in 0.004364 seconds
+  Import took 0.007368 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.970819 seconds.
+  path: Assets/_Scenes/Forest Level 2.unity
+  artifactKey: Guid(f094e1c3eba95d84d80e375531c80d28) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Scenes/Forest Level 2.unity using Guid(f094e1c3eba95d84d80e375531c80d28) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dcb28e47768045e144f0ece767a53fa2') in 0.005968 seconds
+  Import took 0.009054 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001551 seconds.
+  path: Assets/_Scenes/Forest Level 2.unity
+  artifactKey: Guid(f094e1c3eba95d84d80e375531c80d28) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Scenes/Forest Level 2.unity using Guid(f094e1c3eba95d84d80e375531c80d28) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dcb28e47768045e144f0ece767a53fa2') in 0.003595 seconds
+  Import took 0.006632 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.595434 seconds.
+  path: Assets/_Scenes/Forest Level 3.unity
+  artifactKey: Guid(2a9e47519845e394fa10fcf6584ae071) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Scenes/Forest Level 3.unity using Guid(2a9e47519845e394fa10fcf6584ae071) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ef533e356d5d977dba083ad848a28214') in 0.007080 seconds
+  Import took 0.010437 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.604692 seconds.
+  path: Assets/_Scenes/Forest Level 4.unity
+  artifactKey: Guid(92643ea10b940684a86d49cfec8df80c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Scenes/Forest Level 4.unity using Guid(92643ea10b940684a86d49cfec8df80c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '82e6e2ea4fa7b13b7ff9096b940e2928') in 0.004100 seconds
+  Import took 0.006918 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.582551 seconds.
+  path: Assets/_Scenes/Forest Level 5.unity
+  artifactKey: Guid(1aa9a42fe65f00046904201e38199fe7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Scenes/Forest Level 5.unity using Guid(1aa9a42fe65f00046904201e38199fe7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '64fc8dd2c6852734a3ee611bc4d9f8b3') in 0.004117 seconds
+  Import took 0.006908 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.631622 seconds.
+  path: Assets/_Scenes/Kelseys Sandbox.unity
+  artifactKey: Guid(8981b36edc7b72b479eb8adaacd1a17b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Scenes/Kelseys Sandbox.unity using Guid(8981b36edc7b72b479eb8adaacd1a17b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '485e3b2d109c139a55e0d61089292367') in 0.006678 seconds
+  Import took 0.010452 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.001778 seconds.
+  path: Assets/_Scenes/Kelseys Sandbox.unity
+  artifactKey: Guid(8981b36edc7b72b479eb8adaacd1a17b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Scenes/Kelseys Sandbox.unity using Guid(8981b36edc7b72b479eb8adaacd1a17b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '485e3b2d109c139a55e0d61089292367') in 0.003479 seconds
+  Import took 0.006120 seconds .
+
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
