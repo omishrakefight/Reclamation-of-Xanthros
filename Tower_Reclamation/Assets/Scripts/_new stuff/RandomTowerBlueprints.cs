@@ -481,6 +481,11 @@ public class RandomTowerBlueprints : MonoBehaviour
         towerTwoInUse = false;
         towerThreeInUse = false;
         int limit = 3;
+
+        if (amountOfUndiscoveredTowers == 0)
+        {
+            Singleton.Instance.isHasLearnedATower = true;
+        }
         //if(amountOfUndiscoveredTowers < 3)
         //{
         //    limit = amountOfUndiscoveredTowers;

@@ -50,6 +50,7 @@ public class TinkerUpgrades : MonoBehaviour {
             currentUpgradeLevels = new List<int>() { 0, 0, 0, 0, 0 };
             // not completely true, but to make sure it doesnt loop
             numSelected = 0;
+            maxPickNum = 2;
             loadMeOnce = false;
             //hasPicked = false;
             Hint.text = hintPickMore + (maxPickNum - currentPickNum) + " more."; ;
@@ -434,6 +435,15 @@ public class TinkerUpgrades : MonoBehaviour {
         {
             possibleOptionsFromSave.Add(x);
             possibleOptions.Add(x);
+        }
+
+        if (learnableUpgrades.Count == 0)
+        {
+            // then theres nothing more you can learn
+            Singleton.Instance.ishasLearnedTinker = true;
+        } else if(learnableUpgrades.Count < maxPickNum)
+        {
+            maxPickNum = learnableUpgrades.Count;
         }
 
         Transform parent = transform.parent;
