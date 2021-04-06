@@ -62,6 +62,9 @@ public sealed class Singleton : MonoBehaviour {
     private bool hasExplainedTurretRoom = false;
     private bool hasExplainedMeetingRoom = false;
 
+    private bool isInitialized = false;
+    public static string zoneName = "";
+
     [Header("Rifle Tower")]
     [SerializeField] public Tower basicRifledTowerBase;
     [SerializeField] public GameObject basicRifledTowerHead;
@@ -87,6 +90,11 @@ public sealed class Singleton : MonoBehaviour {
             towerOneHead = basicRifledTowerHead;
             towerOneBaseType = (int)RifledBase.Basic;
             towerOneHeadType = (int)RifledHead.Basic;
+        }
+
+        if (!isInitialized)
+        {
+            zoneName = "Ice";
         }
 
         levelText.text = "Level : " + level.ToString();
@@ -236,6 +244,10 @@ public sealed class Singleton : MonoBehaviour {
     {
         return hasExplainedMeetingRoom;
     }
+    public string GetZoneName()
+    {
+        return zoneName;
+    }
 
     public bool GetIsTutorial()
     {
@@ -284,6 +296,16 @@ public sealed class Singleton : MonoBehaviour {
     {
         this.level = level;
         levelText.text = "Level : " + level.ToString();
+    }
+
+    public void SetZoneName(string zone)
+    {
+        zoneName = zone;
+    }
+
+    public void SetInitialized(bool init)
+    {
+        isInitialized = init;
     }
 
 

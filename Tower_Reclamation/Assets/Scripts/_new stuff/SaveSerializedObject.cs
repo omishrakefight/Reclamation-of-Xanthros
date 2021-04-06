@@ -46,6 +46,8 @@ public class SaveSerializedObject  {
     public bool hasExplainedTurretRoom = false;
     public bool hasExplainedMeetingRoom = false;
 
+    public string zoneName = "";
+
     // add the bool
 
     /// <summary>
@@ -56,6 +58,11 @@ public class SaveSerializedObject  {
 
     public SaveSerializedObject()
     {
+    }
+
+    public void SaveZoneName(string zone)
+    {
+        zoneName = zone;
     }
 
     public void SaveTowerPreset(int towerNum, string name, int headType, int baseType) // add more in here for passins.

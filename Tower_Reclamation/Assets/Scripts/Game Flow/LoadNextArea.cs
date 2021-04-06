@@ -90,8 +90,9 @@ public class LoadNextArea : MonoBehaviour {
             // LOAD 'world' + random 1-5 or something to load randomly created,
 
             currentLevel = singleton.level;
+            string zone = singleton.GetZoneName();
 
-            SceneManager.LoadSceneAsync("_Scenes/Level_ " + currentLevel.ToString());
+            SceneManager.LoadSceneAsync("_Scenes/" + zone + "/" + "Level_ " + currentLevel.ToString());
             nextLevelButton.enabled = false;
             //testing purposes
             Singleton.Instance.scenesChanged++;
