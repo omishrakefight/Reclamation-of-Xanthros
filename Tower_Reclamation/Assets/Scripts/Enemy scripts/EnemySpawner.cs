@@ -318,7 +318,7 @@ public class EnemySpawner : MonoBehaviour
             }
             waveTimer = timeBetweenWaves;
             startupTimer = startSetupTime;
-        }
+        }// skip cheat 's'   buzzwords for finding this POS
         if (Input.GetKeyDown(KeyCode.S))
         {
             FindObjectOfType<LoadNextArea>().LoadNextAreaPostBattle(Singleton.Instance.level);

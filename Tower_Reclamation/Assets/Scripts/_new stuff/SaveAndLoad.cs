@@ -140,6 +140,12 @@ public class SaveAndLoad : MonoBehaviour {
         loadingBase = SceneManager.LoadSceneAsync("_Scenes/_Base");
     }
 
+    public void LoadGameWonScene()
+    {
+        AsyncOperation loadingGameComplete;
+        loadingGameComplete = SceneManager.LoadSceneAsync("_Scenes/_GameComplete");
+    }
+
     public void LoadSavedBase()
     {
         finishedLoading = false;

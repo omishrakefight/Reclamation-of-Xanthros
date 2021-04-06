@@ -61,7 +61,7 @@ public class PauseMenu : MonoBehaviour {
 
     public void LoadMenu()
     {
-        SceneManager.LoadSceneAsync("_Scenes/TitleScene");
+        SceneManager.LoadSceneAsync("_Scenes/_TitleScene");
         print("loading the menu...");
         Resume();
     }

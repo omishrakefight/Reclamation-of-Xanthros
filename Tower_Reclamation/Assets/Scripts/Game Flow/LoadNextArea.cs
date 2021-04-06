@@ -19,9 +19,10 @@ public class LoadNextArea : MonoBehaviour {
     SaveAndLoad save;
     int currentLevel;
     int timesClickedNextLevel = 0;
+    public const int gameWonLevel = 5;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
         timesClickedNextLevel = 0;
         enemySpawner = FindObjectOfType<EnemySpawner>();
         singleton = Singleton.Instance;// FindObjectOfType<Singleton>().Ins;
@@ -52,6 +53,10 @@ public class LoadNextArea : MonoBehaviour {
         {
             case 1:
                 save.LoadNewGameBase();
+                break;
+
+            case gameWonLevel:
+                save.LoadGameWonScene();
                 break;
 
             default:               
