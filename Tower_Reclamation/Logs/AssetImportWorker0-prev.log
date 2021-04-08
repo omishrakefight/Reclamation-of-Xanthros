@@ -15,11 +15,11 @@ C:/Users/Nekier/Documents/GitHub/Reclamation-of-Xanthros/Tower_Reclamation
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-52151
+58010
 Successfully changed project path to: C:/Users/Nekier/Documents/GitHub/Reclamation-of-Xanthros/Tower_Reclamation
 C:/Users/Nekier/Documents/GitHub/Reclamation-of-Xanthros/Tower_Reclamation
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 78.56 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 114.46 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.2.1f1 (270dd8c3da1c)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/Resources/UnitySubsystems
@@ -35,569 +35,240 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56060
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56408
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.2.1f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.003713 seconds.
+Registered in 0.002984 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 51.69 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 62.34 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  3.006 seconds
+- Completed reload, in  3.199 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.002856 seconds.
+Registered in 0.002989 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 51.66 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 54.26 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.923 seconds
+- Completed reload, in  0.958 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.06 seconds
-Refreshing native plugins compatible for Editor in 0.46 ms, found 0 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.16 seconds
+Refreshing native plugins compatible for Editor in 0.51 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1792 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 101.6 MB.
-System memory in use after: 101.7 MB.
+Unloading 1793 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 101.9 MB.
+System memory in use after: 102.0 MB.
 
-Unloading 33 unused Assets to reduce memory usage. Loaded Objects now: 2241.
-Total: 2.208700 ms (FindLiveObjects: 0.268400 ms CreateObjectMapping: 0.092100 ms MarkObjects: 1.742600 ms  DeleteObjects: 0.104400 ms)
+Unloading 33 unused Assets to reduce memory usage. Loaded Objects now: 2243.
+Total: 1.875500 ms (FindLiveObjects: 0.166300 ms CreateObjectMapping: 0.066100 ms MarkObjects: 1.537700 ms  DeleteObjects: 0.104200 ms)
 
 ========================================================================
 Received Import Request.
-  path: Assets/_Scenes/Level_ 2
-  artifactKey: Guid(2a262993e66ae7347b630b2523dc9ffa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_Scenes/Level_ 2 using Guid(2a262993e66ae7347b630b2523dc9ffa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '07279be8ebe3b6000a37a36638a23069') in 0.007049 seconds
-  Import took 0.009967 seconds .
+  path: Assets/Prefabs/Lights
+  artifactKey: Guid(4b6cd76fddd720f45a7ef52ff3a7ca34) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Lights using Guid(4b6cd76fddd720f45a7ef52ff3a7ca34) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'adecc237eb52ac31e18659f9f8262a57') in 0.006326 seconds
+  Import took 0.009146 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.001173 seconds.
-  path: Assets/_Scenes/Level_ 2/LightingData.asset
-  artifactKey: Guid(00c5c70836ec5f24092d14db7d77a164) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_Scenes/Level_ 2/LightingData.asset using Guid(00c5c70836ec5f24092d14db7d77a164) Importer(815301076,1909f56bfc062723c751e8b465ee728b) Lighting data asset ‘LightingData’ is inconsistent because 4 files out of 20 are missing.  Please use Generate Lighting to rebuild the lighting data.
-
- -> (artifact id: 'd15744415edb6db80c155bff6ccbb812') in 0.052642 seconds
-  Import took 0.055294 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 26.886017 seconds.
-  path: Assets/_Scenes/Ice
-  artifactKey: Guid(2adb67a3e5d23214ab6ebaba2c574a5f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_Scenes/Ice using Guid(2adb67a3e5d23214ab6ebaba2c574a5f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8e4fcb86ce70ea93f8e01335c5212626') in 0.055203 seconds
-  Import took 0.240536 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 8.364692 seconds.
-  path: Assets/_Scenes/Lava room Template
-  artifactKey: Guid(212a2ac2d9a40d94eabdf9dd5331cdf4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_Scenes/Lava room Template using Guid(212a2ac2d9a40d94eabdf9dd5331cdf4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3655de4997618270bce75ff558a2c240') in 0.005585 seconds
-  Import took 0.009455 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 7.121728 seconds.
-  path: Assets/_Scenes/Volcano level 3/Area Light.prefab
-  artifactKey: Guid(2894a4e81529f784b9412ab93b0c81cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_Scenes/Volcano level 3/Area Light.prefab using Guid(2894a4e81529f784b9412ab93b0c81cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3329e8d5c242cf73fe6d5f0e76d2487f') in 0.023225 seconds
-  Import took 0.026204 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000552 seconds.
-  path: Assets/_Scenes/Volcano level 3/BurrowerShell.prefab
-  artifactKey: Guid(62c86da661daa6642974119b88355fbc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_Scenes/Volcano level 3/BurrowerShell.prefab using Guid(62c86da661daa6642974119b88355fbc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b7c2ae97836786b60bfc69bfa981c151') in 0.096892 seconds
-  Import took 0.100913 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000562 seconds.
-  path: Assets/_Scenes/Volcano level 3/Aura Heal Enemy.prefab
-  artifactKey: Guid(48b6961c5a23c944c911e817680642b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_Scenes/Volcano level 3/Aura Heal Enemy.prefab using Guid(48b6961c5a23c944c911e817680642b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4ece0dc609fdae138834825fc97d3d83') in 0.033640 seconds
-  Import took 0.037762 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000665 seconds.
-  path: Assets/_Scenes/Volcano level 3/Magma_Central.obj
-  artifactKey: Guid(3e30eeb380d081b41821f9537a86303b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_Scenes/Volcano level 3/Magma_Central.obj using Guid(3e30eeb380d081b41821f9537a86303b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b5158b80d7a043843cf13cc7eb92ab3e') in 0.196668 seconds
-  Import took 0.199687 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000517 seconds.
-  path: Assets/_Scenes/Volcano level 3/Background music.prefab
-  artifactKey: Guid(e6090f4146094464d8a7b34ab2d5bb2f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_Scenes/Volcano level 3/Background music.prefab using Guid(e6090f4146094464d8a7b34ab2d5bb2f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0d73ebf3222b246af4457cfb8b17cf96') in 0.005572 seconds
-  Import took 0.008310 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000511 seconds.
-  path: Assets/_Scenes/Volcano level 3/Gameplay Upgrade Sidebar.png
-  artifactKey: Guid(bd6259405013659449f4592350c319cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_Scenes/Volcano level 3/Gameplay Upgrade Sidebar.png using Guid(bd6259405013659449f4592350c319cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fd7bcaf34e42abb1a96980bcb83070c2') in 0.544213 seconds
-  Import took 0.551620 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.001068 seconds.
-  path: Assets/_Scenes/Volcano level 3/Magma_Straight.png
-  artifactKey: Guid(47fa846418d0c0a4a983e5de6e6b0ab9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_Scenes/Volcano level 3/Magma_Straight.png using Guid(47fa846418d0c0a4a983e5de6e6b0ab9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd92619a87e475e21a387d8f83480bd18') in 0.051752 seconds
-  Import took 0.058636 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000457 seconds.
-  path: Assets/_Scenes/Volcano level 3/Magma_Peninsula.png
-  artifactKey: Guid(095c220883c36da41863f76ae26d83d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_Scenes/Volcano level 3/Magma_Peninsula.png using Guid(095c220883c36da41863f76ae26d83d6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd63da8633eba1b127a5974b916e7be75') in 0.013659 seconds
-  Import took 0.017915 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000315 seconds.
-  path: Assets/_Scenes/Volcano level 3/Doubles.prefab
-  artifactKey: Guid(c2db3788b99f9ce4bad2c7e1e994761f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_Scenes/Volcano level 3/Doubles.prefab using Guid(c2db3788b99f9ce4bad2c7e1e994761f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'da9cc3a8917536d7bfc8c4287f926dc8') in 0.019992 seconds
-  Import took 0.023885 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000363 seconds.
-  path: Assets/_Scenes/Volcano level 3/Fire_Standard_BaseMat.mat
-  artifactKey: Guid(8c288c8ac2de4514eb099d097b2d9c0a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_Scenes/Volcano level 3/Fire_Standard_BaseMat.mat using Guid(8c288c8ac2de4514eb099d097b2d9c0a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a306763c81ce3b52024f9f7c57c8225f') in 0.039578 seconds
-  Import took 0.043405 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000332 seconds.
-  path: Assets/_Scenes/Volcano level 3/Flame Basic Tower.prefab
-  artifactKey: Guid(66df67cacb3a52842be7f436389e6ab6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_Scenes/Volcano level 3/Flame Basic Tower.prefab using Guid(66df67cacb3a52842be7f436389e6ab6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '298ce4047e060ac2a2959fd5a68fe1d5') in 0.019619 seconds
-  Import took 0.022867 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000363 seconds.
-  path: Assets/_Scenes/Volcano level 3/General_Shouting.png
-  artifactKey: Guid(5dfaa24356e9d2d4aaf900bf88f4d949) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_Scenes/Volcano level 3/General_Shouting.png using Guid(5dfaa24356e9d2d4aaf900bf88f4d949) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8e9794281cecc81b3057e67a4bb6e32c') in 0.015604 seconds
-  Import took 0.018576 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000339 seconds.
-  path: Assets/_Scenes/Volcano level 3/Orange.mat
-  artifactKey: Guid(7cd5026e11807344695d8225140cf24b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_Scenes/Volcano level 3/Orange.mat using Guid(7cd5026e11807344695d8225140cf24b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '71951adb0462a2980f3d1a95426b1f4e') in 0.012375 seconds
-  Import took 0.015515 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000455 seconds.
-  path: Assets/_Scenes/Volcano level 3/Lightning_Standard.obj
-  artifactKey: Guid(09e9b263c3029cf4e9faaaef3f6b802e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_Scenes/Volcano level 3/Lightning_Standard.obj using Guid(09e9b263c3029cf4e9faaaef3f6b802e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5d2953d3590476666fd59dd77b30bc2b') in 0.033915 seconds
-  Import took 0.036959 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000462 seconds.
-  path: Assets/_Scenes/Volcano level 3/Magma_Curved.obj
-  artifactKey: Guid(40c9e439c8262224e9e67de74e9c294d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_Scenes/Volcano level 3/Magma_Curved.obj using Guid(40c9e439c8262224e9e67de74e9c294d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f5de278122db8e706c2d135d26aaa0d3') in 0.033348 seconds
-  Import took 0.036227 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000418 seconds.
-  path: Assets/_Scenes/Volcano level 3/Enemy Hit Particles.prefab
-  artifactKey: Guid(bb400b744ba2dcc4497cde2662c22e00) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_Scenes/Volcano level 3/Enemy Hit Particles.prefab using Guid(bb400b744ba2dcc4497cde2662c22e00) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '656707b8d99edffa11c23e9b1a182a10') in 0.006227 seconds
-  Import took 0.009415 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000506 seconds.
-  path: Assets/_Scenes/Volcano level 3/Magma_Central.png
-  artifactKey: Guid(758bf90cf936e3042a1a594b6e90dcd9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_Scenes/Volcano level 3/Magma_Central.png using Guid(758bf90cf936e3042a1a594b6e90dcd9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c66446764d514e1d16b2738582eeb6b5') in 0.009766 seconds
-  Import took 0.013515 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000638 seconds.
-  path: Assets/_Scenes/Volcano level 3/Lightning_Standard.png
-  artifactKey: Guid(1951d33ab6c193a44bc30245e95da95c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_Scenes/Volcano level 3/Lightning_Standard.png using Guid(1951d33ab6c193a44bc30245e95da95c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0f6893b38f6960f4322d620752a0e413') in 0.009345 seconds
-  Import took 0.012311 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000320 seconds.
-  path: Assets/_Scenes/Volcano level 3/PicaVoxel PBR.mat
-  artifactKey: Guid(65d08dc1d4ce8ab428f4a6cc21ead210) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_Scenes/Volcano level 3/PicaVoxel PBR.mat using Guid(65d08dc1d4ce8ab428f4a6cc21ead210) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '90051686109c45750af57113404e4e4c') in 0.015560 seconds
-  Import took 0.019043 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000529 seconds.
-  path: Assets/_Scenes/Volcano level 3/Enemy_Scorpion - burrower.obj
-  artifactKey: Guid(97b9b1f8782cf5d4891c46420a2e9f4e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_Scenes/Volcano level 3/Enemy_Scorpion - burrower.obj using Guid(97b9b1f8782cf5d4891c46420a2e9f4e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '733226ab43454657c097618bd5ad28af') in 0.028191 seconds
-  Import took 0.031262 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.001190 seconds.
-  path: Assets/_Scenes/Volcano level 3/Enemy_Doubles.obj
-  artifactKey: Guid(566a0b7bd2022f0478674d1b4cb8a160) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_Scenes/Volcano level 3/Enemy_Doubles.obj using Guid(566a0b7bd2022f0478674d1b4cb8a160) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f5b1739bf40ac9832c11adbe7fb354a6') in 0.032664 seconds
-  Import took 0.035916 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.001148 seconds.
-  path: Assets/_Scenes/Volcano level 3/Enemy Base.obj
-  artifactKey: Guid(9144f7feb0d49c4479650a3cc94a7aac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_Scenes/Volcano level 3/Enemy Base.obj using Guid(9144f7feb0d49c4479650a3cc94a7aac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '747dfe8e2a633ed37e917f58992117c5') in 0.036306 seconds
-  Import took 0.040229 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000991 seconds.
-  path: Assets/_Scenes/Volcano level 3/Enemy A.obj
-  artifactKey: Guid(188a44df5353a5d4ea452fe8426f7c53) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_Scenes/Volcano level 3/Enemy A.obj using Guid(188a44df5353a5d4ea452fe8426f7c53) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a0ae24a567f9d7618ee8e5a587f14c60') in 0.049850 seconds
-  Import took 0.055361 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.001484 seconds.
-  path: Assets/_Scenes/Volcano level 3/Plasma Correcter.prefab
-  artifactKey: Guid(156f5bcfcd5cff04a958c961c5e81cd4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_Scenes/Volcano level 3/Plasma Correcter.prefab using Guid(156f5bcfcd5cff04a958c961c5e81cd4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '19198f08cfeb6c580e74255c13d0e33e') in 0.030366 seconds
-  Import took 0.034740 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.001523 seconds.
-  path: Assets/_Scenes/Volcano level 3/PicaVoxelChunk.prefab
-  artifactKey: Guid(827c4f8b8f19e444cb53c97973658320) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_Scenes/Volcano level 3/PicaVoxelChunk.prefab using Guid(827c4f8b8f19e444cb53c97973658320) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '84ab38bdd35dba6ffa305ae4aedc777d') in 0.007205 seconds
-  Import took 0.010840 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000656 seconds.
-  path: Assets/_Scenes/Volcano level 3/PicaVoxel Diffuse.mat
-  artifactKey: Guid(019ed9f926316604ab3308ebd069619c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_Scenes/Volcano level 3/PicaVoxel Diffuse.mat using Guid(019ed9f926316604ab3308ebd069619c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9a318ef4319f8c102d5484eec86d7a31') in 0.017322 seconds
-  Import took 0.022595 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.005437 seconds.
-  path: Assets/_Scenes/Volcano level 3/Enemy_Doubles.mat
-  artifactKey: Guid(8d7dcd5f8ec164b43af362ac0689dc16) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_Scenes/Volcano level 3/Enemy_Doubles.mat using Guid(8d7dcd5f8ec164b43af362ac0689dc16) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '489185e5d83ee73aaeb80e91389c81ba') in 0.037203 seconds
-  Import took 0.044265 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.001601 seconds.
-  path: Assets/_Scenes/Volcano level 3/Magma_Curved.png
-  artifactKey: Guid(8b1cac989da2c844d8201bd54bcd6f8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_Scenes/Volcano level 3/Magma_Curved.png using Guid(8b1cac989da2c844d8201bd54bcd6f8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f9c82cefff1503416e0d01c26b7520fc') in 0.009741 seconds
-  Import took 0.013710 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000525 seconds.
-  path: Assets/_Scenes/Volcano level 3/PicaVoxelFrame.prefab
-  artifactKey: Guid(10f3f1814be4ec0469080e281f656ba3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_Scenes/Volcano level 3/PicaVoxelFrame.prefab using Guid(10f3f1814be4ec0469080e281f656ba3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e9d3a23cae3dc7c6387ef8c8d50a0a06') in 0.005990 seconds
-  Import took 0.009194 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000538 seconds.
-  path: Assets/_Scenes/Volcano level 3/Green.mat
-  artifactKey: Guid(ab68ed10c8cc73749a773330981cc4be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_Scenes/Volcano level 3/Green.mat using Guid(ab68ed10c8cc73749a773330981cc4be) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ac5479284d763b20e3887b45325d543b') in 0.014648 seconds
-  Import took 0.017593 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000484 seconds.
-  path: Assets/_Scenes/Volcano level 3/Red.mat
-  artifactKey: Guid(cc024bb231a268446ad75e9c0e47ae5f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_Scenes/Volcano level 3/Red.mat using Guid(cc024bb231a268446ad75e9c0e47ae5f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bb3b44834963eece3022edd1e4e58d29') in 0.013233 seconds
-  Import took 0.016317 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000388 seconds.
-  path: Assets/_Scenes/Volcano level 3/Enemy Death Particles.prefab
-  artifactKey: Guid(04b849843fe1bc543a83d2d80d70bcab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_Scenes/Volcano level 3/Enemy Death Particles.prefab using Guid(04b849843fe1bc543a83d2d80d70bcab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eda4edf331cab062a426878c93bb8ca6') in 0.006643 seconds
-  Import took 0.010144 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000463 seconds.
-  path: Assets/_Scenes/Volcano level 3/Fire_Standard_Base.png
-  artifactKey: Guid(cb536396c8f13184cb3b6ebcd9441c0d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_Scenes/Volcano level 3/Fire_Standard_Base.png using Guid(cb536396c8f13184cb3b6ebcd9441c0d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '33a78c0d88d215e7171d1fcf87d4670d') in 0.010193 seconds
-  Import took 0.013661 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000509 seconds.
-  path: Assets/_Scenes/Volcano level 3/Assault Tower.prefab
-  artifactKey: Guid(8d294cd498d114e438cd77e93b340dba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_Scenes/Volcano level 3/Assault Tower.prefab using Guid(8d294cd498d114e438cd77e93b340dba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '31043d7393bd5d648bb2e4515147a1ec') in 0.017986 seconds
-  Import took 0.021521 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000530 seconds.
-  path: Assets/_Scenes/Volcano level 3/Enemies.prefab
-  artifactKey: Guid(d28ec05c83657e24eb41eab7165eb7e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_Scenes/Volcano level 3/Enemies.prefab using Guid(d28ec05c83657e24eb41eab7165eb7e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2fcfda0bd548811460bd45c714638a31') in 0.053159 seconds
-  Import took 0.058838 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000572 seconds.
-  path: Assets/_Scenes/Volcano level 3/Friendly_Base.prefab
-  artifactKey: Guid(e906f2e908d7f2f499b7d6c779c6f271) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_Scenes/Volcano level 3/Friendly_Base.prefab using Guid(e906f2e908d7f2f499b7d6c779c6f271) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '343f2ae95f40758cd0ecba8c331824c1') in 0.019281 seconds
-  Import took 0.022324 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000514 seconds.
-  path: Assets/_Scenes/Volcano level 3/Enemy_Generic.prefab
-  artifactKey: Guid(ed3aafc660138fb4e87d5e667736d697) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_Scenes/Volcano level 3/Enemy_Generic.prefab using Guid(ed3aafc660138fb4e87d5e667736d697) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '920843307dab6fda5a58bd3e0dd8b7af') in 0.027497 seconds
-  Import took 0.032013 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000512 seconds.
-  path: Assets/_Scenes/Volcano level 3/Rolling Enemy.prefab
-  artifactKey: Guid(7a2e42844e92c2447bec7790b419903c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_Scenes/Volcano level 3/Rolling Enemy.prefab using Guid(7a2e42844e92c2447bec7790b419903c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4b7c6172d39db0e4b19edb599a4ed2f0') in 0.022917 seconds
-  Import took 0.027673 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000536 seconds.
-  path: Assets/_Scenes/Volcano level 3/Fire_Standard_Base.prefab
-  artifactKey: Guid(750f1f599a916fe4a9b41e6b9173353a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_Scenes/Volcano level 3/Fire_Standard_Base.prefab using Guid(750f1f599a916fe4a9b41e6b9173353a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c3794b305f1fefa235b0c218498ae0d6') in 0.015339 seconds
-  Import took 0.019042 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000547 seconds.
-  path: Assets/_Scenes/Volcano level 3/Selected Waypoint Spotlight.prefab
-  artifactKey: Guid(aae89dc0a81eb05438e0040573f998f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_Scenes/Volcano level 3/Selected Waypoint Spotlight.prefab using Guid(aae89dc0a81eb05438e0040573f998f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e97886daa1de99d1b2042f29cf3213ca') in 0.006121 seconds
-  Import took 0.009259 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000543 seconds.
-  path: Assets/_Scenes/Volcano level 3/Fire_Standard_Turret.obj
-  artifactKey: Guid(4222d80ece829ce468538abe273d893c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_Scenes/Volcano level 3/Fire_Standard_Turret.obj using Guid(4222d80ece829ce468538abe273d893c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7b7c0a7c624d960e49e689adeb9c83c3') in 0.022781 seconds
-  Import took 0.025876 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000460 seconds.
-  path: Assets/_Scenes/Volcano level 3/Lightning_Standard.prefab
-  artifactKey: Guid(4b9780231aa70514a9034c3c7d5f14d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_Scenes/Volcano level 3/Lightning_Standard.prefab using Guid(4b9780231aa70514a9034c3c7d5f14d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b6bcb2a85ab129e506429f8ab80c321b') in 0.018115 seconds
-  Import took 0.021376 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000389 seconds.
-  path: Assets/_Scenes/Volcano level 3/Purple.mat
-  artifactKey: Guid(4540b47b7643bf946b2ed7889cba08e9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_Scenes/Volcano level 3/Purple.mat using Guid(4540b47b7643bf946b2ed7889cba08e9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '805bf418c2c33c3a7925f507221939bf') in 0.014580 seconds
-  Import took 0.017999 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000560 seconds.
-  path: Assets/_Scenes/Volcano level 3/Magma_Straight.obj
-  artifactKey: Guid(61d717eaea89f3b40bf3c5267af7e314) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_Scenes/Volcano level 3/Magma_Straight.obj using Guid(61d717eaea89f3b40bf3c5267af7e314) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a0047347e9ae1229a46b1aa18cf6d272') in 0.030623 seconds
-  Import took 0.033852 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000406 seconds.
-  path: Assets/_Scenes/Volcano level 3/Friendly Base.obj
-  artifactKey: Guid(d6184d3711537ed4aa692a354fc0b3a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_Scenes/Volcano level 3/Friendly Base.obj using Guid(d6184d3711537ed4aa692a354fc0b3a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bc34c9e152c93ae9ec736fa562a0759f') in 0.033674 seconds
-  Import took 0.037107 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000386 seconds.
-  path: Assets/_Scenes/Volcano level 3/Blue.mat
-  artifactKey: Guid(d70cd3af7d07efa49866aab814ccb2d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_Scenes/Volcano level 3/Blue.mat using Guid(d70cd3af7d07efa49866aab814ccb2d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c104df4783b897841a275a5e0827cb27') in 0.012301 seconds
-  Import took 0.015745 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000408 seconds.
-  path: Assets/_Scenes/Volcano level 3/Magma_Peninsula.obj
-  artifactKey: Guid(2093ca77296ead74a94d88eb0ec97c38) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_Scenes/Volcano level 3/Magma_Peninsula.obj using Guid(2093ca77296ead74a94d88eb0ec97c38) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '28d6278aed41e3faa8f3e9332f2af97b') in 0.032133 seconds
-  Import took 0.035319 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000526 seconds.
-  path: Assets/_Scenes/Volcano level 3/Enemy_Scorpion - burrower.png
-  artifactKey: Guid(5d36c0b7ed4236d44a3a9091eb4c9c70) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_Scenes/Volcano level 3/Enemy_Scorpion - burrower.png using Guid(5d36c0b7ed4236d44a3a9091eb4c9c70) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '51c30e85392abafa0d3369cbd1618ef7') in 0.009520 seconds
-  Import took 0.012620 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000544 seconds.
-  path: Assets/_Scenes/Volcano level 3/Magma_Peninsula.obj
-  artifactKey: Guid(2093ca77296ead74a94d88eb0ec97c38) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_Scenes/Volcano level 3/Magma_Peninsula.obj using Guid(2093ca77296ead74a94d88eb0ec97c38) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '28d6278aed41e3faa8f3e9332f2af97b') in 0.024814 seconds
-  Import took 0.028164 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000347 seconds.
-  path: Assets/_Scenes/Volcano level 3/Enemy_Scorpion - burrower.mat
-  artifactKey: Guid(e439ef2142143ad46b6030e3e1fe82e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_Scenes/Volcano level 3/Enemy_Scorpion - burrower.mat using Guid(e439ef2142143ad46b6030e3e1fe82e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f3ab7ea2db60efd6ba59793b377a0ae9') in 0.014197 seconds
-  Import took 0.017711 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000411 seconds.
-  path: Assets/_Scenes/Volcano level 3/Light Blue.mat
-  artifactKey: Guid(e39045edd78520b4db33bef10ac81d5c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_Scenes/Volcano level 3/Light Blue.mat using Guid(e39045edd78520b4db33bef10ac81d5c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8313a5b421fe7439b0c5dd753b78278b') in 0.011380 seconds
-  Import took 0.014198 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000352 seconds.
-  path: Assets/_Scenes/Volcano level 3/Slime.prefab
-  artifactKey: Guid(c5a4f7fe1d22e3544973cb6b693efe2e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_Scenes/Volcano level 3/Slime.prefab using Guid(c5a4f7fe1d22e3544973cb6b693efe2e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '082af9eb402f5aa35b23fe0033a60482') in 0.011728 seconds
-  Import took 0.014512 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000457 seconds.
-  path: Assets/_Scenes/Volcano level 3/Enemy_Doubles.png
-  artifactKey: Guid(816aebfbd0fcaa44daab647a9f20946d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_Scenes/Volcano level 3/Enemy_Doubles.png using Guid(816aebfbd0fcaa44daab647a9f20946d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0e4f0b4fa2577376eb2c2413724d883c') in 0.009648 seconds
-  Import took 0.012583 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000373 seconds.
-  path: Assets/_Scenes/Volcano level 3/Canvas Container.prefab
-  artifactKey: Guid(ac7d9a3b06602544d9b1be09f5aed802) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_Scenes/Volcano level 3/Canvas Container.prefab using Guid(ac7d9a3b06602544d9b1be09f5aed802) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '80afdb13cd6cd243387ee74fcf0ee8d2') in 0.080678 seconds
-  Import took 0.084893 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000399 seconds.
-  path: Assets/_Scenes/Volcano level 3/General_Neutral.png
-  artifactKey: Guid(373bac48554155b428f4f10b22002dbe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_Scenes/Volcano level 3/General_Neutral.png using Guid(373bac48554155b428f4f10b22002dbe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'adec81d108332354cd7baf849f0116e6') in 0.012330 seconds
-  Import took 0.015372 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000447 seconds.
-  path: Assets/_Scenes/Volcano level 3/End Particles.prefab
-  artifactKey: Guid(da6770196a066b249890a68580b356a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_Scenes/Volcano level 3/End Particles.prefab using Guid(da6770196a066b249890a68580b356a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bb2f63b88f196e775891a32bd29ebdeb') in 0.007228 seconds
-  Import took 0.010276 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000430 seconds.
-  path: Assets/_Scenes/Volcano level 3/Fire_Standard_Base.obj
-  artifactKey: Guid(fa17c854e8543a64ab14f94bc77adc1a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_Scenes/Volcano level 3/Fire_Standard_Base.obj using Guid(fa17c854e8543a64ab14f94bc77adc1a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0254737f65cd9962e59d73b42cd4390d') in 0.026057 seconds
-  Import took 0.029275 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000416 seconds.
-  path: Assets/_Scenes/Volcano level 3/Fire_Standard_Turret.prefab
-  artifactKey: Guid(7512c9623d640c641b298d0a91bc16a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_Scenes/Volcano level 3/Fire_Standard_Turret.prefab using Guid(7512c9623d640c641b298d0a91bc16a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '81f8da5f6cff3452466c57183b6917ac') in 0.015606 seconds
-  Import took 0.019571 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000542 seconds.
-  path: Assets/_Scenes/Volcano level 3/Enemy_Base.prefab
-  artifactKey: Guid(f0dd7617fd6e3794885929ea0dbc9b8e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_Scenes/Volcano level 3/Enemy_Base.prefab using Guid(f0dd7617fd6e3794885929ea0dbc9b8e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7729c63d7f0a8b0e3563f2da3477afe3') in 0.013673 seconds
-  Import took 0.016822 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000366 seconds.
-  path: Assets/_Scenes/Volcano level 3/diffuse.tga
-  artifactKey: Guid(9cfb174a6fc70b7438e35091d385d2f5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/_Scenes/Volcano level 3/diffuse.tga using Guid(9cfb174a6fc70b7438e35091d385d2f5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '321b571627717fff2ef8be68734f06ca') in 0.017256 seconds
-  Import took 0.019956 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.168146 seconds.
-  path: Assets/Assets.index
-  artifactKey: Guid(59a28e7741dc3384ab33ec303678a574) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Assets.index using Guid(59a28e7741dc3384ab33ec303678a574) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5420a4e4026d7a6a92f87f1f91d5e683') in 0.037094 seconds
-  Import took 0.040709 seconds .
+  Time since last request: 0.000677 seconds.
+  path: Assets/Audio/Xanthros.wav
+  artifactKey: Guid(959feebfd82bfe147a68154ab3615a47) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Audio/Xanthros.wav using Guid(959feebfd82bfe147a68154ab3615a47) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '729e40c3adebd7efb8a396cbaff16feb') in 0.243306 seconds
+  Import took 0.247428 seconds .
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.002804 seconds.
+Registered in 0.006264 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.51 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.884 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.49 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1743 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 102.5 MB.
+System memory in use after: 102.6 MB.
+
+Unloading 24 unused Assets to reduce memory usage. Loaded Objects now: 2254.
+Total: 1.892800 ms (FindLiveObjects: 0.190700 ms CreateObjectMapping: 0.061200 ms MarkObjects: 1.622400 ms  DeleteObjects: 0.017600 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 406.223886 seconds.
+  path: Assets/Assets.index
+  artifactKey: Guid(59a28e7741dc3384ab33ec303678a574) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets.index using Guid(59a28e7741dc3384ab33ec303678a574) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '17094a6d0be06bcc571542b4f7a549c8') in 0.065865 seconds
+  Import took 0.074926 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.562194 seconds.
+  path: Assets/_Scenes/_GameComplete.unity
+  artifactKey: Guid(edd249fc85ca904439cdaf5954e78328) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Scenes/_GameComplete.unity using Guid(edd249fc85ca904439cdaf5954e78328) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f42da201c6f0ac20c509e4c5ac060f4d') in 0.012802 seconds
+  Import took 0.021680 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002809 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.70 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.489 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.61 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1743 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 102.5 MB.
+System memory in use after: 102.6 MB.
+
+Unloading 24 unused Assets to reduce memory usage. Loaded Objects now: 2256.
+Total: 2.123500 ms (FindLiveObjects: 0.177600 ms CreateObjectMapping: 0.065000 ms MarkObjects: 1.860200 ms  DeleteObjects: 0.019400 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004111 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.55 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.481 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.54 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1743 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 102.5 MB.
+System memory in use after: 102.6 MB.
+
+Unloading 24 unused Assets to reduce memory usage. Loaded Objects now: 2258.
+Total: 2.382700 ms (FindLiveObjects: 0.194500 ms CreateObjectMapping: 0.068000 ms MarkObjects: 2.097200 ms  DeleteObjects: 0.022100 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002991 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.51 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.939 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.51 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1743 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 102.5 MB.
+System memory in use after: 102.7 MB.
+
+Unloading 24 unused Assets to reduce memory usage. Loaded Objects now: 2260.
+Total: 1.939800 ms (FindLiveObjects: 0.236500 ms CreateObjectMapping: 0.067800 ms MarkObjects: 1.617500 ms  DeleteObjects: 0.016900 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002719 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.55 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.883 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.50 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1743 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 102.5 MB.
+System memory in use after: 102.7 MB.
+
+Unloading 24 unused Assets to reduce memory usage. Loaded Objects now: 2262.
+Total: 2.539700 ms (FindLiveObjects: 0.354700 ms CreateObjectMapping: 0.168300 ms MarkObjects: 1.994000 ms  DeleteObjects: 0.021200 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002814 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.54 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.953 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.87 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1743 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 102.6 MB.
+System memory in use after: 102.7 MB.
+
+Unloading 24 unused Assets to reduce memory usage. Loaded Objects now: 2264.
+Total: 2.291500 ms (FindLiveObjects: 0.197900 ms CreateObjectMapping: 0.071300 ms MarkObjects: 2.002100 ms  DeleteObjects: 0.019100 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002930 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.51 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.437 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.52 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1743 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 102.6 MB.
+System memory in use after: 102.7 MB.
+
+Unloading 24 unused Assets to reduce memory usage. Loaded Objects now: 2266.
+Total: 2.118900 ms (FindLiveObjects: 0.293500 ms CreateObjectMapping: 0.082800 ms MarkObjects: 1.718400 ms  DeleteObjects: 0.023000 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003243 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Refreshing native plugins compatible for Editor in 0.50 ms, found 0 plugins.
@@ -606,38 +277,132 @@ Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.874 seconds
+- Completed reload, in  1.408 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.56 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1743 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 102.6 MB.
+System memory in use after: 102.7 MB.
+
+Unloading 24 unused Assets to reduce memory usage. Loaded Objects now: 2268.
+Total: 2.119200 ms (FindLiveObjects: 0.274000 ms CreateObjectMapping: 0.094400 ms MarkObjects: 1.730800 ms  DeleteObjects: 0.019000 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.002900 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.50 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.833 seconds
 Platform modules already initialized, skipping
 Refreshing native plugins compatible for Editor in 0.53 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1742 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 104.3 MB.
-System memory in use after: 104.4 MB.
+Unloading 1743 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 102.6 MB.
+System memory in use after: 102.7 MB.
 
-Unloading 30 unused Assets to reduce memory usage. Loaded Objects now: 2295.
-Total: 2.129900 ms (FindLiveObjects: 0.307000 ms CreateObjectMapping: 0.114200 ms MarkObjects: 1.647800 ms  DeleteObjects: 0.059500 ms)
+Unloading 24 unused Assets to reduce memory usage. Loaded Objects now: 2270.
+Total: 1.871100 ms (FindLiveObjects: 0.258800 ms CreateObjectMapping: 0.079900 ms MarkObjects: 1.510600 ms  DeleteObjects: 0.019900 ms)
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.004104 seconds.
+Registered in 0.002657 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.52 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.57 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.893 seconds
+- Completed reload, in  2.012 seconds
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.50 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.65 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1742 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 103.3 MB.
-System memory in use after: 103.4 MB.
+Unloading 1743 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 102.6 MB.
+System memory in use after: 102.7 MB.
 
-Unloading 24 unused Assets to reduce memory usage. Loaded Objects now: 2297.
-Total: 2.799700 ms (FindLiveObjects: 0.409500 ms CreateObjectMapping: 0.161800 ms MarkObjects: 2.208300 ms  DeleteObjects: 0.017700 ms)
+Unloading 24 unused Assets to reduce memory usage. Loaded Objects now: 2272.
+Total: 2.480800 ms (FindLiveObjects: 0.272500 ms CreateObjectMapping: 0.088200 ms MarkObjects: 2.094000 ms  DeleteObjects: 0.024800 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 7043.512842 seconds.
+  path: Assets/_Scenes/_Base.unity
+  artifactKey: Guid(2474bb47d10f9f541b6f44525fa5fe7a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Scenes/_Base.unity using Guid(2474bb47d10f9f541b6f44525fa5fe7a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f4cce1a532a73c11bb39627fbb047ae5') in 0.038038 seconds
+  Import took 0.043943 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.012954 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.54 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.324 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.49 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1743 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 102.6 MB.
+System memory in use after: 102.7 MB.
+
+Unloading 24 unused Assets to reduce memory usage. Loaded Objects now: 2274.
+Total: 2.212200 ms (FindLiveObjects: 0.222400 ms CreateObjectMapping: 0.073500 ms MarkObjects: 1.892200 ms  DeleteObjects: 0.023000 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 59346.908185 seconds.
+  path: Assets/Scripts/E_enemySpawnLevels
+  artifactKey: Guid(357c27b2a8e1bc546a3c399bf8dab6fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/E_enemySpawnLevels using Guid(357c27b2a8e1bc546a3c399bf8dab6fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ee0c413e6941cbf20203285ad2810986') in 0.008637 seconds
+  Import took 0.015460 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.483333 seconds.
+  path: Assets/Scripts/Enemy scripts
+  artifactKey: Guid(5e9e8a8c62223ee4dafd5cf687527027) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Enemy scripts using Guid(5e9e8a8c62223ee4dafd5cf687527027) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0943869db3e8eec00a49273b5484ad0c') in 0.005989 seconds
+  Import took 0.009125 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.372400 seconds.
+  path: Assets/Scripts/Enemy scripts/BossEnemy.cs
+  artifactKey: Guid(8645476e81843794bb36d233cfc3dd0d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/Enemy scripts/BossEnemy.cs using Guid(8645476e81843794bb36d233cfc3dd0d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0aea492746cc25d06dc50ecb0432ed65') in 0.011038 seconds
+  Import took 0.014080 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 8.312073 seconds.
+  path: Assets/Assets.index
+  artifactKey: Guid(59a28e7741dc3384ab33ec303678a574) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Assets.index using Guid(59a28e7741dc3384ab33ec303678a574) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a73caa3bd2de71867d70472821e3690d') in 0.054076 seconds
+  Import took 0.057243 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3534.704550 seconds.
+  path: Assets/_Scenes/Ice/Level_ 5.unity
+  artifactKey: Guid(7f0b6ca2b1fd21846bf3f332fb0e3715) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/_Scenes/Ice/Level_ 5.unity using Guid(7f0b6ca2b1fd21846bf3f332fb0e3715) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a388941dd5a028b4b859055d91a08484') in 0.008437 seconds
+  Import took 0.016667 seconds .
 
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file

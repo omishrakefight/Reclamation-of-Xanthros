@@ -9,22 +9,22 @@ EditorBuildSettings:
     path: Assets/_Scenes/_TitleScene.unity
     guid: 335600c556f7f074a8a739d799600759
   - enabled: 1
-    path: Assets/_Scenes/Ice/Level_ 1.unity
+    path: Assets/_Scenes/Ice/Level_1.unity
     guid: 31360b1b59a8ae147bcf2a0db7bc652c
   - enabled: 0
     path: Assets/_Scenes/Turret Room.unity
     guid: 863181ec711b0c44bbc255f6cf6369e6
   - enabled: 1
-    path: Assets/_Scenes/Ice/Level_ 2.unity
+    path: Assets/_Scenes/Ice/Level_2.unity
     guid: baedb79b9e059f843b2e2043f70add58
   - enabled: 1
-    path: Assets/_Scenes/Ice/Level_ 3.unity
+    path: Assets/_Scenes/Ice/Level_3.unity
     guid: 00181dc2a0f3c274e9b40494bbbf2d17
   - enabled: 1
-    path: Assets/_Scenes/Ice/Level_ 4.unity
+    path: Assets/_Scenes/Ice/Level_4.unity
     guid: 1c60b0a527905db469fe8d3bcee63fff
   - enabled: 1
-    path: Assets/_Scenes/Ice/Level_ 5.unity
+    path: Assets/_Scenes/Ice/Level_5.unity
     guid: 7f0b6ca2b1fd21846bf3f332fb0e3715
   - enabled: 1
     path: Assets/_Scenes/Base Exit Doorway.unity

@@ -92,7 +92,7 @@ public class LoadNextArea : MonoBehaviour {
             currentLevel = singleton.level;
             string zone = singleton.GetZoneName();
 
-            SceneManager.LoadSceneAsync("_Scenes/" + zone + "/" + "Level_ " + currentLevel.ToString());
+            SceneManager.LoadSceneAsync("_Scenes/" + zone + "/" + "Level_" + currentLevel.ToString());
             nextLevelButton.enabled = false;
             //testing purposes
             Singleton.Instance.scenesChanged++;
