@@ -1,4 +1,4 @@
-using System.Collections;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -24,10 +24,47 @@ public class ConsoleCommands : MonoBehaviour
         inputField.gameObject.active = !inputField.gameObject.active;
     }
 
-    public void ActivateConsoleCommands(string command)
+    public void ActivateConsoleCommands(string commandCode)
     {
 
         string text = inputField.text.ToString();
+        string[] commands;
+
+        //split code into an array
+        if (text.Contains(";")){
+            commands = text.Split(';');
+            // foreach loop, if contains (trim & get last.
+        } else
+        {
+            commands = new string[] { text };
+        }
+
+        // for each command, im going to  check for command viability.
+        foreach (string command in commands)
+        {
+            try
+            {
+                string currentCommand = command.Trim();
+
+                // try to alter the level.
+                if (currentCommand.ToLower().Contains("level"))
+                {
+                    currentCommand = currentCommand.Replace("Level", "");
+                    currentCommand = currentCommand.Trim();
+
+                    int level = int.Parse(currentCommand);
+                    Singleton.Instance.SetLevel(level);
+                }
+
+
+            }
+            catch (Exception ex)
+            {
+                print("error in printing console command, not found: " + command);
+            }
+        }
+
+
 
         switch (text)
         {

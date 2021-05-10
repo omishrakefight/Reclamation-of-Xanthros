@@ -62,8 +62,11 @@ public sealed class Singleton : MonoBehaviour {
     private bool hasExplainedTurretRoom = false;
     private bool hasExplainedMeetingRoom = false;
 
+    public bool killedABoss = false;
     private bool isInitialized = false;
     public static string zoneName = "";
+    public static string newZoneName = "";
+    public static List<string> potentialZonesList;
 
     [Header("Rifle Tower")]
     [SerializeField] public Tower basicRifledTowerBase;
@@ -95,6 +98,8 @@ public sealed class Singleton : MonoBehaviour {
         if (!isInitialized)
         {
             zoneName = "Ice";
+            // does not add in Ice, because ATM ice is default zone.
+            potentialZonesList = new List<string>() { "Volcano" };//, "", "" };
         }
 
         levelText.text = "Level : " + level.ToString();
@@ -248,6 +253,10 @@ public sealed class Singleton : MonoBehaviour {
     {
         return zoneName;
     }
+    public List<string> GetPosibleZoneList()
+    {
+        return potentialZonesList;
+    }
 
     public bool GetIsTutorial()
     {
@@ -260,11 +269,6 @@ public sealed class Singleton : MonoBehaviour {
         print(level + "is the level now!!!!!!");
         levelText.text = "Level : " + level.ToString();
 
-        // loops all towers that damaged this round and tells you how well they did.  Then clears.
-        //foreach (string key in towerDamages.Keys)
-        //{
-        //    print(key + ": " + towerDamages[key]);
-        //}
         towerDamages.Clear();
      }
 
@@ -302,10 +306,34 @@ public sealed class Singleton : MonoBehaviour {
     {
         zoneName = zone;
     }
+    public void SetNewZoneName(string zone)
+    {
+        newZoneName = zone;
+    }
 
     public void SetInitialized(bool init)
     {
         isInitialized = init;
+    }
+    public void SetPotentialZoneList(List<string> potentialZonesL)
+    {
+        potentialZonesList = potentialZonesL;
+    }
+
+    public void FinishedInBase()
+    {
+        if (killedABoss)
+        {
+            zoneName = newZoneName;
+            try
+            {
+                potentialZonesList.Remove(zoneName);
+            }
+            catch (Exception zoneNotFound)
+            {
+                print(zoneName + " : this zone was not found in the potentialZonesList object.");
+            }
+        }
     }
 
 
@@ -337,11 +365,8 @@ public sealed class Singleton : MonoBehaviour {
 
     public void DecidedPath(List<int> chosenEnemies)
     {
+        enemyList.Clear();
         enemyList = chosenEnemies;
-        //foreach (int x in enemyList)
-        //{
-        //    print(x);
-        //}
     }
 
     public List<int> GetEnemyList()

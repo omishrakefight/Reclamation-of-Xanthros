@@ -26,7 +26,7 @@ GameObject:
   - component: {fileID: 887162349376760177}
   m_Layer: 0
   m_Name: volcano block 3 sides
-  m_TagString: Untagged
+  m_TagString: WalkPath
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -160,7 +160,7 @@ TextMesh:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5818152228332474136}
-  m_Text: 43, 42
+  m_Text: 40, 42
   m_OffsetZ: 0
   m_CharacterSize: 0.06
   m_LineSpacing: 1

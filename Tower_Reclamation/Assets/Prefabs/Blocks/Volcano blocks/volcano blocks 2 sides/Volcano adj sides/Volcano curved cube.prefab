@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7469990343951729692}
   m_Layer: 0
   m_Name: Volcano curved cube
-  m_TagString: Untagged
+  m_TagString: WalkPath
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -147,7 +147,7 @@ TextMesh:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6106697489390207602}
-  m_Text: 41, 42
+  m_Text: 38, 40
   m_OffsetZ: 0
   m_CharacterSize: 0.06
   m_LineSpacing: 1

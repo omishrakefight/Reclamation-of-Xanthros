@@ -94,7 +94,7 @@ TextMesh:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3308616141705812642}
-  m_Text: 42, 42
+  m_Text: 40, 42
   m_OffsetZ: 0
   m_CharacterSize: 0.06
   m_LineSpacing: 1
@@ -121,7 +121,7 @@ GameObject:
   - component: {fileID: 4364173656152472932}
   m_Layer: 0
   m_Name: Volcano uncovered block
-  m_TagString: Untagged
+  m_TagString: WalkPath
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -134,7 +134,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5309446987529471132}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 400.66238, y: -0.5469238, z: 417.63745}
+  m_LocalPosition: {x: 400, y: 0, z: 420}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1718636187715878227}

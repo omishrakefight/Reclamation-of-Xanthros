@@ -56,6 +56,7 @@ public class SaveAndLoad : MonoBehaviour {
         //saver.SaveTowers(_playerTowerLog.SaveTowers());
         saver.IsHasChosenATower(_singleton.isHasLearnedATower);
         saver.SaveZoneName(_singleton.GetZoneName());
+        saver.SavePotentialZonesList(_singleton.GetPosibleZoneList());
         // need to convert back to a list when reading in. ?
         // ERROR IS BEACAUSE THE SCRIPT IS DISABLED IN SAVE WINDOW, THE CANVASSES ARE ALL DISABLED EXCEPT USED ONE.
         saver.SaveEnemyOptions(_missionChoice.firstEnemySet.ToArray(), _missionChoice.secondEnemySet.ToArray());
@@ -207,6 +208,7 @@ public class SaveAndLoad : MonoBehaviour {
                 _singleton.isHasLearnedATower = savedFile.hasChosenATower;
                 _singleton.SetLevel(savedFile.currentLevel);
                 _singleton.SetZoneName(savedFile.zoneName);
+                _singleton.SetPotentialZoneList(savedFile.potentialZonesList);
                 _singleton.SetInitialized(true);
             }           
         }

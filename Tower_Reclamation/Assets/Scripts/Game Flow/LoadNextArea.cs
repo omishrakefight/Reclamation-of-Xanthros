@@ -19,7 +19,7 @@ public class LoadNextArea : MonoBehaviour {
     SaveAndLoad save;
     int currentLevel;
     int timesClickedNextLevel = 0;
-    public const int gameWonLevel = 5;
+    public const int gameWonLevel = 10;
 
     // Use this for initialization
     void Start () {
@@ -59,7 +59,16 @@ public class LoadNextArea : MonoBehaviour {
                 save.LoadGameWonScene();
                 break;
 
-            default:               
+            default:
+                //idk we are setting this to false on loading a new area (if no boss exists)?
+                if (FindObjectOfType<BossEnemy>() != null)
+                {
+                    singleton.killedABoss = true;
+                } else
+                {
+                    singleton.killedABoss = false;
+                }
+
                 singleton.isHasLearnedATower = false;
                 singleton.ishasLearnedTinker = false;
                 singleton.isHasPickedAPath = false;
@@ -77,6 +86,7 @@ public class LoadNextArea : MonoBehaviour {
 
         //singleton = FindObjectOfType<Singleton>();
         nextPath = FindObjectOfType<ChooseNextMissionPath>();
+        //TODO wtf, do i need this?
         pickedPath = nextPath.isHasChosen;
 
         singleton.GetUpdateTinkerUpgrades();
@@ -88,11 +98,16 @@ public class LoadNextArea : MonoBehaviour {
         {
             // MAYBE as I do singleton 'Biome / world' to give global bonuses, I can also use world to determine loadnext level.  
             // LOAD 'world' + random 1-5 or something to load randomly created,
+            singleton.FinishedInBase();
 
             currentLevel = singleton.level;
+            int worldLevel = currentLevel % 5;
+
             string zone = singleton.GetZoneName();
 
-            SceneManager.LoadSceneAsync("_Scenes/" + zone + "/" + "Level_" + currentLevel.ToString());
+            print("zone: " + zone + ", worldLevel: " + worldLevel + ", current Un-modulod level: " + currentLevel);
+
+            SceneManager.LoadSceneAsync("_Scenes/" + zone + "/" + "Level_" + worldLevel.ToString());
             nextLevelButton.enabled = false;
             //testing purposes
             Singleton.Instance.scenesChanged++;

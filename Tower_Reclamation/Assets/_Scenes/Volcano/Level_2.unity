@@ -818,6 +818,11 @@ PrefabInstance:
       propertyPath: m_Text
       value: 31, 48
       objectReference: {fileID: 0}
+    - target: {fileID: 114131694065851520, guid: 04c61b8c3888257449aa403977e67680,
+        type: 3}
+      propertyPath: waypointSpotLight
+      value: 
+      objectReference: {fileID: 2109496662}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 04c61b8c3888257449aa403977e67680, type: 3}
 --- !u!4 &363558586 stripped
@@ -4558,8 +4563,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1868837766}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalRotation: {x: -0.3465997, y: -0.016331697, z: 0.006027716, w: -0.9378516}
+  m_LocalPosition: {x: 385.55652, y: 61.6882, z: 408.02338}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -4684,6 +4689,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 464383433155829545, guid: dbdbb71d2234e2e48b2ab08cbb757d21,
     type: 3}
   m_PrefabInstance: {fileID: 2056468378}
+  m_PrefabAsset: {fileID: 0}
+--- !u!108 &2109496662 stripped
+Light:
+  m_CorrespondingSourceObject: {fileID: 108293093779811620, guid: 95f7b35377729454a863f924f23cfcb9,
+    type: 3}
+  m_PrefabInstance: {fileID: 816818340}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2137557279
 PrefabInstance:

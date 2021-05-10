@@ -24,6 +24,11 @@ public class ChooseNextMissionPath : MonoBehaviour {
 
     private int percentOfEnemies = 0;
 
+    private string newZoneName = "";
+    private string buttonOneZoneName = "";
+    private string buttonTwoZoneName = "";
+
+
     // Use this for initialization
     void Start () {
         singleton = Singleton.Instance;
@@ -47,6 +52,8 @@ public class ChooseNextMissionPath : MonoBehaviour {
 
         firstEnemySet = new List<int>(firstPath);
         secondEnemySet = new List<int>(secondPath);
+        ChangeButtonColor(singleton.GetZoneName(), choiceOneBtn);
+        ChangeButtonColor(singleton.GetZoneName(), choiceTwoBtn);
         // setup the button now.
         CalculateMostCommonEnemy(firstEnemySet);
         choiceOneDescription.text = "We are seeing a lot of " + DetermineEnemyType(mostCommonEnemy)
@@ -63,9 +70,15 @@ public class ChooseNextMissionPath : MonoBehaviour {
     {
         singleton.DecidedPath(firstEnemySet);
 
+        if (singleton.killedABoss)
+        {
+            //make this maybe just set name, it only does permanent stuff on leaving base? also
+            //singleton.SetZoneName();
+            singleton.SetNewZoneName(buttonOneZoneName); // newZoneName = buttonOneZoneName;
+        }
+
         //choiceOneBtn.interactable = false;
         //choiceTwoBtn.interactable = false;
-
         // set hasChose = true after waves complete? on laod of base or something.
         isHasChosen = true;
         singleton.isHasPickedAPath = true;
@@ -74,12 +87,28 @@ public class ChooseNextMissionPath : MonoBehaviour {
     public void ChooseSecondPath()
     {
         singleton.DecidedPath(secondEnemySet);
+        if (singleton.killedABoss)
+        {
+            singleton.SetNewZoneName(buttonTwoZoneName);// = buttonTwoZoneName;
+        }
         //choiceOneBtn.interactable = false;
-        //choiceTwoBtn.interactable = false;
 
+        //choiceTwoBtn.interactable = false;
         // set hasChose = true after waves complete? on laod of base or something.
         isHasChosen = true;
         singleton.isHasPickedAPath = true;
+    }
+
+    private void ChangeButtonColor(string zoneName, Button button)
+    {
+        switch (zoneName)
+        {
+            case "Volcano":
+                button.GetComponent<Image>().color = Color.red;
+                break;
+            default:
+                break;
+        }
     }
 
 
@@ -87,6 +116,43 @@ public class ChooseNextMissionPath : MonoBehaviour {
     {
         firstEnemySet.Clear();
         secondEnemySet.Clear();
+
+        if (singleton.killedABoss)
+        {
+            List<string> zones = singleton.GetPosibleZoneList();
+            if (zones.Count > 1)
+            {
+                //TODO TO CONTINUE.
+                //finish up here in zones, copy the list the temp so  i can remove 1 for first button, and if more than 1, garanteed not same zones.
+                //then go into the selected button, ifkilled boss, make it so it will store the new zone name.
+                //when selecting load next level button it changes the zone name and minuses it from the list.
+                //add it to save and load to load the button color changes and zone names / stuff.
+                //make sure that it goes into the laod button function here.
+                List<string> tempZones = new List<string>();
+
+                zones.ForEach((item) => 
+                {
+                    tempZones.Add(item);
+                });
+
+                int random = Random.Range(0, tempZones.Count);
+                ChangeButtonColor(tempZones[random], choiceOneBtn);
+                buttonOneZoneName = tempZones[random];
+                tempZones.RemoveAt(random);
+
+                random = Random.Range(0, tempZones.Count);
+                ChangeButtonColor(tempZones[random], choiceTwoBtn);
+                buttonTwoZoneName = tempZones[random];
+                tempZones.RemoveAt(random);
+            }
+            else
+            {
+                ChangeButtonColor(zones[0], choiceOneBtn);
+                buttonOneZoneName = zones[0];
+                ChangeButtonColor(zones[0], choiceTwoBtn);
+                buttonTwoZoneName = zones[0];
+            }
+        }
         // being set = to it permanent not at the snapshot
         firstEnemySet = singleton.CreateEnemyList(firstEnemySet);
         CalculateMostCommonEnemy(firstEnemySet);

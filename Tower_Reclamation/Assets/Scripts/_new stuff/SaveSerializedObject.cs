@@ -47,6 +47,7 @@ public class SaveSerializedObject  {
     public bool hasExplainedMeetingRoom = false;
 
     public string zoneName = "";
+    public List<string> potentialZonesList;
 
     // add the bool
 
@@ -149,6 +150,11 @@ public class SaveSerializedObject  {
     {
         enemyOption1List = option1;
         enemyOption2List = option2;
+    }
+
+    public void SavePotentialZonesList(List<string> potentialZones)
+    {
+        potentialZonesList = potentialZones;
     }
 
     public void UpdateCurrentLevel()
