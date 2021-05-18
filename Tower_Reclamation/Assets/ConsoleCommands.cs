@@ -49,7 +49,16 @@ public class ConsoleCommands : MonoBehaviour
                 // try to alter the level.
                 if (currentCommand.ToLower().Contains("level"))
                 {
-                    currentCommand = currentCommand.Replace("Level", "");
+                    currentCommand = currentCommand.ToLower().Replace("level", "");
+                    currentCommand = currentCommand.Trim();
+
+                    int level = int.Parse(currentCommand);
+                    Singleton.Instance.SetLevel(level);
+                }
+
+                if (currentCommand.ToLower().Contains("zone"))
+                {
+                    currentCommand = currentCommand.ToLower().Replace("zone", "");
                     currentCommand = currentCommand.Trim();
 
                     int level = int.Parse(currentCommand);

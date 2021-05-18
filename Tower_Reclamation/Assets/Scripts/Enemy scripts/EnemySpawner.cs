@@ -28,6 +28,8 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] AudioClip enemySpawnAudio;
     [SerializeField] Text win;
 
+    [SerializeField] ParticleSystem fireEnhanced;
+
     public bool stillAlive = true;
     bool currentlySpawning = false;
     CurrentWave level;
@@ -80,31 +82,31 @@ public class EnemySpawner : MonoBehaviour
                 {
                     case 1:
                         currentEnemy = enemyPrefab1;
-                        SpawnGenericEnemy();
+                        SpawnGenericEnemyAndCheckForEnhancement();
                         break;
                     case 2:
                         currentEnemy = enemyBurrower;
-                        SpawnGenericEnemy();
+                        SpawnGenericEnemyAndCheckForEnhancement();
                         break;
                     case 3:
                         currentEnemy = enemyPrefab3;
-                        SpawnGenericEnemy();
+                        SpawnGenericEnemyAndCheckForEnhancement();
                         break;
                     case 4:
                         currentEnemy = enemyDoubles;
-                        SpawnGenericEnemy();
+                        SpawnGenericEnemyAndCheckForEnhancement();
                         yield return new WaitForSeconds(.75f);
-                        SpawnGenericEnemy();
+                        SpawnGenericEnemyAndCheckForEnhancement();
                         break;
 
 
                     case 20:
                         currentEnemy = enemySlimer;
-                        SpawnGenericEnemy();
+                        SpawnGenericEnemyAndCheckForEnhancement();
                         break;
                     case 21:
                         currentEnemy = enemyHealer;
-                        SpawnGenericEnemy();
+                        SpawnGenericEnemyAndCheckForEnhancement();
                         break;
                 }
 
@@ -196,15 +198,15 @@ public class EnemySpawner : MonoBehaviour
         {
             case 1:
                 currentEnemy = enemyPrefab1;
-                SpawnGenericEnemy();
+                SpawnGenericEnemyAndCheckForEnhancement();
                 break;
             case 2:
                 currentEnemy = enemyBurrower;
-                SpawnGenericEnemy();
+                SpawnGenericEnemyAndCheckForEnhancement();
                 break;
             case 3:
                 currentEnemy = enemyPrefab3;
-                SpawnGenericEnemy();
+                SpawnGenericEnemyAndCheckForEnhancement();
                 break;
             case 4:
 
@@ -238,12 +240,32 @@ public class EnemySpawner : MonoBehaviour
         }
     }
 
-    public void SpawnGenericEnemy()
+    public void SpawnGenericEnemyAndCheckForEnhancement()
     {
         var enemySpawnLoc = Instantiate(currentEnemy, transform.position, Quaternion.identity);
         enemySpawnLoc.transform.parent = enemiesLocation;
 
+        CheckForEnhancement(enemySpawnLoc);
+
         GetComponent<AudioSource>().PlayOneShot(enemySpawnAudio);
+    }
+
+    /// <summary>
+    /// This gets the enemy reference passed in, and checks to see if the enemy gets a locatio nenhancement.  If so, it attaches the particle system indicitive.
+    /// </summary>
+    /// <param name="enemySpawnLoc"></param>
+    private void CheckForEnhancement(EnemyMovement enemySpawnLoc)
+    {
+        float rng = UnityEngine.Random.Range(0f, 1f);
+
+        print(rng);
+        if (rng > .5f)
+        {
+            ParticleSystem PS = Instantiate(fireEnhanced, enemySpawnLoc.gameObject.transform.position, Quaternion.identity);//transform.position, Quaternion.identity);
+            PS.transform.Rotate(-90, 0, 0);//.RotateAround();// = new Vector3(-90, 0, 0);
+            PS.transform.parent = enemySpawnLoc.gameObject.transform;
+            //enemySpawnLoc.gameObject.in
+        }
     }
 
     public void StartBattle()
