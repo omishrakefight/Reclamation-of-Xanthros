@@ -261,9 +261,12 @@ public class EnemySpawner : MonoBehaviour
         print(rng);
         if (rng > .5f)
         {
-            ParticleSystem PS = Instantiate(fireEnhanced, enemySpawnLoc.gameObject.transform.position, Quaternion.identity);//transform.position, Quaternion.identity);
+            GameObject enemy = enemySpawnLoc.gameObject;
+            ParticleSystem PS = Instantiate(fireEnhanced, enemy.transform.position, Quaternion.identity);//transform.position, Quaternion.identity);
             PS.transform.Rotate(-90, 0, 0);//.RotateAround();// = new Vector3(-90, 0, 0);
-            PS.transform.parent = enemySpawnLoc.gameObject.transform;
+            PS.transform.parent = enemy.transform;
+
+            EnemyHealth enemyH = enemy.GetComponentInChildren<EnemyHealth>();
             //enemySpawnLoc.gameObject.in
         }
     }

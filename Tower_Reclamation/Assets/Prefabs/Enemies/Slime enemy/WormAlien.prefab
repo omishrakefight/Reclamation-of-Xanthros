@@ -1258,6 +1258,8 @@ MonoBehaviour:
   burrowed: 0
   isTargetable: 1
   isBoss: 0
+  PaticleSlimeOnDeath: {fileID: 4585214446441108572, guid: 41ecee3ea6199d543a9827e632d39b81,
+    type: 3}
 --- !u!1 &1453733091737404
 GameObject:
   m_ObjectHideFlags: 0

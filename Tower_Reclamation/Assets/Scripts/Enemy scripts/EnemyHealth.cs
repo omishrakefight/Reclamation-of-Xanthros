@@ -192,6 +192,11 @@ public abstract class EnemyHealth : MonoBehaviour {
         burnDmg = fireDmg;
     }
 
+    protected virtual void GiveEnhancement(int biome)
+    {
+        print("Hitting default enhancement!! fill me in!");
+    }
+
     ////Rifled tower bullet dmg.
     //protected void OnCollisionEnter(Collision collision) //    protected void OnCollisionEnter(Collision collision)
     //{
@@ -217,7 +222,7 @@ public abstract class EnemyHealth : MonoBehaviour {
     //    }
     //}
 
-        // maybe make this go from a single projectile?  it has aan enmum for its type? orr refactor some of this?
+    // maybe make this go from a single projectile?  it has aan enmum for its type? orr refactor some of this?
     protected virtual void OnTriggerEnter(Collider other)
     {
         print("im trigger!");

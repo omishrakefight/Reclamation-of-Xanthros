@@ -10,6 +10,37 @@ public class SlimerMovement : EnemyMovement {
         base.Start();
     }
 
+
+    public void SlimerDeathExplosion()
+    {
+        //Transform here = this.transform;
+
+        int nextNode = currentPathNode++;
+        // sparays the NEXT 2 nodes, therefore, new variable and +1 twice
+        if (nextNode < (path.Count - 2) && (path[nextNode].isSlimed))
+        {
+            GetComponent<SlimeBug>().SpawnSlime(path[nextNode].transform.position, path[nextNode + 1].transform.position, path[nextNode + 2].transform.position);
+            path[nextNode].isSlimed = true;
+        }
+
+        nextNode++;
+        if (nextNode < (path.Count - 2) && (path[nextNode].isSlimed))
+        {
+            GetComponent<SlimeBug>().SpawnSlime(path[nextNode].transform.position, path[nextNode + 1].transform.position, path[nextNode + 2].transform.position);
+            path[nextNode].isSlimed = true;
+        }
+        //foreach (Waypoint WP in path)
+        //{
+        //    if (!WP.isSlimed)
+        //    {
+        //        if ((Vector3.Distance(here.position, WP.transform.position)) < 18)
+        //        {
+
+        //        }
+        //    }
+        //}
+    }
+
     // Update is called once per frame
     override protected void Update () {
 
