@@ -44,8 +44,9 @@ public class RollerHealth : EnemyHealth {
             //string towerName = "";
             //dmg = other.GetComponentInParent<Tower>().Damage(ref towerName);
             hitPoints = hitPoints - dmg;
-            healthBars.SetHealthBarPercent(hitPoints / hitPointsMax);
-                
+            RefreshHealthBar();
+            //healthBars.SetHealthBarPercent(hitPoints / hitPointsMax);
+
             hitparticleprefab.Play();
 
             damageLog.UpdateDamage(towerName, dmg);
@@ -54,5 +55,26 @@ public class RollerHealth : EnemyHealth {
         
         //    print("Current hit points are : " + hitPoints);
     }
+
+    override public void GiveEnhancement(int biome)
+    {
+        switch (biome)
+        {
+            case (int)Biomes.Volcanic:
+                hitPoints = hitPoints * 1.15f;
+                hitPointsMax = hitPoints;
+                volcanicEnhanced = true;
+
+                //Add armor
+                hitPoints = hitPoints * 1.25f;
+                RefreshHealthBar();
+
+                GetComponent<RollerMovement>().IsBaneling();
+
+                break;
+        }
+    }
+
+    
 
 }

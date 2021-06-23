@@ -80,8 +80,7 @@ public abstract class EnemyMovement : MonoBehaviour
         {
             if (transform.position == path[path.Count - 1].transform.position + heightOffset && !punchingBase)
             {
-                punchingBase = true;
-                GetComponent<EnemyDamage>().startPunchingBase();
+                GotToEndOfPath();
                 //GetComponent<EnemyHealth>().GotToEnd();
                 //FindObjectOfType<MyHealth>().AnEnemyFinishedThePath();
             }
@@ -109,6 +108,12 @@ public abstract class EnemyMovement : MonoBehaviour
         }
 
 
+    }
+
+    virtual protected void GotToEndOfPath()
+    {
+        punchingBase = true;
+        GetComponent<EnemyDamage>().startPunchingBase();
     }
 
     protected void CheckEnemyDirection()

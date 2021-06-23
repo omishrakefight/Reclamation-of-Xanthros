@@ -18,6 +18,11 @@ public class EnemyDamage : MonoBehaviour {
 		
 	}
 
+    public float GetDamage()
+    {
+        return damage;
+    }
+
     public void startPunchingBase()
     {
         StartCoroutine(AttckTheBase());
@@ -30,6 +35,15 @@ public class EnemyDamage : MonoBehaviour {
             baseHealth.AnEnemyIsHittingBase(damage);
             yield return new WaitForSeconds(attackSpeed);
         }
+    }
+    
+    /// <summary>
+    /// For special hits aka banelings or a charge bonus.  This does a single hit non repeating.
+    /// </summary>
+    /// <param name="dmg"></param>
+    public void HitTheBaseOnce(float dmg)
+    {
+        baseHealth.AnEnemyIsHittingBase(dmg);
     }
 
 }

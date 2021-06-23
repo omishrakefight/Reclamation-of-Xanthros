@@ -53,7 +53,6 @@ public class CursorIcons : MonoBehaviour {
     void SetCursorOnLayerChange()
     {
        // /*
-        print("delegate for cursor change..");
         switch (raycasting.currentLayerHit)
         {
             case Layer.Enemy:

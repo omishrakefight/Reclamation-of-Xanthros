@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class EnemyHealthBars : MonoBehaviour {
 
     [SerializeField] Image healthBar;
+    [SerializeField] Image armorBar;
     [SerializeField] Image burnTimeBar;
 
     // Use this for initialization
@@ -18,6 +19,7 @@ public class EnemyHealthBars : MonoBehaviour {
 		
 	}
 
+    // HP
     public void SetHealthBarPercent(float healthPercent)
     {
         healthBar.fillAmount = healthPercent;
@@ -27,6 +29,19 @@ public class EnemyHealthBars : MonoBehaviour {
         return healthBar.fillAmount;
     }
 
+
+    // ARMOR
+    public void SetArmorBarPercent(float healthPercent)
+    {
+        armorBar.fillAmount = healthPercent;
+    }
+    public float GetArmorPercent()
+    {
+        return armorBar.fillAmount;
+    }
+
+    
+    // BURN
     public void SetBurnBarPercent(float burnTimePercent)
     {
         burnTimeBar.fillAmount = burnTimePercent;

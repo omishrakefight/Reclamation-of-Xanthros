@@ -137,11 +137,11 @@ public enum Enemies
 {
     generic = 1,
     burrower = 2,
-    rolling = 3,
+    roller = 3,
     doubles = 4,
 
     //specials
-    slimter = 20,
+    slimer = 20,
     healer = 21
 }
 

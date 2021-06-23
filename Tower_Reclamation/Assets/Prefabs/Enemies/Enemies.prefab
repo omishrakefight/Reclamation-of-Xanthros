@@ -76,11 +76,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startSetupTime: 10
-  enemyPrefab1: {fileID: 114277369253632548, guid: 04f81ff9814844ccfa08226f8d46a3f4,
+  enemyTank: {fileID: 114277369253632548, guid: 04f81ff9814844ccfa08226f8d46a3f4,
     type: 3}
   enemyBurrower: {fileID: 114815673108897594, guid: 60fcd257385cf79458a1b48f661760ae,
     type: 3}
-  enemyPrefab3: {fileID: 114726908905558888, guid: ee31e288441edde4695b6bc5b226e169,
+  enemyRoller: {fileID: 114726908905558888, guid: ee31e288441edde4695b6bc5b226e169,
     type: 3}
   enemyDoubles: {fileID: 114258887241237854, guid: 88f64d91bea821c48a72f1c36bba5d6b,
     type: 3}

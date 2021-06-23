@@ -24,11 +24,15 @@ public class SlimerHealth : EnemyHealth {
         base.Update();
 	}
 
-    override protected void GiveEnhancement(int biome)
+    override public void GiveEnhancement(int biome)
     {
         switch (biome)
         {
             case (int)Biomes.Volcanic:
+                hitPoints = hitPoints * 1.2f;
+                hitPointsMax = hitPoints;
+                volcanicEnhanced = true;
+
                 slimeOnDeath = true;
                 break;
         }

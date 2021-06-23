@@ -340,7 +340,17 @@ public sealed class Singleton : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-
+        // opens console commands Cheats Cheat codes
+        if (Input.GetKeyDown(KeyCode.Tab) || (Input.GetKeyDown(KeyCode.LeftShift) && Input.GetKeyDown(KeyCode.C)))
+        {
+            try{
+                FindObjectOfType<ConsoleCommands>().FlipInputFieldActive();
+            }
+            catch (Exception failedToGet)
+            {
+                print("Failed to get consoleCommand object: " + failedToGet.Message.ToString());
+            }
+        }
     }
 
 //          ______                                      

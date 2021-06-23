@@ -136,7 +136,8 @@ public class BurrowerHealth : EnemyHealth {
         dmg = other.GetComponentInParent<Tower>().Damage(ref towerName);
         ProcessHit(dmg, towerName);
 
-        healthBars.SetHealthBarPercent(hitPoints / hitPointsMax);
+        RefreshHealthBar();
+        //healthBars.SetHealthBarPercent(hitPoints / hitPointsMax);
         TellMovementToStartBurrow();
         if (hitPoints <= 0)
         {
@@ -166,8 +167,8 @@ public class BurrowerHealth : EnemyHealth {
             hitPoints -= burnDmg * Time.deltaTime;
             TellMovementToStartBurrow();
 
-
-            healthBars.SetHealthBarPercent(hitPoints / hitPointsMax);
+            RefreshHealthBar();
+            //healthBars.SetHealthBarPercent(hitPoints / hitPointsMax);
             healthBars.SetBurnBarPercent(time / burnTime);
         }
         else

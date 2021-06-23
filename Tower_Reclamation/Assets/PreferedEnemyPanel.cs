@@ -6,8 +6,12 @@ using UnityEngine.UI;
 public class PreferedEnemyPanel : MonoBehaviour {
 
     [SerializeField] Image health;
-    [SerializeField] Image burnTimer
-        ;
+    [SerializeField] Image armor;
+    [SerializeField] Image burnTimer;
+
+    [SerializeField] Image volcanicEnhancement;
+    [SerializeField] Image forestEnhancement;
+
     [SerializeField] Text enemyName;
     //[SerializeField] Image enemyPicature;
     public float maxEnemyHP = 0;
@@ -23,10 +27,12 @@ public class PreferedEnemyPanel : MonoBehaviour {
 	void Update () {
         if ((targetEnemy != null))
         {
-            health.fillAmount = targetEnemy.getHPPercent();
+            health.fillAmount = targetEnemy.GetHPPercent();
             burnTimer.fillAmount = targetEnemy.getBurnPercent();
+            armor.fillAmount = targetEnemy.GetArmorPercent();
 
-        } else
+        }
+        else
         {
             //if (health.fillAmount != 0f)
             //{
@@ -42,6 +48,24 @@ public class PreferedEnemyPanel : MonoBehaviour {
         targetEnemy = enemy;
         enemyName.text = enemy.gameObject.name;
         //maxEnemyHP = targetEnemy.hitPointsMax;
-        health.fillAmount = targetEnemy.getHPPercent();
+        health.fillAmount = targetEnemy.GetHPPercent();
+        armor.fillAmount = targetEnemy.GetArmorPercent();
+
+        if (targetEnemy.volcanicEnhanced)
+        {
+            volcanicEnhancement.gameObject.SetActive(true);
+        } else
+        {
+            volcanicEnhancement.gameObject.SetActive(false);
+        }
+
+        if (targetEnemy.forestEnhanced)
+        {
+            forestEnhancement.gameObject.SetActive(true);
+        }
+        else
+        {
+            forestEnhancement.gameObject.SetActive(false);
+        }
     }
 }

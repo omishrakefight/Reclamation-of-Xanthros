@@ -24,6 +24,7 @@ public class ConsoleCommands : MonoBehaviour
         inputField.gameObject.active = !inputField.gameObject.active;
     }
 
+    // cheat codes console codes console cheats
     public void ActivateConsoleCommands(string commandCode)
     {
 
@@ -56,7 +57,7 @@ public class ConsoleCommands : MonoBehaviour
                     Singleton.Instance.SetLevel(level);
                 }
 
-                if (currentCommand.ToLower().Contains("zone"))
+                else if (currentCommand.ToLower().Contains("zone"))
                 {
                     currentCommand = currentCommand.ToLower().Replace("zone", "");
                     currentCommand = currentCommand.Trim();
@@ -65,6 +66,21 @@ public class ConsoleCommands : MonoBehaviour
                     Singleton.Instance.SetLevel(level);
                 }
 
+                else if (currentCommand.ToLower().Contains("spawn"))
+                {
+                    try
+                    {
+                        FindObjectOfType<CheatSpawnEnemyPanel>().SetMyselfActive(); //.gameObject.SetActive(true);
+                    }
+                    catch (Exception notFound)
+                    {
+                        print("CheatSpawnPanel not found.");
+                    }
+                }
+                else if (currentCommand.ToLower().Equals("s") || currentCommand.ToLower().Contains("skip"))
+                {
+                    FindObjectOfType<LoadNextArea>().LoadNextAreaPostBattle(Singleton.Instance.level);
+                }
 
             }
             catch (Exception ex)

@@ -40,6 +40,9 @@ public abstract class EnemyHealth : MonoBehaviour {
     public bool isTargetable = true;
     public bool isBoss = false;
 
+    public bool volcanicEnhanced = false;
+    public bool forestEnhanced = false;
+
     protected bool noSpecialHealthThings = true;
 
     // Use this for initialization
@@ -124,9 +127,13 @@ public abstract class EnemyHealth : MonoBehaviour {
         isBoss = true;
     }
      
-    public float getHPPercent()
+    public float GetHPPercent()
     {
         return healthBars.GetHPPercent();
+    }
+    public float GetArmorPercent()
+    {
+        return healthBars.GetArmorPercent();
     }
 
     public void DontResethealthPlease()
@@ -146,9 +153,21 @@ public abstract class EnemyHealth : MonoBehaviour {
         }
     }
 
+    /// <summary>
+    /// Refreshes the health bar percents, showing armor and life in its current amount.
+    /// </summary>
     public void RefreshHealthBar()
     {
-        healthBars.SetHealthBarPercent(hitPoints / hitPointsMax);
+        // this means im in 'normal' health
+        if ((hitPointsMax - hitPoints) > 0)
+        {
+            healthBars.SetArmorBarPercent(0);
+            healthBars.SetHealthBarPercent(hitPoints / hitPointsMax);
+        } else // this means im in armor state
+        {
+            healthBars.SetHealthBarPercent(1);
+            healthBars.SetArmorBarPercent((hitPoints - hitPointsMax) / hitPointsMax);
+        }
     }
 
     public virtual IEnumerator Burning(float fireDmg)
@@ -159,7 +178,8 @@ public abstract class EnemyHealth : MonoBehaviour {
             burn = burnDmg * Time.deltaTime;
             time -= 1 * Time.deltaTime;
             hitPoints -= burn;
-            healthBars.SetHealthBarPercent(hitPoints / hitPointsMax);
+            //healthBars.SetHealthBarPercent(hitPoints / hitPointsMax);
+            RefreshHealthBar();
             healthBars.SetBurnBarPercent(time / burnTime);
 
             damageLog.UpdateDamage("Flame Tower", burn);
@@ -192,9 +212,20 @@ public abstract class EnemyHealth : MonoBehaviour {
         burnDmg = fireDmg;
     }
 
-    protected virtual void GiveEnhancement(int biome)
+    public virtual void GiveEnhancement(int biome)
     {
         print("Hitting default enhancement!! fill me in!");
+
+        switch (biome)
+        {
+            case (int)Biomes.Volcanic:
+                volcanicEnhanced = true;
+                break;
+
+            case (int)Biomes.Forest:
+                forestEnhanced = true;
+                break;
+        }
     }
 
     ////Rifled tower bullet dmg.
@@ -225,7 +256,6 @@ public abstract class EnemyHealth : MonoBehaviour {
     // maybe make this go from a single projectile?  it has aan enmum for its type? orr refactor some of this?
     protected virtual void OnTriggerEnter(Collider other)
     {
-        print("im trigger!");
         if (other.gameObject.GetComponent<RifledBullet>())
         {
             RifledBullet bullet = other.gameObject.GetComponent<RifledBullet>();
@@ -325,7 +355,8 @@ public abstract class EnemyHealth : MonoBehaviour {
         //dmg = other.GetComponentInParent<Tower>().Damage(ref towerName);        
         hitPoints = hitPoints - dmg;
         hitparticleprefab.Play();
-        healthBars.SetHealthBarPercent(hitPoints / hitPointsMax);
+        RefreshHealthBar();
+        //healthBars.SetHealthBarPercent(hitPoints / hitPointsMax);
 
         damageLog.UpdateDamage(towerName, dmg);
         Singleton.AddTowerDamage(towerName, dmg);
@@ -335,9 +366,10 @@ public abstract class EnemyHealth : MonoBehaviour {
     {
         float dmg = damage;
         hitPoints = hitPoints - dmg;
-        healthBars.SetHealthBarPercent(hitPoints / hitPointsMax);
+        RefreshHealthBar();
+        //healthBars.SetHealthBarPercent(hitPoints / hitPointsMax);
 
-        
+
         Singleton.AddTowerDamage(towerName, damage);
         hitparticleprefab.Play();
 
@@ -402,7 +434,8 @@ public abstract class EnemyHealth : MonoBehaviour {
             {
                 hitPoints += (healPerTick * Time.deltaTime);
             }
-            healthBars.SetHealthBarPercent(hitPoints / hitPointsMax);
+            RefreshHealthBar();
+            //healthBars.SetHealthBarPercent(hitPoints / hitPointsMax);
             //print("I healed " + healPerTick + " HP!" + "   | healPercent: " + healPercent);
         }
         else
@@ -413,12 +446,12 @@ public abstract class EnemyHealth : MonoBehaviour {
         yield return new WaitForSeconds(1f);
     }
 
-    public void GotToEnd()
-    {
-        Instantiate(deathPrefab, transform.position, Quaternion.identity);
-        endPrefab.Play();
-        KillEnemy();
-    }
+    //public void GotToEnd()
+    //{
+    //    Instantiate(deathPrefab, transform.position, Quaternion.identity);
+    //    endPrefab.Play();
+    //    KillEnemy();
+    //}
 
 
 

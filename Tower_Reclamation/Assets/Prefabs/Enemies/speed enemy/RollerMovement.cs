@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class RollerMovement : EnemyMovement {
 
+    public bool turnedBaneling = false;
+
     // Use this for initialization
     override protected void Start () {
         base.Start();
@@ -14,4 +16,26 @@ public class RollerMovement : EnemyMovement {
     override protected void Update () {
         base.Update();
 	}
+
+    public void IsBaneling()
+    {
+        turnedBaneling = true;
+    }
+
+    override protected void GotToEndOfPath()
+    {
+        if (!turnedBaneling)
+        {
+            punchingBase = true;
+            GetComponent<EnemyDamage>().startPunchingBase();
+        } else
+        {
+            EnemyDamage dmg = GetComponent<EnemyDamage>();
+            float baseDmg = dmg.GetDamage();
+
+            // baneling explode 4x dmg (20 ATM) then dies.
+            dmg.HitTheBaseOnce(baseDmg * 4);
+            GetComponent<RollerHealth>().KillsEnemyandAddsGold();
+        }
+    }
 }

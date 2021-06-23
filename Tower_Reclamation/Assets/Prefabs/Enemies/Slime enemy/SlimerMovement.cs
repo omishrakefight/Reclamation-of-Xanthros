@@ -62,8 +62,9 @@ public class SlimerMovement : EnemyMovement {
         {
             if (transform.position == path[path.Count - 1].transform.position + heightOffset && !punchingBase)
             {
-                punchingBase = true;
-                GetComponent<EnemyDamage>().startPunchingBase();
+                GotToEndOfPath();
+                //punchingBase = true;
+                //GetComponent<EnemyDamage>().startPunchingBase();
                 //GetComponent<EnemyHealth>().GotToEnd();
                 //FindObjectOfType<MyHealth>().AnEnemyFinishedThePath();
             }

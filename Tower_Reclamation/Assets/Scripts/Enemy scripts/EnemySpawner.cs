@@ -15,9 +15,9 @@ public class EnemySpawner : MonoBehaviour
     private bool checkForBoss = true;
     const float originalSecondsBetweenSpawns = 2.00f;
     private EnemyMovement currentEnemy;
-    [SerializeField] EnemyMovement enemyPrefab1;
+    [SerializeField] EnemyMovement enemyTank;
     [SerializeField] EnemyMovement enemyBurrower;
-    [SerializeField] EnemyMovement enemyPrefab3;
+    [SerializeField] EnemyMovement enemyRoller;
     [SerializeField] EnemyMovement enemyDoubles;
 
     [SerializeField] EnemyMovement enemySlimer;
@@ -80,19 +80,19 @@ public class EnemySpawner : MonoBehaviour
 
                 switch (x)
                 {
-                    case 1:
-                        currentEnemy = enemyPrefab1;
+                    case (int)Enemies.generic:
+                        currentEnemy = enemyTank;
                         SpawnGenericEnemyAndCheckForEnhancement();
                         break;
-                    case 2:
+                    case (int)Enemies.burrower:
                         currentEnemy = enemyBurrower;
                         SpawnGenericEnemyAndCheckForEnhancement();
                         break;
-                    case 3:
-                        currentEnemy = enemyPrefab3;
+                    case (int)Enemies.roller:
+                        currentEnemy = enemyRoller;
                         SpawnGenericEnemyAndCheckForEnhancement();
                         break;
-                    case 4:
+                    case (int)Enemies.doubles:
                         currentEnemy = enemyDoubles;
                         SpawnGenericEnemyAndCheckForEnhancement();
                         yield return new WaitForSeconds(.75f);
@@ -100,11 +100,11 @@ public class EnemySpawner : MonoBehaviour
                         break;
 
 
-                    case 20:
+                    case (int)Enemies.slimer:
                         currentEnemy = enemySlimer;
                         SpawnGenericEnemyAndCheckForEnhancement();
                         break;
-                    case 21:
+                    case (int)Enemies.healer:
                         currentEnemy = enemyHealer;
                         SpawnGenericEnemyAndCheckForEnhancement();
                         break;
@@ -192,27 +192,28 @@ public class EnemySpawner : MonoBehaviour
         }
     }
 
-    public void SpawnAppropriateEnemy(int enemy)
-    {
-        switch (enemy)
-        {
-            case 1:
-                currentEnemy = enemyPrefab1;
-                SpawnGenericEnemyAndCheckForEnhancement();
-                break;
-            case 2:
-                currentEnemy = enemyBurrower;
-                SpawnGenericEnemyAndCheckForEnhancement();
-                break;
-            case 3:
-                currentEnemy = enemyPrefab3;
-                SpawnGenericEnemyAndCheckForEnhancement();
-                break;
-            case 4:
 
-                break;
-        }
-    }
+    //public void SpawnAppropriateEnemy(int enemy)
+    //{
+    //    switch (enemy)
+    //    {
+    //        case 1:
+    //            currentEnemy = enemyTank;
+    //            SpawnGenericEnemyAndCheckForEnhancement();
+    //            break;
+    //        case 2:
+    //            currentEnemy = enemyBurrower;
+    //            SpawnGenericEnemyAndCheckForEnhancement();
+    //            break;
+    //        case 3:
+    //            currentEnemy = enemyRoller;
+    //            SpawnGenericEnemyAndCheckForEnhancement();
+    //            break;
+    //        case 4:
+
+    //            break;
+    //    }
+    //}
 
     public void CheckArray(int Enemy)
     {
@@ -223,13 +224,13 @@ public class EnemySpawner : MonoBehaviour
         switch (Enemy)
         {
             case 1:
-                currentEnemy = enemyPrefab1;
+                currentEnemy = enemyTank;
                 break;
             case 2:
                 currentEnemy = enemyBurrower;
                 break;
             case 3:
-                currentEnemy = enemyPrefab3;
+                currentEnemy = enemyRoller;
                 break;
 
             case -1:
@@ -258,7 +259,7 @@ public class EnemySpawner : MonoBehaviour
     {
         float rng = UnityEngine.Random.Range(0f, 1f);
 
-        print(rng);
+        //print(rng);
         if (rng > .5f)
         {
             GameObject enemy = enemySpawnLoc.gameObject;
@@ -267,7 +268,7 @@ public class EnemySpawner : MonoBehaviour
             PS.transform.parent = enemy.transform;
 
             EnemyHealth enemyH = enemy.GetComponentInChildren<EnemyHealth>();
-            //enemySpawnLoc.gameObject.in
+            enemyH.GiveEnhancement((int)Biomes.Volcanic);
         }
     }
 
@@ -344,10 +345,6 @@ public class EnemySpawner : MonoBehaviour
             waveTimer = timeBetweenWaves;
             startupTimer = startSetupTime;
         }// skip cheat 's'   buzzwords for finding this POS
-        if (Input.GetKeyDown(KeyCode.S))
-        {
-            FindObjectOfType<LoadNextArea>().LoadNextAreaPostBattle(Singleton.Instance.level);
-        }
 
     }
 
@@ -356,5 +353,93 @@ public class EnemySpawner : MonoBehaviour
     {
         startSetupTime = delyedTime;
     }
+
+
+    #region cheatSpawn
+    public void CheatSpawnEnemey(int enemyInt, bool VolcanoEnhancement, bool ForestEnhancement)
+    {
+        switch (enemyInt)
+        {
+            case (int)Enemies.generic:
+                currentEnemy = enemyTank;
+               // SpawnGenericEnemyAndCheckForEnhancement();
+                break;
+            case (int)Enemies.burrower:
+                currentEnemy = enemyBurrower;
+                //SpawnGenericEnemyAndCheckForEnhancement();
+                break;
+            case (int)Enemies.roller:
+                currentEnemy = enemyRoller;
+                //SpawnGenericEnemyAndCheckForEnhancement();
+                break;
+            case (int)Enemies.doubles:
+                currentEnemy = enemyDoubles;
+                //SpawnGenericEnemyAndCheckForEnhancement();
+                
+                //SpawnGenericEnemyAndCheckForEnhancement();
+                break;
+
+
+            case (int)Enemies.slimer:
+                currentEnemy = enemySlimer;
+                //SpawnGenericEnemyAndCheckForEnhancement();
+                break;
+            case (int)Enemies.healer:
+                currentEnemy = enemyHealer;
+                //SpawnGenericEnemyAndCheckForEnhancement();
+                break;
+        }
+
+        var enemySpawnLoc = Instantiate(currentEnemy, transform.position, Quaternion.identity);
+        enemySpawnLoc.transform.parent = enemiesLocation;
+
+        //CheckForEnhancement(enemySpawnLoc);
+        if (VolcanoEnhancement)
+        {
+            GameObject enemy = enemySpawnLoc.gameObject;
+            ParticleSystem PS = Instantiate(fireEnhanced, enemy.transform.position, Quaternion.identity);//transform.position, Quaternion.identity);
+            PS.transform.Rotate(-90, 0, 0);//.RotateAround();// = new Vector3(-90, 0, 0);
+            PS.transform.parent = enemy.transform;
+
+            EnemyHealth enemyH = enemy.GetComponentInChildren<EnemyHealth>();
+            enemyH.GiveEnhancement((int)Biomes.Volcanic);
+        }
+
+        GetComponent<AudioSource>().PlayOneShot(enemySpawnAudio);
+
+        return;
+    }
+
+    public void CheatSpawnTank(bool volcanicEnhance, bool forestEnhancement)
+    {
+        CheatSpawnEnemey((int)Enemies.generic, volcanicEnhance, forestEnhancement);
+    }
+
+    public void CheatSpawnBurrower(bool volcanicEnhance, bool forestEnhancement)
+    {
+        CheatSpawnEnemey((int)Enemies.burrower, volcanicEnhance, forestEnhancement);
+    }
+
+    public void CheatSpawnRoller(bool volcanicEnhance, bool forestEnhancement)
+    {
+        CheatSpawnEnemey((int)Enemies.roller, volcanicEnhance, forestEnhancement);
+    }
+
+    public void CheatSpawnDouble(bool volcanicEnhance, bool forestEnhancement)
+    {
+        CheatSpawnEnemey((int)Enemies.doubles, volcanicEnhance, forestEnhancement);
+    }
+
+    public void CheatSpawnSlimer(bool volcanicEnhance, bool forestEnhancement)
+    {
+        CheatSpawnEnemey((int)Enemies.slimer, volcanicEnhance, forestEnhancement);
+    }
+
+    public void CheatSpawnHealer(bool volcanicEnhance, bool forestEnhancement)
+    {
+        CheatSpawnEnemey((int)Enemies.healer, volcanicEnhance, forestEnhancement);
+    }
+
+    #endregion
 
 }
