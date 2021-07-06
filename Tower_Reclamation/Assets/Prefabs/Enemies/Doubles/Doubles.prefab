@@ -215,6 +215,8 @@ MonoBehaviour:
   burrowed: 0
   isTargetable: 1
   isBoss: 0
+  volcanicEnhanced: 0
+  forestEnhanced: 0
 --- !u!114 &114258887241237854
 MonoBehaviour:
   m_ObjectHideFlags: 0

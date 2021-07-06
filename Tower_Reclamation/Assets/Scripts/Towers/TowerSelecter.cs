@@ -987,6 +987,21 @@ public class TowerSelecter : MonoBehaviour
         }
     }
 
+    /// <summary>
+    ///  this is just a quicky to be able to use kelses test grounds to 
+    /// </summary>
+    /// <param name="rifleHead"></param>
+    /// <param name="rifleBod"></param>
+    /// <param name="headint"></param>
+    /// <param name="bodint"></param>
+    //public void CheatGetRifledTowerPartsDefault(ref GameObject rifleHead, ref Tower rifleBod, ref int headint, ref int bodint)
+    //{
+    //    rifleHead = basicRifledTowerHead;
+    //    rifleBod = basicRifledTowerBase;
+    //    headint = (int)RifledHead.Basic;
+    //    bodint = (int)RifledBase.Basic;
+    //}
+
 
     //public void UpdateTowerType()
     //{

@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-using TMPro;
+//using TMPro;
 using System;
 
 public class PostLevelSummaryScreen : MonoBehaviour {
 
-    [SerializeField] TextMeshProUGUI towerText;
+    
+    [SerializeField] TextMesh towerText; //TextMeshProUGUI this was from TMPro
+
     [SerializeField] Text proceedText;
     [SerializeField] Image loadingBar;
     Dictionary<string, PostGameObject> towerLogs = new Dictionary<string, PostGameObject>();

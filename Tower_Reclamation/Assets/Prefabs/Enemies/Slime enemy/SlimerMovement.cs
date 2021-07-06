@@ -17,14 +17,14 @@ public class SlimerMovement : EnemyMovement {
 
         int nextNode = currentPathNode++;
         // sparays the NEXT 2 nodes, therefore, new variable and +1 twice
-        if (nextNode < (path.Count - 2) && (path[nextNode].isSlimed))
+        if (nextNode < (path.Count - 2) && (!path[nextNode].isSlimed))
         {
             GetComponent<SlimeBug>().SpawnSlime(path[nextNode].transform.position, path[nextNode + 1].transform.position, path[nextNode + 2].transform.position);
             path[nextNode].isSlimed = true;
         }
 
         nextNode++;
-        if (nextNode < (path.Count - 2) && (path[nextNode].isSlimed))
+        if (nextNode < (path.Count - 2) && (!path[nextNode].isSlimed))
         {
             GetComponent<SlimeBug>().SpawnSlime(path[nextNode].transform.position, path[nextNode + 1].transform.position, path[nextNode + 2].transform.position);
             path[nextNode].isSlimed = true;

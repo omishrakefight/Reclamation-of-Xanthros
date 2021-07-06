@@ -13,6 +13,9 @@ public class TowerFactory : MonoBehaviour {
     [SerializeField] Tower_Plasma plasmaTowerPrefab;
     [SerializeField] Transform towerParentTransform;
 
+    [SerializeField] Tower rifledTowerBase;
+    [SerializeField] GameObject rifledTowerHead;
+
     // For Lights and last waypoint
     [SerializeField] Waypoint lastWaypoint;
     Singleton singleton;
@@ -132,23 +135,35 @@ public class TowerFactory : MonoBehaviour {
 
     public void AddAssaultTower()
     {
-        int currentGold = FindObjectOfType<GoldManagement>().CurrentGold();
-        if (lastWaypoint.isAvailable && currentGold >= assaultTowerPrefab.goldCost)
-        {
-            var newTower = Instantiate(assaultTowerPrefab, lastWaypoint.transform.position, Quaternion.identity);
-            newTower.transform.parent = towerParentTransform;
-            lastWaypoint.isAvailable = false;
-            print("hi" + GetComponentInChildren<RifledTower>(true).goldCost);
-            FindObjectOfType<GoldManagement>().TowerCost(assaultTowerPrefab.goldCost);
-            if (lastWaypoint.CompareTag("Buff Tile"))
-            {
-                newTower.TowerBuff();
-            }
-        }
-        else
-        {
-            print("Unable to build here.");
-        }
+
+        Tower towerBod = null;
+        GameObject towerHead = null;
+        int towerHeadInt = (int)RifledHead.Basic;
+        int towerBaseInt = (int)RifledBase.Basic;
+        //TowerSelecter towerSc = FindObjectOfType<TowerSelecter>();
+
+        //towerSc.CheatGetRifledTowerPartsDefault(ref towerHead, ref towerBod, ref towerHeadInt, ref towerBaseInt);
+
+        CreateAndStackTower(rifledTowerBase, rifledTowerHead, towerBaseInt, towerHeadInt);
+
+
+        //int currentGold = FindObjectOfType<GoldManagement>().CurrentGold();
+        //if (lastWaypoint.isAvailable && currentGold >= assaultTowerPrefab.goldCost)
+        //{
+        //    var newTower = Instantiate(assaultTowerPrefab, lastWaypoint.transform.position, Quaternion.identity);
+        //    newTower.transform.parent = towerParentTransform;
+        //    lastWaypoint.isAvailable = false;
+        //    print("hi" + GetComponentInChildren<RifledTower>(true).goldCost);
+        //    FindObjectOfType<GoldManagement>().TowerCost(assaultTowerPrefab.goldCost);
+        //    if (lastWaypoint.CompareTag("Buff Tile"))
+        //    {
+        //        newTower.TowerBuff();
+        //    }
+        //}
+        //else
+        //{
+        //    print("Unable to build here.");
+        //}
     }
 
     public void AddLighteningTower()

@@ -465,6 +465,8 @@ MonoBehaviour:
     type: 3}
   plasmaTowerPrefab: {fileID: 0}
   towerParentTransform: {fileID: 2023514800}
+  rifledTowerBase: {fileID: 0}
+  rifledTowerHead: {fileID: 0}
   lastWaypoint: {fileID: 0}
 --- !u!114 &47542414
 MonoBehaviour:
@@ -3224,6 +3226,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114144831826614820, guid: c75d683a57da05b46abfab717912e227,
+        type: 3}
+      propertyPath: towerText
+      value: 
+      objectReference: {fileID: 1383523359}
     - target: {fileID: 114503192797828114, guid: c75d683a57da05b46abfab717912e227,
         type: 3}
       propertyPath: armor
@@ -3382,6 +3389,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1383523358 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1988975357879942, guid: c75d683a57da05b46abfab717912e227,
+    type: 3}
+  m_PrefabInstance: {fileID: 1383523354}
+  m_PrefabAsset: {fileID: 0}
+--- !u!102 &1383523359
+TextMesh:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1383523358}
+  m_Text: 
+  m_OffsetZ: 0
+  m_CharacterSize: 1
+  m_LineSpacing: 1
+  m_Anchor: 0
+  m_Alignment: 0
+  m_TabSize: 4
+  m_FontSize: 0
+  m_FontStyle: 0
+  m_RichText: 1
+  m_Font: {fileID: 0}
+  m_Color:
+    serializedVersion: 2
+    rgba: 4294967295
 --- !u!1001 &1413269443
 PrefabInstance:
   m_ObjectHideFlags: 0

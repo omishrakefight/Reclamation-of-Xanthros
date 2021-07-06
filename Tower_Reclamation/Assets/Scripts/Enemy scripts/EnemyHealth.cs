@@ -332,6 +332,15 @@ public abstract class EnemyHealth : MonoBehaviour {
         }
     }
 
+    public virtual void SetUntagetable()
+    {
+        isTargetable = false;
+    }
+    public  virtual void SetTargetable()
+    {
+        isTargetable = true;
+    }
+
     public void KillsEnemyandAddsGold()
     {
         FindObjectOfType<GoldManagement>().AddGold(goldForMyHead);

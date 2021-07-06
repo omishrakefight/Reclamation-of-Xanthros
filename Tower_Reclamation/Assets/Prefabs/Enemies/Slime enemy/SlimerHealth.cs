@@ -42,8 +42,8 @@ public class SlimerHealth : EnemyHealth {
     {
         if (slimeOnDeath)
         {
-            ParticleSystem PS = Instantiate(PaticleSlimeOnDeath, this.transform.position, Quaternion.identity);//transform.position, Quaternion.identity);
-            //PS.transform.Rotate(-90, 0, 0);//.RotateAround();// = new Vector3(-90, 0, 0);
+            ParticleSystem PS = Instantiate(PaticleSlimeOnDeath, transform.position, Quaternion.identity);//transform.position, Quaternion.identity);
+            PS.transform.Rotate(-180, 0, 0);//.RotateAround();// = new Vector3(-90, 0, 0);
             GetComponentInChildren<SlimerMovement>().SlimerDeathExplosion();
         }
 

@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/_Scenes/_Base.unity
+- path: Assets/_Scenes/Kelseys Sandbox.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

@@ -5,6 +5,7 @@ using UnityEngine;
 public class BurrowerHealth : EnemyHealth {
 
     protected BurrowerMovement burrowerMove;
+    [SerializeField] protected SandStorm sandStorm;
     
     // Use this for initialization
     override protected void Start()
@@ -176,6 +177,29 @@ public class BurrowerHealth : EnemyHealth {
             onFire = false;
         }
         yield return new WaitForSeconds(1f);
+    }
+
+    public override void KillEnemy()
+    {
+        if (volcanicEnhanced)
+        {
+            SandStorm SS = Instantiate(sandStorm, transform.position, Quaternion.identity);
+        }
+
+        Destroy(gameObject);
+    }
+
+    override public void GiveEnhancement(int biome)
+    {
+        switch (biome)
+        {
+            case (int)Biomes.Volcanic:
+                hitPoints = hitPoints * 1.15f;
+                hitPointsMax = hitPoints;
+                volcanicEnhanced = true;
+
+                break;
+        }
     }
 
 }

@@ -19,4 +19,28 @@ public class DoublesHealth : EnemyHealth {
 	override protected void Update () {
         base.Update();
 	}
+
+    public override void KillEnemy()
+    {
+        if (volcanicEnhanced)
+        {
+            GameObject littleSpawn = Instantiate(this.gameObject, transform.position, Quaternion.identity);
+        }
+
+        Destroy(gameObject);
+    }
+
+    override public void GiveEnhancement(int biome)
+    {
+        switch (biome)
+        {
+            case (int)Biomes.Volcanic:
+                hitPoints = hitPoints * 1.15f;
+                hitPointsMax = hitPoints;
+                volcanicEnhanced = true;
+
+                break;
+        }
+    }
+
 }
