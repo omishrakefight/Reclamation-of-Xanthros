@@ -264,8 +264,12 @@ namespace UnityEditor.TestTools.TestRunner
         {
             switch (target)
             {
-
+//#if UNITY_2020_2_OR_NEWER
+//                case BuildTarget.GameCoreXboxOne:
+//                case BuildTarget.GameCoreXboxSeries:
+//#else
                 case BuildTarget.XboxOne:
+//#endif
                 case BuildTarget.WSAPlayer:
                     return true;
                 default:

@@ -5,7 +5,7 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637611886958113180
+      ticks: 637611955699826301
     m_Hash: 2960086285
   m_LockFileStatus:
     m_FilePath: C:/Users/Nekier/Documents/GitHub/Reclamation-of-Xanthros/Tower_Reclamation/Packages/packages-lock.json
@@ -13,7 +13,7 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637611920564954421
+      ticks: 637611956203262445
     m_Hash: 398649034
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
@@ -3808,13 +3808,32 @@ m_PackageAssets:
         - 7.2.1
         - 7.3.1
         - 7.4.1
+        - 7.4.2
+        - 7.4.3
+        - 7.5.1
+        - 7.5.2
+        - 7.5.3
+        - 7.6.0
+        - 7.7.0
         - 8.0.1
         - 8.1.0
         - 8.2.0
+        - 8.3.1
         - 9.0.0-preview.13
         - 9.0.0-preview.35
         - 9.0.0-preview.38
+        - 9.0.0-preview.60
+        - 9.0.0-preview.77
+        - 10.0.0-preview.30
+        - 10.1.0
+        - 10.2.0
+        - 10.2.1
         - 10.2.2
+        - 10.3.1
+        - 10.3.2
+        - 10.4.0
+        - 10.5.0
+        - 10.5.1
         compatible:
         - 10.2.2
         verified: 10.2.2
@@ -3841,12 +3860,12 @@ m_PackageAssets:
       entitlements:
         isAllowed: 1
       isAssetStorePackage: 0
-      datePublishedTicks: 0
+      datePublishedTicks: 637430478820000000
       documentationUrl: 
       hasRepository: 1
       repository:
         type: git
-        url: https://github.com/Unity-Technologies/Graphics.git
+        url: git+https://github.com/Unity-Technologies/Graphics.git
         revision: a197e35ba4e93349ccbb4fddd4f3f80ba7b1c113
         path: 
     - packageId: com.unity.searcher@4.3.1
@@ -3870,10 +3889,36 @@ m_PackageAssets:
       errors: []
       versions:
         all:
+        - 4.0.0-preview
+        - 4.0.0
+        - 4.0.7-preview
+        - 4.0.7
+        - 4.0.8-preview
+        - 4.0.9
+        - 4.1.0-preview
+        - 4.1.0
+        - 4.2.0
+        - 4.3.0
         - 4.3.1
+        - 4.3.2
+        - 4.6.0-preview
+        - 4.7.0-preview
         compatible:
+        - 4.0.0-preview
+        - 4.0.0
+        - 4.0.7-preview
+        - 4.0.7
+        - 4.0.8-preview
+        - 4.0.9
+        - 4.1.0-preview
+        - 4.1.0
+        - 4.2.0
+        - 4.3.0
         - 4.3.1
-        verified: 4.3.1
+        - 4.3.2
+        - 4.6.0-preview
+        - 4.7.0-preview
+        verified: 4.3.2
       dependencies: []
       resolvedDependencies: []
       keywords:
@@ -3891,7 +3936,7 @@ m_PackageAssets:
       entitlements:
         isAllowed: 1
       isAssetStorePackage: 0
-      datePublishedTicks: 0
+      datePublishedTicks: 637272602300000000
       documentationUrl: 
       hasRepository: 1
       repository:
@@ -4175,12 +4220,12 @@ m_PackageAssets:
       entitlements:
         isAllowed: 1
       isAssetStorePackage: 0
-      datePublishedTicks: 0
+      datePublishedTicks: 637324062630000000
       documentationUrl: 
       hasRepository: 1
       repository:
         type: git
-        url: https://github.com/Unity-Technologies/Unity.Mathematics.git
+        url: git+https://github.com/Unity-Technologies/Unity.Mathematics.git
         revision: 71412d94b7a0b0fdbb3195a5e6559bf6a761e91a
         path: 
   m_LocalPackages:

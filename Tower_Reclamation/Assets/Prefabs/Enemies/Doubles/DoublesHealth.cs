@@ -24,7 +24,7 @@ public class DoublesHealth : EnemyHealth {
     {
         if (volcanicEnhanced)
         {
-            GameObject littleSpawn = Instantiate(this.gameObject, transform.position, Quaternion.identity);
+            GameObject littleSpawn = Instantiate(this.gameObject, this.transform.position, Quaternion.identity);
         }
 
         Destroy(gameObject);

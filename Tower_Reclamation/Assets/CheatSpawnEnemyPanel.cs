@@ -1,12 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 using UnityEngine.UI;
+
 
 public class CheatSpawnEnemyPanel : MonoBehaviour
 {
     [SerializeField] Toggle volcanicEnhancement;
     [SerializeField] Toggle forestEnhancement;
+    [SerializeField] InputField moneyToAdd;
+    [SerializeField] InputField upgradesToAdd;
+
 
     [SerializeField] GameObject MySelf;
 
@@ -22,6 +27,34 @@ public class CheatSpawnEnemyPanel : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void AddMoney()
+    {
+        try
+        {
+            int money = int.Parse(moneyToAdd.text);
+            GoldManagement goldM = FindObjectOfType<GoldManagement>();
+            goldM.AddGold(money);
+        }
+        catch (Exception BadParse)
+        {
+            print("failed addMoney parse");
+        }
+    }
+
+    public void AddUpgradeParts()
+    {
+        try
+        {
+            int money = int.Parse(moneyToAdd.text);
+            GoldManagement goldM = FindObjectOfType<GoldManagement>();
+            goldM.AddUpgradeParts(money);
+        }
+        catch (Exception BadParse)
+        {
+            print("failed addMoney parse");
+        }
     }
 
     public void SetMyselfActive()
